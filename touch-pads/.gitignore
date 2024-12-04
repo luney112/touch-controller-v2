@@ -5,6 +5,9 @@
 .DS_Store
 Thumbs.db
 
+# Gerber files
+gerber/
+
 # Temporary files
 *.000
 *.bak
