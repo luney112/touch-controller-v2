@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CAP1188_1_CP_TR")(type "KiCad")(uri "${KIPRJMOD}/lib/CAP1188_1_CP_TR/CAP1188_1_CP_TR.kicad_sym")(options "")(descr ""))
+)

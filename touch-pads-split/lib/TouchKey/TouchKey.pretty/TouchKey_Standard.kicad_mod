@@ -1,0 +1,155 @@
+(footprint "TouchKey_Standard"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 6.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8959132f-b69c-4b96-aa80-fa5652b40ed5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "TouchKey_Standard"
+		(at 0.5 6.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d3c5f24a-b0b7-4f4b-962c-9039392e392d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0124942b-34db-47e3-9f11-c75b21f3f00b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6ab1161b-d239-4251-8cc3-7b71c48045e9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b9fdf76-db53-49c0-a77c-478cdc7fac9b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -15 -27)
+		(end 15 28)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "8420f461-8b78-4a19-a1b1-a9fe9e9029ce")
+	)
+	(fp_rect
+		(start -17.5254 26)
+		(end -12.5 31)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "User.1")
+		(uuid "a4cc6512-dc7d-4f00-8596-4ef458fd1f56")
+	)
+	(fp_rect
+		(start -13 -26)
+		(end 13 26)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "User.1")
+		(uuid "9b643f19-f40e-41a5-a495-4f520f5b5c06")
+	)
+	(fp_rect
+		(start -8.0508 26)
+		(end -3.0254 31)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "User.1")
+		(uuid "889e8e7b-a406-4bdc-8d67-257abd01faca")
+	)
+	(fp_rect
+		(start 2.9746 26)
+		(end 8 31)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "User.1")
+		(uuid "be40e2f6-f10d-4f2e-8654-6d30fc0c6b92")
+	)
+	(fp_rect
+		(start 12.4619 26)
+		(end 17.4873 31)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "User.1")
+		(uuid "a614c212-e2fa-4256-87ae-ed5b183a6a53")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.5 6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "084b44b8-ec1a-4d25-952e-b15cadd3f11a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0 0)
+		(size 28 52)
+		(layers "F.Cu")
+		(roundrect_rratio 0.07142857143)
+		(uuid "8b54c8dd-5615-4a75-8317-8b21ab9a00bc")
+	)
+)
