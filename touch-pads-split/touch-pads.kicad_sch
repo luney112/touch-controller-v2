@@ -1688,7 +1688,7 @@
 		(uuid "2de2d1be-fd38-4106-b6f6-29c16da88f89")
 	)
 	(junction
-		(at 154.94 36.83)
+		(at 149.86 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39f64717-5bdd-4a3a-b0c3-d6abd2a07fcb")
@@ -1736,7 +1736,7 @@
 		(uuid "94b46711-1e26-40bb-903f-87e5f4dd4d65")
 	)
 	(junction
-		(at 154.94 34.29)
+		(at 149.86 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbdf065a-e0cb-4269-aa6b-33eebea19b89")
@@ -1778,16 +1778,6 @@
 			(type default)
 		)
 		(uuid "05ea17b2-ed96-4fbe-bcf3-2ad439b67876")
-	)
-	(wire
-		(pts
-			(xy 165.1 69.85) (xy 167.64 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "076cc44f-a472-40b5-8bdd-17113a2b3b07")
 	)
 	(wire
 		(pts
@@ -1851,7 +1841,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 34.29) (xy 171.45 34.29)
+			(xy 149.86 36.83) (xy 166.37 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1891,7 +1881,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 39.37) (xy 154.94 36.83)
+			(xy 149.86 41.91) (xy 149.86 39.37)
 		)
 		(stroke
 			(width 0)
@@ -1921,6 +1911,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 66.04) (xy 166.37 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f15afef-dc0c-4536-b046-98ba34383137")
+	)
+	(wire
+		(pts
 			(xy 36.83 62.23) (xy 38.1 62.23)
 		)
 		(stroke
@@ -1928,16 +1928,6 @@
 			(type default)
 		)
 		(uuid "2f75cd17-3d0a-4ffc-9a86-e23b4b812300")
-	)
-	(wire
-		(pts
-			(xy 165.1 59.69) (xy 167.64 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "323c36fc-522a-4e8d-a657-81dcb1a3ca89")
 	)
 	(wire
 		(pts
@@ -1951,23 +1941,23 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 62.23) (xy 151.13 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37acc1aa-a4b1-4b39-aee0-1c473dae8bc9")
-	)
-	(wire
-		(pts
-			(xy 154.94 31.75) (xy 154.94 34.29)
+			(xy 149.86 34.29) (xy 149.86 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3d4575d5-a830-4535-81e3-ddcdde1b23cb")
+	)
+	(wire
+		(pts
+			(xy 149.86 63.5) (xy 166.37 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f3b1413-2b78-43bd-a686-ecf3c263d5e9")
 	)
 	(wire
 		(pts
@@ -1981,6 +1971,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 58.42) (xy 166.37 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "430bf38d-08be-4596-a5c4-7e5da3d5b78b")
+	)
+	(wire
+		(pts
 			(xy 29.21 39.37) (xy 38.1 39.37)
 		)
 		(stroke
@@ -1991,13 +1991,33 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 36.83) (xy 171.45 36.83)
+			(xy 163.83 55.88) (xy 166.37 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49e8caaf-89de-46a6-8eb2-f1508747ee0c")
+	)
+	(wire
+		(pts
+			(xy 149.86 39.37) (xy 166.37 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4d2f371f-0d70-4bbb-9202-56eb3274e5dd")
+	)
+	(wire
+		(pts
+			(xy 163.83 60.96) (xy 166.37 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f9bc01b-cb1e-4416-91d8-c6927866ecee")
 	)
 	(wire
 		(pts
@@ -2011,7 +2031,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 26.67) (xy 171.45 26.67)
+			(xy 163.83 29.21) (xy 166.37 29.21)
 		)
 		(stroke
 			(width 0)
@@ -2051,33 +2071,13 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 39.37) (xy 171.45 39.37)
+			(xy 163.83 41.91) (xy 166.37 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6eeb31a1-be95-4576-a330-f21b744497d3")
-	)
-	(wire
-		(pts
-			(xy 151.13 69.85) (xy 151.13 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f13804c-c6be-495e-9fc9-1bd19a152a11")
-	)
-	(wire
-		(pts
-			(xy 151.13 67.31) (xy 167.64 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f6f4885-c0aa-4652-8849-d12f50f75c56")
 	)
 	(wire
 		(pts
@@ -2151,6 +2151,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 68.58) (xy 149.86 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c2b2d9b-b691-4048-9e9c-f364798d500b")
+	)
+	(wire
+		(pts
 			(xy 100.33 62.23) (xy 107.95 62.23)
 		)
 		(stroke
@@ -2171,13 +2181,13 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 57.15) (xy 167.64 57.15)
+			(xy 149.86 60.96) (xy 149.86 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a4180f39-a5f8-4ea4-9c5d-469ffed16fa9")
+		(uuid "9ba98bd5-74af-49b6-a7c5-6a3cc7387f1d")
 	)
 	(wire
 		(pts
@@ -2191,7 +2201,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 29.21) (xy 171.45 29.21)
+			(xy 163.83 31.75) (xy 166.37 31.75)
 		)
 		(stroke
 			(width 0)
@@ -2218,6 +2228,16 @@
 			(type default)
 		)
 		(uuid "b217602f-3959-45c6-940d-b2288415b0d5")
+	)
+	(wire
+		(pts
+			(xy 163.83 68.58) (xy 166.37 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b46eac67-66aa-4c45-a34d-a33fe2dfe6ce")
 	)
 	(wire
 		(pts
@@ -2251,23 +2271,13 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 34.29) (xy 154.94 34.29)
+			(xy 140.97 36.83) (xy 149.86 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c21e1e93-3917-4882-832a-4ebde3a2621e")
-	)
-	(wire
-		(pts
-			(xy 165.1 62.23) (xy 167.64 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c37b5676-d81a-42cc-b7eb-d3ea6012b133")
 	)
 	(wire
 		(pts
@@ -2291,7 +2301,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 31.75) (xy 171.45 31.75)
+			(xy 163.83 34.29) (xy 166.37 34.29)
 		)
 		(stroke
 			(width 0)
@@ -2331,17 +2341,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 64.77) (xy 167.64 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e27253af-4733-47ef-9aa9-50569c406075")
-	)
-	(wire
-		(pts
-			(xy 146.05 36.83) (xy 154.94 36.83)
+			(xy 140.97 39.37) (xy 149.86 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2563,9 +2563,9 @@
 			)
 		)
 	)
-	(global_label "SMDATA"
+	(global_label "RESET"
 		(shape input)
-		(at 165.1 59.69 180)
+		(at 163.83 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2573,9 +2573,9 @@
 			)
 			(justify right)
 		)
-		(uuid "3ea13aa8-e85f-44c8-9d61-4ebeb51db73d")
+		(uuid "1e2ae4c8-3a58-4647-a69c-b51f5dcd2b41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 155.0391 59.69 0)
+			(at 155.0997 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2607,31 +2607,9 @@
 			)
 		)
 	)
-	(global_label "RESET"
-		(shape input)
-		(at 165.1 62.23 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "68a13eb6-6aef-40e2-a4ad-9c1f5da3bc05")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.3697 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SMDATA"
 		(shape input)
-		(at 168.91 29.21 180)
+		(at 163.83 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2641,7 +2619,7 @@
 		)
 		(uuid "7a6b7f20-6e40-4d0f-b514-276d3efdfce9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 158.8491 29.21 0)
+			(at 153.7691 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2653,7 +2631,7 @@
 	)
 	(global_label "RESET"
 		(shape input)
-		(at 168.91 31.75 180)
+		(at 163.83 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2663,7 +2641,7 @@
 		)
 		(uuid "7e43dc96-82a7-4a29-913f-8eb719f08886")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.1797 31.75 0)
+			(at 155.0997 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2675,7 +2653,7 @@
 	)
 	(global_label "ALERT"
 		(shape input)
-		(at 168.91 39.37 180)
+		(at 163.83 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2685,7 +2663,29 @@
 		)
 		(uuid "805b2d29-3958-4f0e-a78e-cccd60427894")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.4215 39.37 0)
+			(at 155.3415 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SMDATA"
+		(shape input)
+		(at 163.83 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84ba3bd0-a205-4c39-b86d-3adfdfec04b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 153.7691 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2697,7 +2697,7 @@
 	)
 	(global_label "SMCLK"
 		(shape input)
-		(at 168.91 26.67 180)
+		(at 163.83 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2707,7 +2707,7 @@
 		)
 		(uuid "95f2b73a-55f7-42c2-8189-9378ea4ef242")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.6958 26.67 0)
+			(at 154.6158 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2739,9 +2739,9 @@
 			)
 		)
 	)
-	(global_label "ALERT"
+	(global_label "SMCLK"
 		(shape input)
-		(at 165.1 69.85 180)
+		(at 163.83 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2749,9 +2749,9 @@
 			)
 			(justify right)
 		)
-		(uuid "c1722b7d-51ad-44b2-8217-74d2085a6b46")
+		(uuid "ca39908f-3c98-40ab-b6b4-3c323b6dd29b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.6115 69.85 0)
+			(at 154.6158 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2761,9 +2761,9 @@
 			)
 		)
 	)
-	(global_label "SMCLK"
+	(global_label "ALERT"
 		(shape input)
-		(at 165.1 57.15 180)
+		(at 163.83 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2771,9 +2771,9 @@
 			)
 			(justify right)
 		)
-		(uuid "f93bb15f-7ad9-4f76-a50f-39ce06bc0f01")
+		(uuid "f1bceb35-c57a-4524-9c81-825474e1cfb2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 155.8858 57.15 0)
+			(at 155.3415 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2814,7 +2814,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "175188dd-c774-4dba-a0a6-6bbffc2c4ab6")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR02"
 			(at 106.68 30.48 0)
 			(effects
 				(font
@@ -2864,7 +2864,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR01")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -2938,8 +2938,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 149.86 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "20a70cb0-0d0e-4e7b-9d1b-455a514047b2")
+		(property "Reference" "#PWR08"
+			(at 149.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 149.86 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 149.86 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c6eff7d-e77a-4d9f-9102-0399841707f2")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Socket")
-		(at 176.53 31.75 0)
+		(at 171.45 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2947,7 +3012,7 @@
 		(dnp no)
 		(uuid "221373da-f644-4e73-8fd2-b7daf3106900")
 		(property "Reference" "J1"
-			(at 167.64 21.082 0)
+			(at 157.48 23.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2956,7 +3021,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06_Socket"
-			(at 160.528 23.368 0)
+			(at 150.368 25.908 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2965,7 +3030,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical"
-			(at 176.53 31.75 0)
+			(at 171.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2974,7 +3039,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 176.53 31.75 0)
+			(at 171.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2983,7 +3048,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated"
-			(at 176.53 31.75 0)
+			(at 171.45 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3020,15 +3085,15 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 146.05 34.29 0)
+		(at 140.97 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "246bd2ff-3af2-4730-9064-324c3ec65507")
-		(property "Reference" "#FLG03"
-			(at 146.05 32.385 0)
+		(property "Reference" "#FLG01"
+			(at 140.97 34.925 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3037,7 +3102,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 146.05 30.48 0)
+			(at 140.97 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3045,7 +3110,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 34.29 0)
+			(at 140.97 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3054,7 +3119,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 34.29 0)
+			(at 140.97 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3063,7 +3128,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 146.05 34.29 0)
+			(at 140.97 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3077,72 +3142,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 151.13 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "30a19703-b44d-42c5-b9f1-7c13f95f002f")
-		(property "Reference" "#PWR02"
-			(at 151.13 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 151.13 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 151.13 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.13 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 151.13 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b931eb5f-816f-4688-bc32-1cf3ce5240cb")
-		)
-		(instances
-			(project "touch-pads"
-				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR02")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -3150,15 +3150,15 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 146.05 36.83 180)
+		(at 140.97 39.37 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "34aadc95-eaf9-493f-90e3-0582bf3b886e")
-		(property "Reference" "#FLG04"
-			(at 146.05 38.735 0)
+		(property "Reference" "#FLG02"
+			(at 140.97 41.275 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3167,7 +3167,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 146.304 40.64 0)
+			(at 141.224 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3175,7 +3175,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 36.83 0)
+			(at 140.97 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3184,7 +3184,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 36.83 0)
+			(at 140.97 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3193,7 +3193,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 146.05 36.83 0)
+			(at 140.97 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,7 +3207,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#FLG04")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -3215,7 +3215,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 39.37 0)
+		(at 149.86 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3223,7 +3223,7 @@
 		(dnp no)
 		(uuid "3eeb34a4-4348-4233-88c7-f09662adaf2f")
 		(property "Reference" "#PWR06"
-			(at 154.94 45.72 0)
+			(at 149.86 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3232,7 +3232,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 43.18 0)
+			(at 149.86 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3240,7 +3240,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 39.37 0)
+			(at 149.86 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3249,7 +3249,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 39.37 0)
+			(at 149.86 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3258,7 +3258,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 39.37 0)
+			(at 149.86 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3337,6 +3337,71 @@
 			(project ""
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 149.86 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c6e6c8e-2f9c-493c-b2d7-df5db0e14896")
+		(property "Reference" "#PWR07"
+			(at 149.86 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 149.86 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 149.86 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9865d260-7e87-4a82-b4aa-ff40bdec3b6b")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -3736,6 +3801,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x06_Socket")
+		(at 171.45 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "924b9fb4-a0d3-4040-be94-81d9ca964e17")
+		(property "Reference" "J2"
+			(at 157.48 50.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x06_Socket"
+			(at 150.368 52.578 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical"
+			(at 171.45 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.45 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 171.45 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "437c861e-bb47-43d7-aea6-3e278a6bec39")
+		)
+		(pin "5"
+			(uuid "d52dce0e-9629-4e9e-ac42-343a10b0852e")
+		)
+		(pin "2"
+			(uuid "1c0044ea-fae8-414e-9b67-72e0bf1fb43c")
+		)
+		(pin "4"
+			(uuid "667101ba-b282-444f-b069-bb170898e11b")
+		)
+		(pin "6"
+			(uuid "16c8df07-0c8a-4d74-9983-d7f2048d9fb8")
+		)
+		(pin "3"
+			(uuid "310d6e6b-3898-4703-b834-2a30c36dcb99")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 111.76 31.75 90)
 		(unit 1)
@@ -3813,7 +3959,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a82cb9f3-d5bf-4eb1-aab5-5002339d3edf")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR03"
 			(at 107.95 77.47 0)
 			(effects
 				(font
@@ -3863,7 +4009,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR07")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -3871,7 +4017,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 154.94 31.75 0)
+		(at 149.86 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3879,7 +4025,7 @@
 		(dnp no)
 		(uuid "aa3e30c4-b0fa-4ab4-bcbe-b9c269c2d1b6")
 		(property "Reference" "#PWR05"
-			(at 154.94 35.56 0)
+			(at 149.86 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3888,7 +4034,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 154.94 27.94 0)
+			(at 149.86 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3896,7 +4042,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 31.75 0)
+			(at 149.86 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3905,7 +4051,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 31.75 0)
+			(at 149.86 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3914,7 +4060,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 154.94 31.75 0)
+			(at 149.86 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4149,7 +4295,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c99f7860-046f-436e-a26a-bf666bb3cac8")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 111.76 65.278 0)
 			(effects
 				(font
@@ -4203,7 +4349,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "R3")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -4218,7 +4364,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cb98c74d-50d6-498f-a148-c6db2036debc")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR01"
 			(at 36.83 71.12 0)
 			(effects
 				(font
@@ -4268,72 +4414,7 @@
 		(instances
 			(project ""
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 151.13 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dcb46aca-cec6-4fcc-b55c-4d5ddd2733d8")
-		(property "Reference" "#PWR03"
-			(at 151.13 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.13 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 151.13 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.13 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 151.13 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e6410ec9-5113-49a7-99b7-daf6d55c5b40")
-		)
-		(instances
-			(project "touch-pads"
-				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR03")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -4400,87 +4481,6 @@
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x06_Socket")
-		(at 172.72 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eb964b30-56ed-4b40-9e5d-59863177fe34")
-		(property "Reference" "J2"
-			(at 163.83 51.562 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x06_Socket"
-			(at 156.718 53.848 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical"
-			(at 172.72 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 172.72 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x06, script generated"
-			(at 172.72 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5dcbcf62-bd26-4e55-891b-6d744512bdfe")
-		)
-		(pin "5"
-			(uuid "5f46eed8-13a2-45dc-8172-141b068cbfed")
-		)
-		(pin "2"
-			(uuid "5db26386-fdee-4a93-b1b9-24b471213698")
-		)
-		(pin "4"
-			(uuid "56a1a7f3-3ea6-4a3b-b3ed-f3b065804823")
-		)
-		(pin "6"
-			(uuid "8338224c-2e70-4ac8-aedb-dfbf451b4ecd")
-		)
-		(pin "3"
-			(uuid "9d8fa896-1c65-42b4-b474-6c6af1071807")
-		)
-		(instances
-			(project "touch-pads"
-				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "J2")
 					(unit 1)
 				)
 			)
