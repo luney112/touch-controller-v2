@@ -5283,7 +5283,7 @@
 		(uuid "c1405472-faf0-43ce-9776-7b444f60f1f4")
 	)
 	(gr_text "ALERT\nGND\n+3.3V\nRESET\nSMDATA\nSMCLK"
-		(at 99 260.75 -0)
+		(at 92.75 260.75 0)
 		(layer "B.SilkS")
 		(uuid "28603e24-176e-4504-9f0b-3ab0243af4fe")
 		(effects
@@ -5291,7 +5291,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify left bottom mirror)
+			(justify right bottom mirror)
 		)
 	)
 	(gr_text "ALERT\nGND\n+3.3V\nRESET\nSMDATA\nSMCLK"

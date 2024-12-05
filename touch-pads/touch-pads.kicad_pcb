@@ -16917,7 +16917,7 @@
 		(descr "JST XH series connector, B6B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST XH vertical")
 		(property "Reference" "J1"
-			(at 6.25 3.55 0)
+			(at -4.25 -0.525 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "aaaffb02-9391-4cee-87a7-c64a6fc9371d")
@@ -17569,6 +17569,18 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "c1405472-faf0-43ce-9776-7b444f60f1f4")
+	)
+	(gr_text "SMCLK\nSMDATA\nRESET\n+3.3V\nGND\nALERT"
+		(at 270.75 254.75 -90)
+		(layer "B.SilkS")
+		(uuid "d9a4fdc6-8642-4c29-a22e-469fc91d3eda")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
 	)
 	(segment
 		(start 115.25 257.5)
