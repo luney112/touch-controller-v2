@@ -3985,12 +3985,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "3c7e15cf-805f-45fa-bb83-bb91479596c4")
-		(at 542.75 132.75)
+		(at 533.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H7"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f3a82e53-d730-4577-8402-76cf183e5eef")
 			(effects
 				(font
@@ -4098,12 +4099,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "41461d23-c92f-4437-a031-542ef4ee6ad7")
-		(at 418.75 132.75)
+		(at 413.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H8"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1a08f0a5-0e05-4039-af60-e5f56a618131")
 			(effects
 				(font
@@ -6300,12 +6302,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "55d78896-5aba-4536-bdaf-6b5cc77144cc")
-		(at 298.75 132.75)
+		(at 293.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H9"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e6def026-0fff-4af7-8d64-8b383ed2fdd0")
 			(effects
 				(font
@@ -6788,12 +6791,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "6a987e45-58a7-4dcb-8477-71e36f755cfb")
-		(at 54.75 259)
+		(at 63.75 260)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H2"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b600e5f2-5f3d-4d94-90d6-bdcf77aa5f95")
 			(effects
 				(font
@@ -7062,12 +7066,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "7535ce4d-1b05-4237-b90a-9faad9fd40a4")
-		(at 178.75 132.75)
+		(at 173.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H10"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7dde5187-cfcd-49c9-b27e-80f7fb60de61")
 			(effects
 				(font
@@ -9211,12 +9216,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "99bf825e-1add-4d12-8b41-fa36a9e90019")
-		(at 418.75 259)
+		(at 413.75 260)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H5"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "204ebe2c-c00e-4189-bbb4-8b883ba99c56")
 			(effects
 				(font
@@ -9538,12 +9544,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "a32c1ad0-8cbc-4e4d-9a77-314bf546dcdd")
-		(at 178.75 259)
+		(at 173.75 260)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H3"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ce3adeda-6dd4-498e-8ca6-953e6219c494")
 			(effects
 				(font
@@ -9812,12 +9819,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "ab732e13-9356-4ef6-abe5-1cf1b4d56a8f")
-		(at 542.75 259)
+		(at 533.75 260)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H6"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1008b83d-4dd7-4428-b53f-f2e1cf1423ce")
 			(effects
 				(font
@@ -12067,12 +12075,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "b22848ac-d869-4980-a500-1dba48f25a30")
-		(at 54.75 132.75)
+		(at 63.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H1"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "992cd573-db9d-4288-9b5a-db8c98949f45")
 			(effects
 				(font
@@ -15288,12 +15297,13 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "d17e3337-c099-4ac1-a4d6-97b73139e93d")
-		(at 298.75 259)
+		(at 293.75 260)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H4"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f97c25a1-b1c4-4062-8962-a7ac716ea559")
 			(effects
 				(font
@@ -17410,8 +17420,38 @@
 		)
 	)
 	(gr_line
-		(start 178.75 126)
-		(end 178.75 259.5)
+		(start 178.75 127.25)
+		(end 173.75 127.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "0c6e0cc3-3eb6-4b9a-ba73-577b49458fe1")
+	)
+	(gr_line
+		(start 173.75 125)
+		(end 173.75 265.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "10b8e3db-ad75-40a9-ba37-738fd8afe08e")
+	)
+	(gr_line
+		(start 63.75 125)
+		(end 63.75 273.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "158bcdc1-0697-4498-9805-de9714be9787")
+	)
+	(gr_line
+		(start 178.75 125)
+		(end 178.75 265.5)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -17420,18 +17460,28 @@
 		(uuid "254f3685-3f02-488f-b200-f8f58daa5313")
 	)
 	(gr_line
-		(start 542.75 129.75)
-		(end 542.75 260.5)
+		(start 533.75 122.5)
+		(end 533.75 266.5)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Dwgs.User")
-		(uuid "41a2dd36-471c-41aa-a424-833027c806ad")
+		(uuid "38be6244-7862-4fc2-a60b-784659f07e0f")
 	)
 	(gr_line
-		(start 298.75 129)
-		(end 298.75 259.75)
+		(start 418.75 127.75)
+		(end 413.75 127.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "5ada246a-7976-4708-aedb-9572772eaf1d")
+	)
+	(gr_line
+		(start 298.75 125)
+		(end 298.75 268.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -17440,8 +17490,48 @@
 		(uuid "626f8e43-5b86-4c17-9497-2898c198ab16")
 	)
 	(gr_line
-		(start 54.75 259)
-		(end 547.5 259)
+		(start 298.75 127.25)
+		(end 293.75 127.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "62733efa-0eac-4b96-8a56-9eb24ff4e8c6")
+	)
+	(gr_line
+		(start 293.75 124)
+		(end 293.75 265.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "6cdd0861-4d73-4e36-bcbf-36b30bc9ddae")
+	)
+	(gr_line
+		(start 538.75 128.25)
+		(end 533.75 128.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "6f82a6d2-94cc-45a3-94f0-b13f8fb39072")
+	)
+	(gr_line
+		(start 413.75 123.25)
+		(end 413.75 266)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Dwgs.User")
+		(uuid "a31fc34e-5f70-406f-846b-e4a7b7fbaa04")
+	)
+	(gr_line
+		(start 54.75 260)
+		(end 547.5 260)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -17450,18 +17540,18 @@
 		(uuid "ad91e2a5-3006-4e55-b77b-8129d3b6458d")
 	)
 	(gr_line
-		(start 54.75 132.75)
-		(end 547.5 132.75)
+		(start 557.5 130)
+		(end 59 130)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Dwgs.User")
-		(uuid "ae5d6e3f-fe34-49b2-a6f2-0855110c14b1")
+		(uuid "c6f3852b-7d57-433d-9395-d86052b83f8d")
 	)
 	(gr_line
 		(start 418.75 124.25)
-		(end 418.75 259.5)
+		(end 418.75 266.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -17470,8 +17560,8 @@
 		(uuid "f2f18a97-2a7e-4d66-9d4e-58aa617b50d4")
 	)
 	(gr_rect
-		(start 48.75 126.75)
-		(end 548.75 265)
+		(start 58.75 125)
+		(end 538.75 265)
 		(stroke
 			(width 0.05)
 			(type default)

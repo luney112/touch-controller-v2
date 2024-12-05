@@ -2654,7 +2654,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "6a987e45-58a7-4dcb-8477-71e36f755cfb")
-		(at 173.75 131.75)
+		(at 173.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H2"
@@ -3793,7 +3793,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "b22848ac-d869-4980-a500-1dba48f25a30")
-		(at 63.75 131.75)
+		(at 63.75 130)
 		(descr "Mounting Hole 3.2mm, no annular, M3")
 		(tags "mounting hole 3.2mm no annular m3")
 		(property "Reference" "H1"
@@ -5172,8 +5172,8 @@
 		)
 	)
 	(gr_line
-		(start 63.75 126.75)
-		(end 63.75 131.75)
+		(start 63.75 125)
+		(end 63.75 130)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -5202,8 +5202,8 @@
 		(uuid "8954fd7a-087a-4642-9e95-96a58e121337")
 	)
 	(gr_line
-		(start 178.75 131.75)
-		(end 173.75 131.75)
+		(start 178.75 130)
+		(end 173.75 130)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -5232,8 +5232,8 @@
 		(uuid "9a6a725a-93bf-4c6d-a7d3-28e8da950c82")
 	)
 	(gr_line
-		(start 63.75 131.75)
-		(end 58.75 131.75)
+		(start 63.75 130)
+		(end 58.75 130)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -5252,8 +5252,8 @@
 		(uuid "dfa1ed2a-dbcc-4f2b-8475-44306992024d")
 	)
 	(gr_line
-		(start 173.75 131.75)
-		(end 173.75 126.75)
+		(start 173.75 130)
+		(end 173.75 125)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -5272,7 +5272,7 @@
 		(uuid "f4213cc0-ff5e-4fae-a1bb-ca55c966a7f1")
 	)
 	(gr_rect
-		(start 58.75 126.75)
+		(start 58.75 125)
 		(end 178.75 265)
 		(stroke
 			(width 0.05)
