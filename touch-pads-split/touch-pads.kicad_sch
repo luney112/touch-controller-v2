@@ -4351,6 +4351,33 @@
 				(hide yes)
 			)
 		)
+		(property "i2c_0x2A" "120k"
+			(at 107.95 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "i2c_0x2B" "100k"
+			(at 107.95 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "i2c_0x2C" "82k"
+			(at 107.95 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5e1243f8-9852-455f-812d-cac51fe822ef")
 		)
