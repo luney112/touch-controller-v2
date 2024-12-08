@@ -9409,8 +9409,8 @@
 		)
 	)
 	(gr_line
-		(start 144.25 60.25)
-		(end 124.25 60.25)
+		(start 144.25 65.25)
+		(end 124.25 65.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -9419,8 +9419,8 @@
 		(uuid "22f82de3-d538-449b-90a2-58bcbc84b6db")
 	)
 	(gr_line
-		(start 124.25 60.25)
-		(end 124.25 57.75)
+		(start 124.25 65.25)
+		(end 124.25 62.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -9429,8 +9429,8 @@
 		(uuid "9344dec1-8548-436c-ac50-fc5d2239dcdd")
 	)
 	(gr_rect
-		(start 104.25 63.75)
-		(end 144.25 121.75)
+		(start 104.25 64.25)
+		(end 144.25 121.25)
 		(stroke
 			(width 0.05)
 			(type default)
