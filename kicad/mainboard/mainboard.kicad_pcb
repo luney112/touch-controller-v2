@@ -3110,7 +3110,7 @@
 		(descr "USB 2.0 Type C Receptacle, GCT, 16P, top mounted, horizontal, 5A: https://gct.co/files/drawings/usb4105.pdf")
 		(tags "USB C Type-C Receptacle SMD USB 2.0 16P 16C USB4105-15-A USB4105-15-A-060 USB4105-15-A-120 USB4105-GF-A USB4105-GF-A-060 USB4105-GF-A-120")
 		(property "Reference" "J1"
-			(at 6.5 3 0)
+			(at 6.5 2.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "a37cf6b1-1108-40a8-be22-8ce9fa3183b3")
@@ -4963,7 +4963,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C6"
-			(at -2.5 0 180)
+			(at -2.75 0 180)
 			(layer "F.SilkS")
 			(uuid "65c05a31-1fbb-45ce-8f04-ed0c8fa5ef50")
 			(effects
@@ -6638,7 +6638,7 @@
 		(descr "JST GH series connector, SM07B-GHS-TB (http://www.jst-mfg.com/product/pdf/eng/eGH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST GH horizontal")
 		(property "Reference" "J2"
-			(at -5 -4.25 180)
+			(at 6 -4.25 180)
 			(layer "F.SilkS")
 			(uuid "ac0bc1af-ab21-4488-a246-2ed9f61f22a5")
 			(effects
@@ -6973,7 +6973,7 @@
 	(footprint "FSM2JSMAATR:SWITCH_FSM2JSMAA_TYC"
 		(layer "F.Cu")
 		(uuid "eb281a48-d41a-4d01-9cb7-d8f5f79f1baf")
-		(at 141.37795 110.7034 -90)
+		(at 141.37795 110.5 -90)
 		(tags "FSM2JSMAATR ")
 		(property "Reference" "SW1"
 			(at 4.5466 2.2479 -90)
@@ -9534,7 +9534,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R11"
-			(at -2.75 -0.5 0)
+			(at -0.25 -2.5 0)
 			(layer "B.SilkS")
 			(uuid "b2a1ba7b-f050-4536-ba7f-424be3d23671")
 			(effects
@@ -10191,7 +10191,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R12"
-			(at -2.75 0.25 0)
+			(at -2.75 0 0)
 			(layer "B.SilkS")
 			(uuid "8cd53e8d-90e7-4768-a2d5-3d05d3e908b1")
 			(effects
@@ -10718,6 +10718,14 @@
 		(uuid "16ad74bd-886d-49dd-bad6-90cb6bb75670")
 	)
 	(segment
+		(start 136.88215 111.11785)
+		(end 136.88215 110.5)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "1b0740bd-19b4-423e-bd8b-c49dbdd903ea")
+	)
+	(segment
 		(start 125.65 104)
 		(end 125.65 106.8)
 		(width 0.4)
@@ -10740,6 +10748,14 @@
 		(layer "F.Cu")
 		(net 1)
 		(uuid "2885fc45-3dc2-405a-80fd-e8106602f825")
+	)
+	(segment
+		(start 135 113)
+		(end 136.88215 111.11785)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "2c0c5a6f-0cfd-4202-bf7e-c133473d1eb6")
 	)
 	(segment
 		(start 131.7 67.5)
@@ -10894,14 +10910,6 @@
 		(uuid "716a37d5-20e9-4529-a829-7f2a2c296dab")
 	)
 	(segment
-		(start 136.88215 110.7034)
-		(end 136.88215 111.11785)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "756222f4-51be-4e1a-a5a0-06b96593abfc")
-	)
-	(segment
 		(start 130.4 75.8625)
 		(end 132.0375 77.5)
 		(width 0.6)
@@ -10980,14 +10988,6 @@
 		(layer "F.Cu")
 		(net 1)
 		(uuid "a1045cf5-abea-4677-870c-8d8b9e7968bc")
-	)
-	(segment
-		(start 136.88215 111.11785)
-		(end 135 113)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "a6fa4d12-81b6-459a-a931-1a204d97cf86")
 	)
 	(segment
 		(start 107.3 73.3)
@@ -11430,52 +11430,44 @@
 		(uuid "f952828a-bf6f-4fa3-88ea-beb350acb9b3")
 	)
 	(segment
-		(start 137.53135 109)
-		(end 135.01 109)
+		(start 139.25 110.5)
+		(end 141.37795 110.5)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "04d96e47-b6da-4430-b017-5957d43a87e9")
+		(uuid "11134fbe-b039-4bd4-b4eb-fb90435d03e2")
 	)
 	(segment
 		(start 139 110.75)
-		(end 139 110.46865)
+		(end 139 109.75)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "53196b8b-475e-4f4e-bca8-153301c7aec7")
-	)
-	(segment
-		(start 139.0466 110.7034)
-		(end 141.37795 110.7034)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "5e1bc4d2-834e-4a5d-8bc4-764b395d1558")
+		(uuid "34ab9324-5174-44bd-9b0a-38cadfae3b78")
 	)
 	(segment
 		(start 139 110.75)
-		(end 139.0466 110.7034)
+		(end 139.25 110.5)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "97acae76-4b14-4297-9343-8b000c70a7c3")
+		(uuid "38844a81-7dad-45dd-ac49-0f99c9bd3833")
 	)
 	(segment
-		(start 139 110.46865)
-		(end 137.53135 109)
+		(start 138 108.75)
+		(end 135.26 108.75)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "a1f7d7d9-52c3-41d2-8727-534c13049b04")
+		(uuid "56f3f7da-d2fc-4cfb-afda-9cd9ee78db49")
 	)
 	(segment
-		(start 135.01 109)
-		(end 133.43 110.58)
+		(start 139 109.75)
+		(end 138 108.75)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "c75bfbb3-d87c-40ae-a9ad-c9afa95a9667")
+		(uuid "708a1af4-7945-4e7b-8e5d-b4eb940bbb54")
 	)
 	(segment
 		(start 133.43 110.58)
@@ -11483,7 +11475,15 @@
 		(width 0.2)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "f36181da-b965-4b0a-8672-1d2018a3d9fc")
+		(uuid "7c25c542-3b15-485c-9666-6216bbc4987e")
+	)
+	(segment
+		(start 135.26 108.75)
+		(end 133.43 110.58)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "f4510689-d588-4abf-ab4c-cabdf11ae8f3")
 	)
 	(via
 		(at 139 110.75)
