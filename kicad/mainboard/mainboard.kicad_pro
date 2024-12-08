@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "hole_clearance|121200000|71255000|ada3174d-dae1-46a2-8ca9-1629e00e55d4|604d79a5-eee4-4673-aa62-f813a003a6c2",
+        "hole_clearance|121200000|71255000|bca9dd4f-beb3-409b-a457-9bb32824da1d|604d79a5-eee4-4673-aa62-f813a003a6c2",
+        "hole_clearance|127300000|71255000|2d87b040-9be4-4123-9d86-8b440893992f|3a60c66f-764a-4f30-a6cc-c9641f40ed09",
+        "hole_clearance|127300000|71255000|d49b1620-e310-4274-986f-9e4c85a30161|3a60c66f-764a-4f30-a6cc-c9641f40ed09"
+      ],
       "meta": {
         "version": 2
       },
@@ -484,27 +489,10 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "+3.3V",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
         "name": "+5V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
+        "track_width": 0.6,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -516,10 +504,6 @@
     "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": [
-      {
-        "netclass": "+3.3V",
-        "pattern": "+3.3V"
-      },
       {
         "netclass": "+5V",
         "pattern": "+5V"
