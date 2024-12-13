@@ -11,8 +11,6 @@ public:
   void init(SerialController *serial);
   void setAllUntouched();
   void setAllOff();
-  void setTouched(int led);
-  void setUntouched(int led);
   void set(int *vals, int sz);
   void setChuniIo(const uint8_t *brg, int sz);
   void test();

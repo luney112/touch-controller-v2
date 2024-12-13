@@ -48,20 +48,6 @@ void LedController::setAllOff() {
   FastLED.show();
 }
 
-// 0 1 | 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
-// 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 | 1 0
-void LedController::setTouched(int led) {
-  int idx = LED_DIRECTION == LeftToRight ? (LED_OFFSET + led) : (LED_COUNT - 1 - led);
-  leds[idx] = this->isBeamBroken ? ColorTouchedBeamBroken : ColorTouched;
-  FastLED.show();
-}
-
-void LedController::setUntouched(int led) {
-  int idx = LED_DIRECTION == LeftToRight ? (LED_OFFSET + led) : (LED_COUNT - 1 - led);
-  leds[idx] = this->isBeamBroken ? ColorUntouchedBeamBroken : ColorUntouched;
-  FastLED.show();
-}
-
 // TODO: Use bitmap
 void LedController::set(int *vals, int sz) {
   for (int i = 0; i < sz; i++) {
@@ -88,27 +74,36 @@ void LedController::setChuniIo(const uint8_t *brg, int sz) {
     return;
   }
 
-  for (int i = 0; i < sz; i += 6) {
-    int idx = LED_DIRECTION == RightToLeft ? (LED_OFFSET + (i / 6)) : (LED_COUNT - 1 - (i / 6));
-    leds[idx].setRGB(brg[i + 1], brg[i + 2], brg[i + 0]);
+  // FastLED.show() can be slow, so only call it when the crc of the light pattern changes
+  uint32_t currentCrc = CRC32::calculate(brg, sz);
+  if (currentCrc == this->ledCrc) {
+    return;
   }
 
-  // show() can be slow, so only call it when the crc of the light pattern changes
-  uint32_t currentCrc = CRC32::calculate(brg, sz);
-  if (currentCrc != this->ledCrc) {
-    FastLED.show();
+  int idx = LED_DIRECTION == RightToLeft ? (LED_OFFSET) : (LED_COUNT - 1);
+  int dir = LED_DIRECTION == RightToLeft ? 1 : -1;
+  for (int i = 0; i < sz; i += 3) {
+    leds[idx].setRGB(brg[i + 1], brg[i + 2], brg[i + 0]);
+    idx += dir;
+    // We use double LEDs for keys
+    if (i % 2 == 0) {
+      leds[idx].setRGB(brg[i + 1], brg[i + 2], brg[i + 0]);
+      idx += dir;
+    }
   }
+
+  FastLED.show();
   this->ledCrc = currentCrc;
 }
 
 void LedController::test() {
-  leds[2] = CRGB(0xFF0000);
-  leds[3] = CRGB(0x00FF00);
-  leds[4] = CRGB(0x0000FF);
-  leds[5] = CRGB(0xFFD700);
-  leds[6] = CHSV(_HSV(51, 100, 100));
-  leds[7] = CRGB(0x87CEEB);
-  leds[8] = CHSV(_HSV(197, 42.6, 92.2));
+  leds[2] = CRGB(0xFF0000);              // R
+  leds[3] = CRGB(0x00FF00);              // G
+  leds[4] = CRGB(0x0000FF);              // B
+  leds[5] = CRGB(0xFFD700);              // Gold
+  leds[6] = CHSV(_HSV(51, 100, 100));    // Gold
+  leds[7] = CRGB(0x87CEEB);              // Sky blue
+  leds[8] = CHSV(_HSV(197, 42.6, 92.2)); // Sky blue
   FastLED.show();
 }
 

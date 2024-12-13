@@ -26,7 +26,7 @@ SerialController serial;
 
 TouchData touchData;
 AirSensorData airSensorData;
-int ledData[LED_KEY_COUNT] = {0};
+int ledData[LED_SEGMENT_COUNT] = {0};
 
 unsigned long startTime = 0;
 
@@ -192,7 +192,7 @@ void processSensorDataTest() {
   touch.getTouchStatus(touchData);
   uint16_t touched = touchData.touched;
   for (int i = 0; i < 32; i += 2) {
-    int idx = LED_KEY_COUNT - 1 - i;
+    int idx = LED_SEGMENT_COUNT - 1 - i;
     if (touched & (1 << i) || touched & (1 << (i + 1))) {
       ledData[idx] = 1;
       serial.writeDebugLogf("Key pressed %d", idx);
@@ -200,5 +200,5 @@ void processSensorDataTest() {
       ledData[idx] = 0;
     }
   }
-  led.set(ledData, LED_KEY_COUNT);
+  led.set(ledData, LED_SEGMENT_COUNT);
 }
