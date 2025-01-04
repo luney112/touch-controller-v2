@@ -31,6 +31,8 @@ int ledData[LED_SEGMENT_COUNT] = {0};
 unsigned long startTime = 0;
 
 void setup() {
+  delay(1000); // Needed for some reason to get complete serial output
+
   serial.init(&led); // Should be first
   led.init(&serial);
   touch.init(&serial);

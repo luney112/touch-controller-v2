@@ -11,6 +11,7 @@ bool TouchController::init(SerialController *serial) {
 
   // TODO: Initialize CAP1188
 
+  Wire.begin();
 #ifdef SET_QUICK_WIRE_CLOCK_SPEED
   Wire.setClock(WireClockSpeed);
 #endif
