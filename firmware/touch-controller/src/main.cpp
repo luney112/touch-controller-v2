@@ -43,7 +43,7 @@ void setup() {
 
   serial.writeDebugLog("Preparing for calibration...")->processWrite();
   led.calibrate();
-  delay(3000);
+  delay(500);
   serial.writeDebugLog("Calibrating...")->processWrite();
   air.calibrate();
   serial.writeDebugLog("Finished calibrating!")->processWrite();
@@ -193,13 +193,17 @@ void processSensorDataTest() {
   // Read and update slider
   touch.getTouchStatus(touchData);
   uint16_t touched = touchData.touched;
-  for (int i = 0; i < 32; i += 2) {
-    int idx = LED_SEGMENT_COUNT - 1 - i;
-    if (touched & (1 << i) || touched & (1 << (i + 1))) {
-      ledData[idx] = 1;
-      serial.writeDebugLogf("Key pressed %d", idx);
+  for (int i = 0; i < 32; i++) {
+    if (touched & (1 << i)) {
+      if (ledData[i] == 0) {
+        serial.writeDebugLogf("Key pressed %d", i);
+      }
+      ledData[i] = 1;
     } else {
-      ledData[idx] = 0;
+      if (ledData[i] == 1) {
+        serial.writeDebugLogf("Key released %d", i);
+      }
+      ledData[i] = 0;
     }
   }
   led.set(ledData, LED_SEGMENT_COUNT);

@@ -1,6 +1,9 @@
 #ifndef TOUCH_H
 #define TOUCH_H
 
+#define CAP1188_COUNT 1
+
+#include "cap1188.h"
 #include <cstdint>
 
 class SerialController;
@@ -19,6 +22,8 @@ public:
 
 private:
   SerialController *serial;
+
+  CAP1188 caps[CAP1188_COUNT];
 };
 
 #endif
