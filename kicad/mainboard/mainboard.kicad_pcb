@@ -858,7 +858,7 @@
 		(zone
 			(net 0)
 			(net_name "")
-			(layers "*.Cu")
+			(layers "F&B.Cu")
 			(uuid "2e0b6466-5528-43a6-98c3-9b99bc609d05")
 			(name "antenna keepout")
 			(hatch edge 0.508)
@@ -7198,7 +7198,7 @@
 		(descr "SMD capacitor, aluminum electrolytic, Nichicon, 6.3x5.8mm")
 		(tags "capacitor electrolytic")
 		(property "Reference" "C6"
-			(at 4.95 2.25 360)
+			(at 4.95 2.25 0)
 			(layer "F.SilkS")
 			(uuid "054bf528-16c6-4605-bdb9-49c42ce4c86e")
 			(effects
@@ -7209,7 +7209,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 0 4.35 360)
+			(at 0 4.35 0)
 			(layer "F.Fab")
 			(uuid "d5c05273-f09e-41be-8bc5-00897e580f86")
 			(effects
@@ -7595,7 +7595,7 @@
 			(uuid "5303e915-441f-4ee5-921d-dcf7d567d406")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "2ef4a962-5b06-4392-b89a-ba2daa82e488")
 			(effects
@@ -9973,6 +9973,18 @@
 				(bold yes)
 			)
 			(justify right bottom)
+		)
+	)
+	(gr_text "+5V\nGND\nLED_DATA"
+		(at 115 86.75 0)
+		(layer "F.SilkS")
+		(uuid "ef0cf1f8-8905-4c66-88b1-f1c621d15bfe")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(justify left bottom)
 		)
 	)
 	(segment

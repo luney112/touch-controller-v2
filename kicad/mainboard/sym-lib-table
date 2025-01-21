@@ -1,5 +1,4 @@
 (sym_lib_table
   (version 7)
   (lib (name "TPD2EUSB30DRTR")(type "KiCad")(uri "${KIPRJMOD}/../lib/TPD2EUSB30DRTR/TPD2EUSB30DRTR.kicad_sym")(options "")(descr ""))
-  (lib (name "FSM2JSMAATR")(type "KiCad")(uri "${KIPRJMOD}/../lib/FSM2JSMAATR/FSM2JSMAATR.kicad_sym")(options "")(descr ""))
 )
