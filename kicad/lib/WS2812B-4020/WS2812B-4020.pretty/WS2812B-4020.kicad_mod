@@ -242,7 +242,7 @@
 		(solder_mask_margin 0.102)
 		(uuid "0640ad1f-331f-44d0-8c7e-e421e79c3ef5")
 	)
-	(model "${KIPRJMOD}/lib/WS2812B-4020/WS2812B-4020.step"
+	(model "${KIPRJMOD}/../lib/WS2812B-4020/WS2812B-4020.step"
 		(offset
 			(xyz 0 -1 1)
 		)

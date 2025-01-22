@@ -1675,7 +1675,7 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "d8477db2-e4e0-4e46-8333-c6d66b4dae03")
 	)
-	(model "${KIPRJMOD}/lib/CAP1188_1_CP_TR/QFN24_4X4MC_MCH.step"
+	(model "${KIPRJMOD}/../lib/CAP1188_1_CP_TR/QFN24_4X4MC_MCH.step"
 		(offset
 			(xyz 0 0 0)
 		)
