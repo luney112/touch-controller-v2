@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "208e6366-7d11-4576-9309-e3e3af46f0ad")
-	(paper "A5")
+	(paper "A4")
 	(lib_symbols
 		(symbol "CAP1188_1_CP_TR:CAP1188-1-CP-TR"
 			(pin_names
@@ -575,6 +575,210 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector:Conn_01x03_Socket"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03_Socket"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x03_Socket_1_1"
+				(arc
+					(start 0 -2.032)
+					(mid -0.5058 -2.54)
+					(end 0 -3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0.508)
+					(mid -0.5058 0)
+					(end 0 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 3.048)
+					(mid -0.5058 2.54)
+					(end 0 2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1362,6 +1566,277 @@
 				)
 			)
 		)
+		(symbol "WS2812B-4020:WS2812B-4020"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -7.62 8.128 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "WS2812B-4020"
+				(at -7.62 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MF" "Worldsemi"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+				(at 0 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "Package"
+				(at -0.508 -4.318 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at -0.254 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+				(at 0 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at -0.508 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "V1.2"
+				(at 0 -4.318 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+				(at -0.254 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "WS2812B-4020"
+				(at 0 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+				(at 0 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Worldsemi"
+				(at 0 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "Not in stock"
+				(at 0 -3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SNAPEDA_PN" "WS2812B-4020"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "WS2812B-4020_0_0"
+				(rectangle
+					(start -7.62 7.62)
+					(end 2.54 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -12.7 6.35 0)
+					(length 5.08)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 6.35 180)
+					(length 5.08)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "WS2812B-4020_1_0"
+				(pin passive line
+					(at 7.62 3.81 180)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers hide)
@@ -1462,6 +1937,126 @@
 				)
 			)
 			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -1676,10 +2271,40 @@
 		)
 	)
 	(junction
+		(at 140.97 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c56b993-ae2b-4e14-aa4a-d2412b5acf71")
+	)
+	(junction
+		(at 196.85 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f6a1f1f-a719-4f9a-8f8f-6e943d897947")
+	)
+	(junction
+		(at 57.15 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1459366a-5582-44dc-b996-20ad8c65ffde")
+	)
+	(junction
+		(at 113.03 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ec7ac6e-3a55-451b-b628-96ed0b848e0c")
+	)
+	(junction
 		(at 36.83 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1fa2516b-2355-4294-9bc6-261ab04790b9")
+	)
+	(junction
+		(at 85.09 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a14f9e0-7889-469c-aab1-3e292df14032")
 	)
 	(junction
 		(at 106.68 31.75)
@@ -1688,10 +2313,34 @@
 		(uuid "2de2d1be-fd38-4106-b6f6-29c16da88f89")
 	)
 	(junction
+		(at 57.15 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30bca0d2-0e7d-4af7-b52e-ecee0c6ccaf1")
+	)
+	(junction
+		(at 196.85 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33c1b1ed-3bcf-4a5e-a29a-5969f071e366")
+	)
+	(junction
+		(at 113.03 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "352a834d-9f99-48ae-90fa-c96ddb4dc875")
+	)
+	(junction
 		(at 149.86 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39f64717-5bdd-4a3a-b0c3-d6abd2a07fcb")
+	)
+	(junction
+		(at 140.97 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40d14af2-c231-4653-939b-ab5ea0a85b11")
 	)
 	(junction
 		(at 36.83 57.15)
@@ -1700,10 +2349,34 @@
 		(uuid "55ca6575-7413-43c7-b0d1-e814453b94aa")
 	)
 	(junction
+		(at 57.15 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "560967aa-36bf-46af-b177-d75eec3d7166")
+	)
+	(junction
 		(at 107.95 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a387a82-30b3-4f57-8c58-63486b19de1e")
+	)
+	(junction
+		(at 196.85 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5d607367-a786-49df-959d-856b33687f96")
+	)
+	(junction
+		(at 113.03 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f5c8991-8997-48e3-a04c-e5c3a1465b54")
+	)
+	(junction
+		(at 85.09 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6383b9b5-756d-4e79-9806-df83e3e005f3")
 	)
 	(junction
 		(at 36.83 49.53)
@@ -1712,10 +2385,28 @@
 		(uuid "6bff072e-d663-4e4c-b281-b0484390ae43")
 	)
 	(junction
+		(at 85.09 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cf7e582-db3e-41f8-8078-a78a027bb1c3")
+	)
+	(junction
 		(at 36.83 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fef266c-6cf8-4cd3-b8f9-3bc54abd2d48")
+	)
+	(junction
+		(at 85.09 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "703c1a39-b0d2-43b6-92cb-58be85ac1dc4")
+	)
+	(junction
+		(at 57.15 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "757c0bf5-e9da-44fe-b929-914bb8e268bc")
 	)
 	(junction
 		(at 119.38 31.75)
@@ -1730,10 +2421,28 @@
 		(uuid "918b2b65-4e6e-460e-8f6f-60ed599828cd")
 	)
 	(junction
+		(at 168.91 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91a1a1e0-2797-43cf-a642-448bc86e1898")
+	)
+	(junction
 		(at 36.83 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94b46711-1e26-40bb-903f-87e5f4dd4d65")
+	)
+	(junction
+		(at 196.85 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "998a67c7-d9ab-4e08-83dc-170e9a23d533")
+	)
+	(junction
+		(at 140.97 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a127c45c-44e7-45a5-b253-04a81f0ff014")
 	)
 	(junction
 		(at 149.86 36.83)
@@ -1742,10 +2451,34 @@
 		(uuid "bbdf065a-e0cb-4269-aa6b-33eebea19b89")
 	)
 	(junction
+		(at 140.97 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c205c4b1-d5ec-4e75-9f8f-d395d5b37426")
+	)
+	(junction
+		(at 57.15 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c44cce3c-1d84-4b51-b6e5-0ed282dfdb5e")
+	)
+	(junction
+		(at 168.91 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c8fdf70d-4158-4e20-80b0-e535f65cf97b")
+	)
+	(junction
 		(at 36.83 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c912dc59-772f-4997-9bb1-85b634eae91b")
+	)
+	(junction
+		(at 168.91 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ccee5414-1ec6-43cb-8f4f-cbbf9d788df0")
 	)
 	(junction
 		(at 36.83 62.23)
@@ -1758,6 +2491,48 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e15ce345-e1ea-4d9e-adcc-bf1147c5722c")
+	)
+	(junction
+		(at 113.03 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0cb4b9c-63d9-4d0e-b782-be57a1cd96c7")
+	)
+	(junction
+		(at 168.91 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff59bbcb-c01c-4696-b490-e20147fdacaa")
+	)
+	(wire
+		(pts
+			(xy 193.04 99.06) (xy 196.85 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01b90da4-67cc-4806-b856-69cce55375bd")
+	)
+	(wire
+		(pts
+			(xy 198.12 35.56) (xy 198.12 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0218bd55-0080-42b8-8c1d-89cff66e8263")
+	)
+	(wire
+		(pts
+			(xy 85.09 93.98) (xy 85.09 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0392a335-7486-4b02-b175-fe74528c4729")
 	)
 	(wire
 		(pts
@@ -1781,6 +2556,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 96.52) (xy 209.55 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "060a8164-e704-4e73-b0cc-fbb5e0c928db")
+	)
+	(wire
+		(pts
 			(xy 36.83 46.99) (xy 38.1 46.99)
 		)
 		(stroke
@@ -1801,6 +2586,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 124.46) (xy 144.78 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c81eeda-e634-4144-ac55-43636006d30d")
+	)
+	(wire
+		(pts
 			(xy 106.68 27.94) (xy 106.68 31.75)
 		)
 		(stroke
@@ -1811,6 +2606,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 132.08) (xy 85.09 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11bf50c3-26d9-462e-ad0f-7398adfcbf80")
+	)
+	(wire
+		(pts
 			(xy 33.02 36.83) (xy 33.02 44.45)
 		)
 		(stroke
@@ -1818,6 +2623,16 @@
 			(type default)
 		)
 		(uuid "15dcf047-7b8e-4232-a63e-ef3f88cbd03e")
+	)
+	(wire
+		(pts
+			(xy 53.34 104.14) (xy 57.15 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15e10bbe-0c89-4467-a90f-531ab790936e")
 	)
 	(wire
 		(pts
@@ -1851,6 +2666,46 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 104.14) (xy 113.03 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18a37d32-cf88-43a7-b139-87e8f1a6bf09")
+	)
+	(wire
+		(pts
+			(xy 165.1 104.14) (xy 168.91 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "198acee8-266f-48c6-a64d-50c48e6d4554")
+	)
+	(wire
+		(pts
+			(xy 196.85 93.98) (xy 196.85 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b699e79-19ea-4bab-8677-166a5b0a78bb")
+	)
+	(wire
+		(pts
+			(xy 53.34 129.54) (xy 53.34 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c121b95-a141-4a48-b92b-051b01d09cee")
+	)
+	(wire
+		(pts
 			(xy 36.83 49.53) (xy 38.1 49.53)
 		)
 		(stroke
@@ -1861,6 +2716,26 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 121.92) (xy 57.15 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cec9c79-1d74-48bd-b658-efed25c680bd")
+	)
+	(wire
+		(pts
+			(xy 53.34 99.06) (xy 57.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e6af9db-0d3f-459a-92ec-a9d8af38b544")
+	)
+	(wire
+		(pts
 			(xy 106.68 31.75) (xy 109.22 31.75)
 		)
 		(stroke
@@ -1868,6 +2743,26 @@
 			(type default)
 		)
 		(uuid "1ffab6fd-140d-4522-b011-9dc79fb66476")
+	)
+	(wire
+		(pts
+			(xy 109.22 129.54) (xy 109.22 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2153c3fa-6ee1-4b31-8ddf-7e79786e3603")
+	)
+	(wire
+		(pts
+			(xy 113.03 121.92) (xy 113.03 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22b77ff0-51fa-462d-92fb-2bb2836619a8")
 	)
 	(wire
 		(pts
@@ -1941,6 +2836,26 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 127) (xy 168.91 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a77d227-cc18-4a2f-ad11-0f62f4312e18")
+	)
+	(wire
+		(pts
+			(xy 165.1 96.52) (xy 172.72 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a81375b-50b7-4be1-a1d7-61646b547353")
+	)
+	(wire
+		(pts
 			(xy 149.86 34.29) (xy 149.86 36.83)
 		)
 		(stroke
@@ -1948,6 +2863,16 @@
 			(type default)
 		)
 		(uuid "3d4575d5-a830-4535-81e3-ddcdde1b23cb")
+	)
+	(wire
+		(pts
+			(xy 140.97 104.14) (xy 140.97 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dbe772f-0d09-41bd-aead-5ec08b7462fe")
 	)
 	(wire
 		(pts
@@ -1961,6 +2886,36 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 96.52) (xy 209.55 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "409a5312-62d9-4562-a7db-31bd3c664389")
+	)
+	(wire
+		(pts
+			(xy 31.75 96.52) (xy 33.02 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4110fa21-7d81-4650-9113-fd1cac5b9cee")
+	)
+	(wire
+		(pts
+			(xy 81.28 96.52) (xy 88.9 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "422c91a2-3b61-4565-a4c3-3ee8ca9e9360")
+	)
+	(wire
+		(pts
 			(xy 29.21 39.37) (xy 38.1 39.37)
 		)
 		(stroke
@@ -1971,6 +2926,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 99.06) (xy 85.09 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "456639ae-2f63-412c-bc62-5bbb48034c7a")
+	)
+	(wire
+		(pts
 			(xy 163.83 63.5) (xy 166.37 63.5)
 		)
 		(stroke
@@ -1978,6 +2943,36 @@
 			(type default)
 		)
 		(uuid "4774932b-a2c0-4e80-92e7-7b35a82baebe")
+	)
+	(wire
+		(pts
+			(xy 137.16 101.6) (xy 137.16 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47e378ce-060b-49b7-9420-ca7fb61d7b55")
+	)
+	(wire
+		(pts
+			(xy 137.16 96.52) (xy 144.78 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b71e2e-b1c2-409f-bb1c-ee02addf406a")
+	)
+	(wire
+		(pts
+			(xy 198.12 29.21) (xy 200.66 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49be9179-3114-4aa8-ab52-01c8ae53cccc")
 	)
 	(wire
 		(pts
@@ -2001,6 +2996,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 101.6) (xy 109.22 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52bed406-c788-458f-9015-246cc4d19ac7")
+	)
+	(wire
+		(pts
 			(xy 163.83 29.21) (xy 166.37 29.21)
 		)
 		(stroke
@@ -2008,6 +3013,36 @@
 			(type default)
 		)
 		(uuid "53d8a1e1-b902-4027-9913-7201bda2aa1f")
+	)
+	(wire
+		(pts
+			(xy 140.97 121.92) (xy 140.97 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53fc155b-d6b6-434f-b9d4-49b9c4c0c35d")
+	)
+	(wire
+		(pts
+			(xy 193.04 127) (xy 196.85 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bce20f0-5f7b-428a-8376-438fea2d5268")
+	)
+	(wire
+		(pts
+			(xy 81.28 124.46) (xy 88.9 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c57df10-556d-4d96-8153-c00c00996a41")
 	)
 	(wire
 		(pts
@@ -2021,6 +3056,26 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 129.54) (xy 193.04 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fe96596-cae3-4385-b869-7ed4e33ae80c")
+	)
+	(wire
+		(pts
+			(xy 113.03 104.14) (xy 113.03 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6146cc3b-b82d-4519-91fb-801a7e30868a")
+	)
+	(wire
+		(pts
 			(xy 36.83 34.29) (xy 36.83 44.45)
 		)
 		(stroke
@@ -2031,6 +3086,26 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 101.6) (xy 81.28 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62b90c4f-744b-4877-ac2a-4d068e561dcd")
+	)
+	(wire
+		(pts
+			(xy 53.34 96.52) (xy 60.96 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c453e4-93c2-431a-b0fa-bbae86f19e0e")
+	)
+	(wire
+		(pts
 			(xy 102.87 69.85) (xy 107.95 69.85)
 		)
 		(stroke
@@ -2038,6 +3113,26 @@
 			(type default)
 		)
 		(uuid "6670d3af-d884-4092-9a35-9b48fe1db858")
+	)
+	(wire
+		(pts
+			(xy 179.07 58.42) (xy 179.07 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68a92ffe-41ff-4576-b3b1-369af46bc418")
+	)
+	(wire
+		(pts
+			(xy 109.22 124.46) (xy 116.84 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d4ea77c-ce82-4d8c-97b6-415ef07d4cfd")
 	)
 	(wire
 		(pts
@@ -2061,6 +3156,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 127) (xy 140.97 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7039701a-daef-4ec1-9d56-992f84610f08")
+	)
+	(wire
+		(pts
 			(xy 36.83 57.15) (xy 38.1 57.15)
 		)
 		(stroke
@@ -2068,6 +3173,36 @@
 			(type default)
 		)
 		(uuid "72404c98-fd45-4c43-a444-b0972ead0bbb")
+	)
+	(wire
+		(pts
+			(xy 196.85 121.92) (xy 196.85 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7549ea61-2ea0-41e7-9aaa-668a585d15c8")
+	)
+	(wire
+		(pts
+			(xy 181.61 31.75) (xy 200.66 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "754e73b6-f794-410e-94b0-e415f96fad1e")
+	)
+	(wire
+		(pts
+			(xy 113.03 93.98) (xy 113.03 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75d9e200-d37c-4c6d-835e-05c398bebe83")
 	)
 	(wire
 		(pts
@@ -2081,6 +3216,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 121.92) (xy 85.09 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "776d5599-64e6-41d8-99aa-0c2b77e09b75")
+	)
+	(wire
+		(pts
 			(xy 106.68 27.94) (xy 109.22 27.94)
 		)
 		(stroke
@@ -2088,6 +3233,46 @@
 			(type default)
 		)
 		(uuid "77d1af42-81de-4a6b-8c91-d93af8bef6e5")
+	)
+	(wire
+		(pts
+			(xy 193.04 124.46) (xy 199.39 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e1270bd-5e0a-4296-8c1f-7c086a3bf470")
+	)
+	(wire
+		(pts
+			(xy 81.28 129.54) (xy 81.28 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e851deb-668b-454a-8458-ce97927b1c42")
+	)
+	(wire
+		(pts
+			(xy 193.04 101.6) (xy 193.04 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e9e1e4f-0145-4338-a759-737989640d1e")
+	)
+	(wire
+		(pts
+			(xy 137.16 129.54) (xy 137.16 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ffc2a43-7dc7-496d-8d62-6cb92f6895b8")
 	)
 	(wire
 		(pts
@@ -2101,6 +3286,26 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 132.08) (xy 168.91 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "853d97c0-cc58-4a2d-8e63-12b0d033f6e5")
+	)
+	(wire
+		(pts
+			(xy 113.03 132.08) (xy 113.03 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "856aafd1-46ca-40e8-ac19-d2c44434c9de")
+	)
+	(wire
+		(pts
 			(xy 36.83 59.69) (xy 36.83 57.15)
 		)
 		(stroke
@@ -2111,6 +3316,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 101.6) (xy 165.1 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87bffe20-9496-4448-967e-f89493e0e3cd")
+	)
+	(wire
+		(pts
 			(xy 100.33 54.61) (xy 109.22 54.61)
 		)
 		(stroke
@@ -2118,6 +3333,26 @@
 			(type default)
 		)
 		(uuid "896b7b7f-db18-4149-8902-95ce031b9f1f")
+	)
+	(wire
+		(pts
+			(xy 137.16 132.08) (xy 140.97 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89e7734a-acb0-4e39-98b6-405f605d8236")
+	)
+	(wire
+		(pts
+			(xy 168.91 104.14) (xy 168.91 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a243d30-1f02-49a0-977c-e78669625d6e")
 	)
 	(wire
 		(pts
@@ -2141,6 +3376,76 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 132.08) (xy 113.03 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e4a1f09-65b5-4307-bf5f-1ba783dc277e")
+	)
+	(wire
+		(pts
+			(xy 165.1 99.06) (xy 168.91 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f3937c0-c21f-473a-a4ae-8eb316864f02")
+	)
+	(wire
+		(pts
+			(xy 196.85 104.14) (xy 196.85 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "902053ae-4552-4247-872a-ca3f5df7e4ec")
+	)
+	(wire
+		(pts
+			(xy 181.61 29.21) (xy 181.61 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "912421f2-7f4d-4733-a8b0-8f092e7b3e6d")
+	)
+	(wire
+		(pts
+			(xy 137.16 99.06) (xy 140.97 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91340ecc-f8b1-4186-960a-c580a0a19164")
+	)
+	(wire
+		(pts
+			(xy 209.55 114.3) (xy 33.02 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94e4f80a-bbe6-417c-ad4f-bf2e9b3bdefb")
+	)
+	(wire
+		(pts
+			(xy 165.1 129.54) (xy 165.1 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9534b43a-50e1-431f-ad39-e5aee9927ca3")
+	)
+	(wire
+		(pts
 			(xy 100.33 62.23) (xy 107.95 62.23)
 		)
 		(stroke
@@ -2148,6 +3453,26 @@
 			(type default)
 		)
 		(uuid "95f26f4e-f480-4c20-866d-3052606dc99c")
+	)
+	(wire
+		(pts
+			(xy 53.34 124.46) (xy 60.96 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96c2c738-b56a-4264-87dd-4b5067f5e630")
+	)
+	(wire
+		(pts
+			(xy 109.22 127) (xy 113.03 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98e69583-5787-48db-9dca-048203271a08")
 	)
 	(wire
 		(pts
@@ -2161,6 +3486,46 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 104.14) (xy 85.09 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9aa19de0-7e4c-4ef4-b0e8-0b61775502e6")
+	)
+	(wire
+		(pts
+			(xy 50.8 93.98) (xy 57.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3daf8e9-8c8c-4960-9a7b-fdb74aba45ee")
+	)
+	(wire
+		(pts
+			(xy 196.85 132.08) (xy 196.85 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a56993e2-ca4b-47e9-93c0-3ee5f425c178")
+	)
+	(wire
+		(pts
+			(xy 85.09 104.14) (xy 85.09 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab13d53f-268e-45ec-957b-4b36cc576eca")
+	)
+	(wire
+		(pts
 			(xy 100.33 41.91) (xy 109.22 41.91)
 		)
 		(stroke
@@ -2171,6 +3536,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 93.98) (xy 168.91 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab9520e4-62c7-445d-9c4a-ca1b3100691a")
+	)
+	(wire
+		(pts
 			(xy 163.83 31.75) (xy 166.37 31.75)
 		)
 		(stroke
@@ -2178,6 +3553,26 @@
 			(type default)
 		)
 		(uuid "aba07e2e-959e-4801-b581-c3c1dcffbbe4")
+	)
+	(wire
+		(pts
+			(xy 81.28 132.08) (xy 85.09 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abded5fb-ccdc-45ab-9746-6edb4a4bfd4a")
+	)
+	(wire
+		(pts
+			(xy 168.91 121.92) (xy 168.91 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae3154b0-4d25-41f5-ac55-b4a2d3a4da9f")
 	)
 	(wire
 		(pts
@@ -2201,6 +3596,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 124.46) (xy 172.72 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2c36600-6f11-4523-b10f-99539ffdef7f")
+	)
+	(wire
+		(pts
 			(xy 100.33 39.37) (xy 109.22 39.37)
 		)
 		(stroke
@@ -2208,6 +3613,16 @@
 			(type default)
 		)
 		(uuid "b6a620ea-6f66-4ece-ab63-bc54c2f4b301")
+	)
+	(wire
+		(pts
+			(xy 168.91 132.08) (xy 168.91 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b85244b5-5ea4-4f5f-bae6-6c18abe7352c")
 	)
 	(wire
 		(pts
@@ -2221,6 +3636,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 99.06) (xy 113.03 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8b8922e-c8a2-49b9-922d-f90679d862e7")
+	)
+	(wire
+		(pts
 			(xy 33.02 36.83) (xy 38.1 36.83)
 		)
 		(stroke
@@ -2228,6 +3653,26 @@
 			(type default)
 		)
 		(uuid "bb252656-7120-43cf-9696-444a3661cf53")
+	)
+	(wire
+		(pts
+			(xy 193.04 132.08) (xy 196.85 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0c0da7b-a2d5-4428-82c5-f1e7af88d142")
+	)
+	(wire
+		(pts
+			(xy 137.16 104.14) (xy 140.97 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0c64651-6440-4f03-bf75-18dd8ac538cd")
 	)
 	(wire
 		(pts
@@ -2248,6 +3693,16 @@
 			(type default)
 		)
 		(uuid "c21e1e93-3917-4882-832a-4ebde3a2621e")
+	)
+	(wire
+		(pts
+			(xy 57.15 104.14) (xy 57.15 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c342e8d7-6362-4890-99ea-0993f8e12ac8")
 	)
 	(wire
 		(pts
@@ -2301,6 +3756,36 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 58.42) (xy 200.66 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfb33210-309a-4d4a-a59c-5c496a99f30c")
+	)
+	(wire
+		(pts
+			(xy 193.04 104.14) (xy 196.85 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1756b38-6ffb-4123-9199-53815c6d7ea3")
+	)
+	(wire
+		(pts
+			(xy 198.12 60.96) (xy 200.66 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d22250e3-fe60-4bb5-98b7-0584bb4ace84")
+	)
+	(wire
+		(pts
 			(xy 163.83 66.04) (xy 166.37 66.04)
 		)
 		(stroke
@@ -2308,6 +3793,36 @@
 			(type default)
 		)
 		(uuid "d4ea8a0a-74de-4c04-bf57-53a7203ece2e")
+	)
+	(wire
+		(pts
+			(xy 33.02 114.3) (xy 33.02 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7a63eae-c0ff-4369-ad68-0f17a6e34542")
+	)
+	(wire
+		(pts
+			(xy 57.15 132.08) (xy 57.15 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8827f7e-8eb3-45d9-af78-3889b162a41b")
+	)
+	(wire
+		(pts
+			(xy 81.28 127) (xy 85.09 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da3b20ee-037e-4e00-ba69-149ab0271ba4")
 	)
 	(wire
 		(pts
@@ -2331,6 +3846,36 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 93.98) (xy 140.97 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e15ca56a-4e77-4fe3-8cab-def9dc53e9b1")
+	)
+	(wire
+		(pts
+			(xy 199.39 55.88) (xy 200.66 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3bd69b6-5fc0-4ae7-b512-017f0115e606")
+	)
+	(wire
+		(pts
+			(xy 57.15 93.98) (xy 57.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3c2e093-9c29-427a-a9c3-f59814122bfb")
+	)
+	(wire
+		(pts
 			(xy 140.97 39.37) (xy 149.86 39.37)
 		)
 		(stroke
@@ -2338,6 +3883,36 @@
 			(type default)
 		)
 		(uuid "e42d8c07-9781-4871-87b0-2ff5f1827715")
+	)
+	(wire
+		(pts
+			(xy 53.34 101.6) (xy 53.34 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4d2b2dc-77ad-4a17-bea8-7730a52cfb52")
+	)
+	(wire
+		(pts
+			(xy 195.58 34.29) (xy 200.66 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5702b9b-bcb1-4f1c-baea-37356db78126")
+	)
+	(wire
+		(pts
+			(xy 140.97 132.08) (xy 140.97 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5a58a3a-330d-4fae-9deb-5b1754298a10")
 	)
 	(wire
 		(pts
@@ -2381,6 +3956,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 127) (xy 57.15 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f344d467-3211-4433-873b-ffe967256b16")
+	)
+	(wire
+		(pts
 			(xy 142.24 58.42) (xy 166.37 58.42)
 		)
 		(stroke
@@ -2411,6 +3996,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 62.23) (xy 198.12 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fae7dbef-10c9-4fff-8bf7-477d748add03")
+	)
+	(wire
+		(pts
 			(xy 100.33 57.15) (xy 109.22 57.15)
 		)
 		(stroke
@@ -2418,6 +4013,16 @@
 			(type default)
 		)
 		(uuid "fd0e09a5-b2c9-4fcf-abdb-a495e0b4bbf6")
+	)
+	(wire
+		(pts
+			(xy 53.34 132.08) (xy 57.15 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe21cd74-ce6a-47fb-b1e3-91ba656baafb")
 	)
 	(wire
 		(pts
@@ -2429,9 +4034,19 @@
 		)
 		(uuid "feb7f697-338c-4a44-aa27-4551c764642f")
 	)
+	(wire
+		(pts
+			(xy 109.22 96.52) (xy 116.84 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffed535f-bba0-48d8-a787-29c91ea0d8aa")
+	)
 	(rectangle
 		(start 129.54 15.24)
-		(end 184.15 81.28)
+		(end 215.9 81.28)
 		(stroke
 			(width 0.2032)
 			(type dash)
@@ -2454,8 +4069,8 @@
 		(uuid 09df779d-c137-43c4-ab6b-b3c0b2f425b8)
 	)
 	(rectangle
-		(start 15.24 83.82)
-		(end 44.45 116.84)
+		(start 218.44 15.24)
+		(end 247.65 34.29)
 		(stroke
 			(width 0.2032)
 			(type dash)
@@ -2465,9 +4080,21 @@
 		)
 		(uuid 14399331-ffef-41b2-ae32-a9b2b4529fa7)
 	)
+	(rectangle
+		(start 15.24 83.82)
+		(end 236.22 146.05)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 3c9cf9ba-b9de-4fd8-a407-bbf80d19c9b2)
+	)
 	(text "I2C address: 0x2B (100k)"
 		(exclude_from_sim no)
-		(at 57.404 55.118 0)
+		(at 56.134 51.562 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2481,7 +4108,7 @@
 	)
 	(text "I2C address: 0x29 (150k)"
 		(exclude_from_sim no)
-		(at 56.642 47.752 0)
+		(at 56.134 46.482 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2493,9 +4120,19 @@
 		)
 		(uuid "93866acc-b8fd-4a70-bcb6-bd2097f895b1")
 	)
+	(text "LEDs"
+		(exclude_from_sim no)
+		(at 20.828 87.884 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "b3131338-00c0-42aa-97bc-e19ef4d4db04")
+	)
 	(text "Mounting holes"
 		(exclude_from_sim no)
-		(at 28.194 86.868 0)
+		(at 231.394 18.288 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2503,9 +4140,9 @@
 		)
 		(uuid "c4014f86-2211-42b8-aa37-db687790bf49")
 	)
-	(text "Touch Sensors"
+	(text "Touch Sensor"
 		(exclude_from_sim no)
-		(at 29.718 20.574 0)
+		(at 27.94 19.304 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2525,7 +4162,7 @@
 	)
 	(text "I2C address: 0x2C (82k)"
 		(exclude_from_sim no)
-		(at 58.42 58.674 0)
+		(at 56.134 53.848 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2539,7 +4176,7 @@
 	)
 	(text "I2C address: 0x2A (120k)"
 		(exclude_from_sim no)
-		(at 57.404 51.308 0)
+		(at 56.134 49.022 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2586,6 +4223,72 @@
 		(uuid "1e2ae4c8-3a58-4647-a69c-b51f5dcd2b41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 155.0997 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_DATA_OUT"
+		(shape input)
+		(at 199.39 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1f37154a-00b5-4891-a91d-31a5f2cea779")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 215.8009 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_DATA_IN"
+		(shape input)
+		(at 31.75 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "308f359f-1487-4b19-9d4c-26d1fbbb2a59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.0324 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_DATA_OUT"
+		(shape input)
+		(at 199.39 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "30b55bbc-96ae-46fa-a0c1-872b31cdc716")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.9791 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2793,6 +4496,28 @@
 			)
 		)
 	)
+	(global_label "LED_DATA_IN"
+		(shape input)
+		(at 195.58 34.29 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fac8923e-1ad0-4ac8-9235-b0c54a1d8115")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 180.8624 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ALERT"
 		(shape input)
 		(at 101.6 36.83 0)
@@ -2816,6 +4541,607 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 85.09 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "057a0aed-bd1b-4b72-ba29-b1cefce006f1")
+		(property "Reference" "C4"
+			(at 83.312 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 88.138 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 85.09 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 85.09 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f1f3027-f8c9-4f7d-aaa3-3d8eebec6c7d")
+		)
+		(pin "2"
+			(uuid "e165a0ba-6f52-47cb-bd45-f86b1030fd80")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 185.42 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07887345-ef91-4015-80dc-2361e6d7d3f4")
+		(property "Reference" "D6"
+			(at 182.88 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 183.642 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 185.42 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 184.912 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 185.166 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 185.42 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 184.912 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 185.42 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 185.166 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 185.42 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 185.42 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 185.42 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 185.42 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 185.42 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "b5042ac8-46bb-4f23-bb73-656ff5abd186")
+		)
+		(pin "3"
+			(uuid "e53d5a68-d25e-45ab-805e-6783100d78c1")
+		)
+		(pin "2"
+			(uuid "f29e1a23-65f1-4ba0-a479-8215e45a7033")
+		)
+		(pin "1"
+			(uuid "11da6a6c-1b4f-41ec-9ca6-6879f078acf7")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 57.15 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "096d9566-1b02-4d0b-a626-6de6bc6367e0")
+		(property "Reference" "#PWR03"
+			(at 57.15 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 57.15 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 57.15 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9feff85-a221-471b-b265-b19e3e5ff549")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 198.12 62.23 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ddeeda0-f2ef-4af2-ada0-7576fa03c0e7")
+		(property "Reference" "#PWR032"
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 198.12 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 198.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "84fdd635-88da-4bf5-aa59-4c0895ec85e2")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 57.15 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e610670-fa5a-4c2f-94c8-e36b8cce980e")
+		(property "Reference" "C1"
+			(at 55.372 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 60.198 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 57.15 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 57.15 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 57.15 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7bcd8dc-2892-46d1-9db2-e6bb15a1a00c")
+		)
+		(pin "2"
+			(uuid "b51fe34a-ee18-43f6-97fa-6ea5cde7dee0")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 113.03 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0fbdcdd9-6812-432c-a2b7-28039b69ffbb")
+		(property "Reference" "C8"
+			(at 111.252 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 116.078 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 113.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 113.03 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f60b7591-d5c1-49d9-9a3d-eba42f73f221")
+		)
+		(pin "2"
+			(uuid "2bc78585-de76-4ce6-b003-3823bd5f4bdf")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 168.91 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1039e254-15bc-452d-a433-d5993021454e")
+		(property "Reference" "#PWR027"
+			(at 168.91 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 168.91 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 168.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7e62e6b-ca74-411b-a5b0-5ae96645a63e")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 106.68 26.67 0)
 		(unit 1)
@@ -2824,7 +5150,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "175188dd-c774-4dba-a0a6-6bbffc2c4ab6")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR010"
 			(at 106.68 30.48 0)
 			(effects
 				(font
@@ -2874,7 +5200,72 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR02")
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 196.85 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a84366b-8722-48e7-bee6-70e0b626f290")
+		(property "Reference" "#PWR036"
+			(at 196.85 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 196.85 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 196.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f0f05a3-361c-4a39-832a-92f720b14eed")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -2948,6 +5339,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 57.15 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1f898c6c-2148-4b91-bc02-0e5d84948766")
+		(property "Reference" "#PWR04"
+			(at 57.15 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 57.15 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 57.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f946c791-a35d-45c8-8029-44ff66b8bfa5")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 142.24 60.96 0)
 		(mirror y)
@@ -2957,7 +5413,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "20a70cb0-0d0e-4e7b-9d1b-455a514047b2")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR021"
 			(at 142.24 67.31 0)
 			(effects
 				(font
@@ -3007,7 +5463,141 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR05")
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 113.03 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "20ca7796-67d2-4eb6-bd59-ee191e408c6f")
+		(property "Reference" "C7"
+			(at 111.252 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 116.078 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6126836d-9bea-4599-b002-361d5422db35")
+		)
+		(pin "2"
+			(uuid "0861481b-39a9-47b9-b95c-fb68f9abb54c")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 140.97 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "213373c8-70f3-4f30-8dba-b9eb2dfb6b93")
+		(property "Reference" "C9"
+			(at 139.192 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 144.018 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b01b386-b0e2-43fc-b9af-f016fe69c80e")
+		)
+		(pin "2"
+			(uuid "4f831b67-0c65-4611-a894-3a15bd503775")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -3103,7 +5693,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "246bd2ff-3af2-4730-9064-324c3ec65507")
-		(property "Reference" "#FLG01"
+		(property "Reference" "#FLG02"
 			(at 140.97 34.925 0)
 			(effects
 				(font
@@ -3153,7 +5743,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#FLG01")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -3168,7 +5758,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "34aadc95-eaf9-493f-90e3-0582bf3b886e")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG03"
 			(at 140.97 41.275 0)
 			(effects
 				(font
@@ -3218,7 +5808,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#FLG02")
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -3233,7 +5823,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3eeb34a4-4348-4233-88c7-f09662adaf2f")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR024"
 			(at 149.86 48.26 0)
 			(effects
 				(font
@@ -3283,7 +5873,415 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR08")
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 45.72 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "41ab1f9c-3d37-428a-bd8f-b0d33fe2907d")
+		(property "Reference" "D1"
+			(at 43.18 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 43.942 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 45.72 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 45.72 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 45.72 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 45.212 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 45.466 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 45.72 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 45.212 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 45.72 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 45.466 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 45.72 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 45.72 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 45.72 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 45.72 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 45.72 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "46473e24-cb55-46eb-ab7e-6a12d1dee9f2")
+		)
+		(pin "3"
+			(uuid "753ef4a2-e7b2-4d5f-b47d-19e61d859cfe")
+		)
+		(pin "2"
+			(uuid "300c2b39-cf05-47d3-8e68-2619fbeb4e70")
+		)
+		(pin "1"
+			(uuid "66d17750-eb61-45ec-a52e-7d7d374ab24c")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 185.42 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45fb64bb-9dbb-4336-8736-e371370337a9")
+		(property "Reference" "D12"
+			(at 182.88 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 183.642 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 185.42 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 185.42 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 185.42 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 184.912 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 185.166 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 185.42 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 184.912 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 185.42 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 185.166 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 185.42 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 185.42 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 185.42 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 185.42 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 185.42 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "0c2592ae-9291-4b66-87dd-74086c743e42")
+		)
+		(pin "3"
+			(uuid "eb139b54-dc50-45ec-8170-b1fe91575053")
+		)
+		(pin "2"
+			(uuid "10c19216-09e6-4f9b-8f45-084cd1562148")
+		)
+		(pin "1"
+			(uuid "5fe872a1-50c9-4a82-8bd3-85206a5488f9")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -3291,7 +6289,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 22.86 92.71 0)
+		(at 226.06 24.13 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -3300,7 +6298,7 @@
 		(fields_autoplaced yes)
 		(uuid "49049dd6-fd61-4fb2-a920-2c76253e8efb")
 		(property "Reference" "H1"
-			(at 25.4 91.4399 0)
+			(at 228.6 22.8599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3309,7 +6307,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 25.4 93.9799 0)
+			(at 228.6 25.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3318,7 +6316,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 22.86 92.71 0)
+			(at 226.06 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3327,7 +6325,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 22.86 92.71 0)
+			(at 226.06 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3336,7 +6334,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 22.86 92.71 0)
+			(at 226.06 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3354,6 +6352,210 @@
 		)
 	)
 	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 73.66 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "493e66cb-ab36-4072-88d0-2348e2dcf76f")
+		(property "Reference" "D8"
+			(at 71.12 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 71.882 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 73.66 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 73.152 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 73.406 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 73.66 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 73.152 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 73.66 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 73.406 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 73.66 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 73.66 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 73.66 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 73.66 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "863d40a6-f36a-41d1-b4be-3d78beae3fa4")
+		)
+		(pin "3"
+			(uuid "e7600a0f-51a2-4d6d-aa17-3ca94d59eab7")
+		)
+		(pin "2"
+			(uuid "4d71441a-0d3f-4167-9aa7-f375bf101dd3")
+		)
+		(pin "1"
+			(uuid "81bde89b-a4c1-4d50-b187-0d6c8d6bab36")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 147.32 64.77 0)
 		(unit 1)
@@ -3362,7 +6564,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4c6e6c8e-2f9c-493c-b2d7-df5db0e14896")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR022"
 			(at 147.32 68.58 0)
 			(effects
 				(font
@@ -3412,42 +6614,39 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR06")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 22.86 97.79 0)
+		(lib_id "Device:C_Small")
+		(at 168.91 129.54 180)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "60f8f869-ed72-42db-961b-85e23a383589")
-		(property "Reference" "H2"
-			(at 25.4 96.5199 0)
+		(uuid "50a6ee23-729a-4f68-9ee1-1134675cdbd1")
+		(property "Reference" "C12"
+			(at 166.624 128.016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 25.4 99.0599 0)
+		(property "Value" "0.1uF"
+			(at 171.958 128.016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 22.86 97.79 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 168.91 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3456,7 +6655,207 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 22.86 97.79 0)
+			(at 168.91 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 168.91 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "90bce8c2-0355-40ab-b6c1-22011cf6a60b")
+		)
+		(pin "2"
+			(uuid "48605313-ae78-4806-b2e6-3d004b15dcdc")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 50.8 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5dbe9955-7c0e-44c0-986e-e3bfa0b8cdca")
+		(property "Reference" "#FLG01"
+			(at 50.8 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 48.514 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a1675de-1a43-4820-867c-6d99f36f669f")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 140.97 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5def0c52-a7bd-4c32-9996-0052397ad696")
+		(property "Reference" "#PWR019"
+			(at 140.97 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 140.97 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 140.97 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a913392-e605-4dfd-9b4f-e1c7fdaaad54")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 226.06 29.21 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60f8f869-ed72-42db-961b-85e23a383589")
+		(property "Reference" "H2"
+			(at 228.6 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 228.6 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 226.06 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3465,7 +6864,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 22.86 97.79 0)
+			(at 226.06 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3483,35 +6882,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 22.86 107.95 0)
+		(lib_id "Device:C_Small")
+		(at 196.85 129.54 180)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "635ac719-dbb1-4889-8910-1771bb53e75e")
-		(property "Reference" "H4"
-			(at 25.4 106.6799 0)
+		(uuid "616190de-a91d-406b-9d05-6e536ebf6d0f")
+		(property "Reference" "C14"
+			(at 194.564 128.016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 25.4 109.2199 0)
+		(property "Value" "0.1uF"
+			(at 199.898 128.016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 22.86 107.95 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 196.85 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3520,7 +6916,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 22.86 107.95 0)
+			(at 196.85 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3528,36 +6924,41 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 22.86 107.95 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 196.85 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "e191850e-0808-4776-89c4-bca16edbc7cc")
+		)
+		(pin "2"
+			(uuid "29d8c9ea-f2f5-4d24-b199-742876c42279")
 		)
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "H4")
+					(reference "C14")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 22.86 102.87 0)
+		(lib_id "Connector:Conn_01x03_Socket")
+		(at 205.74 31.75 0)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "70182555-39cb-4062-8393-e7837aa6448e")
-		(property "Reference" "H3"
-			(at 25.4 101.5999 0)
+		(uuid "61c5c128-a687-44a7-8b8e-167359815655")
+		(property "Reference" "J3"
+			(at 197.612 23.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3565,8 +6966,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 25.4 104.1399 0)
+		(property "Value" "Conn_01x03_Socket"
+			(at 189.992 25.6539 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3574,8 +6975,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 22.86 102.87 0)
+		(property "Footprint" "Connector_JST:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
+			(at 205.74 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3584,7 +6985,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 22.86 102.87 0)
+			(at 205.74 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3592,19 +6993,833 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 22.86 102.87 0)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 205.74 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "2"
+			(uuid "2a0b0df0-ee79-443c-9f06-c78d5c8790d7")
+		)
+		(pin "1"
+			(uuid "454f5526-7e4d-4486-ab21-11db7ccf8e99")
+		)
+		(pin "3"
+			(uuid "770cd6e1-14cd-4c6d-8da4-49468b4b1816")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 168.91 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "629f11ea-47c5-408d-bdb1-317752f3b4f2")
+		(property "Reference" "#PWR028"
+			(at 168.91 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 168.91 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d9e76e7-056e-4821-87a6-896f0feb159a")
 		)
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "H3")
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 196.85 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "68412963-e0ab-4035-8a20-5efd61b8e0ae")
+		(property "Reference" "#PWR033"
+			(at 196.85 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 196.85 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 196.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "63282508-8f03-44ca-8a35-f1b4e42e7148")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 129.54 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e4617cd-ef74-4ea8-a636-c6d35f67325a")
+		(property "Reference" "D4"
+			(at 127 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 127.762 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 129.54 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 129.032 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 129.286 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 129.54 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 129.032 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 129.54 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 129.286 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 129.54 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 129.54 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 129.54 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 129.54 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "d10cf750-51b2-446d-a02e-3f143fe4de36")
+		)
+		(pin "3"
+			(uuid "d8df7cf1-2ff6-4744-a0fe-34ef03a2edf2")
+		)
+		(pin "2"
+			(uuid "6fa6cd2b-6394-4132-8d9c-1a72bb79f210")
+		)
+		(pin "1"
+			(uuid "afbc718a-4cad-4441-a1d9-080cc95a7975")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 113.03 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "71703c16-5c0d-4d02-8999-5a536bdf40ec")
+		(property "Reference" "#PWR013"
+			(at 113.03 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 113.03 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1ec728c-976b-42a7-b6ae-e9a5685af11f")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Socket")
+		(at 205.74 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72b0e4ed-4ca7-4c95-b76d-7024bcb76a6e")
+		(property "Reference" "J4"
+			(at 197.612 50.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x03_Socket"
+			(at 189.992 52.3239 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
+			(at 205.74 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 205.74 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 205.74 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5b113ffa-34be-4fec-ae23-98197955d151")
+		)
+		(pin "1"
+			(uuid "c21ccaad-bfc1-498e-9452-63b9e0264cb9")
+		)
+		(pin "3"
+			(uuid "9314eba0-a6c4-4c32-b3c3-6d46267813cd")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 85.09 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "765abe77-a663-46f4-a4d7-6465ffb4e891")
+		(property "Reference" "#PWR06"
+			(at 85.09 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 85.09 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c77e1645-a4d9-403d-8bb2-d404306d06a7")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 157.48 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7742630a-f3c2-4c94-a69e-d90463af170d")
+		(property "Reference" "D5"
+			(at 154.94 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 155.702 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 157.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 157.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 157.48 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 156.972 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 157.226 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 157.48 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 156.972 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 157.48 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 157.226 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 157.48 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 157.48 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 157.48 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 157.48 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 157.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "58e0cc14-4bf3-452e-b058-b9c9fbf9be1a")
+		)
+		(pin "3"
+			(uuid "d0592663-2618-40cc-9565-ffc1ad200d4c")
+		)
+		(pin "2"
+			(uuid "8b2b000c-b052-4408-81fe-464fdc348cb3")
+		)
+		(pin "1"
+			(uuid "4c985e0d-eaae-4913-9264-7059d7758521")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 181.61 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "79454388-383a-45ad-ac65-363f14e27a6c")
+		(property "Reference" "#PWR029"
+			(at 181.61 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 181.61 25.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 181.61 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f89f9ea-f5e1-4ea0-9ddf-60c621fb1699")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -3812,6 +8027,277 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 196.85 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "903559ca-2fbe-42d6-9576-61c54cf2e461")
+		(property "Reference" "C13"
+			(at 194.564 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 199.898 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 196.85 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 196.85 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 196.85 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd0bfe52-1253-4851-9ca5-21da75bb41d0")
+		)
+		(pin "2"
+			(uuid "fbf7c892-4ee4-4b6d-bec0-04c533f59542")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 101.6 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "903e835f-9c1d-4462-88fa-725a07cae37a")
+		(property "Reference" "D9"
+			(at 99.06 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 99.822 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 101.6 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 101.092 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 101.346 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 101.6 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 101.092 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 101.6 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 101.346 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 101.6 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 101.6 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 101.6 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 101.6 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f496c36e-c029-4d74-8d78-37c3db4952e0")
+		)
+		(pin "3"
+			(uuid "c4da9177-c0d8-4ac8-8f60-a6bfe154d760")
+		)
+		(pin "2"
+			(uuid "c4112697-437f-40a7-85d3-d48795afc6ff")
+		)
+		(pin "1"
+			(uuid "e2650796-f563-4546-b4e5-8a774961ad2f")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Socket")
 		(at 171.45 60.96 0)
 		(unit 1)
@@ -3901,7 +8387,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "97df38fa-2030-426d-b10e-8006a27ec3b7")
-		(property "Reference" "C2"
+		(property "Reference" "C6"
 			(at 110.998 30.48 90)
 			(effects
 				(font
@@ -3955,7 +8441,406 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "C2")
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 101.6 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9d33f736-af75-4564-8ae7-50c9deffc7cd")
+		(property "Reference" "D3"
+			(at 99.06 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 99.822 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 101.6 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 101.6 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 101.6 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 101.092 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 101.346 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 101.6 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 101.092 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 101.6 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 101.346 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 101.6 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 101.6 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 101.6 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 101.6 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 101.6 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "29a09160-ae74-4c7d-a85d-d3c7cfdccd57")
+		)
+		(pin "3"
+			(uuid "beccc724-1c04-4944-a5ce-76d457ac61dd")
+		)
+		(pin "2"
+			(uuid "1af92f17-03f9-4142-acd2-3cab5c1f2812")
+		)
+		(pin "1"
+			(uuid "b7a196e8-881d-4474-9648-2123fdb42e3a")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 113.03 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ebacf37-3c30-4929-8c19-4a6e551e0e59")
+		(property "Reference" "#PWR014"
+			(at 113.03 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 113.03 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 113.03 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5758f9b2-b185-4ca3-bbac-2b7a256014bf")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 113.03 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1a62bae-1f98-4697-baec-2f5c014e02dc")
+		(property "Reference" "#PWR015"
+			(at 113.03 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 113.03 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3426f06c-6dea-4b69-8da7-eef984a8d122")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 85.09 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a71a5d9e-79ca-4d3a-a343-36aaf90d6c2d")
+		(property "Reference" "#PWR07"
+			(at 85.09 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "71f79758-cfd8-443e-b116-477104953bcd")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -3970,7 +8855,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a82cb9f3-d5bf-4eb1-aab5-5002339d3edf")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR011"
 			(at 107.95 77.47 0)
 			(effects
 				(font
@@ -4020,7 +8905,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR03")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -4035,7 +8920,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aa3e30c4-b0fa-4ab4-bcbe-b9c269c2d1b6")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR023"
 			(at 149.86 38.1 0)
 			(effects
 				(font
@@ -4085,7 +8970,7 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR07")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -4231,6 +9116,202 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 179.07 57.15 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af488a31-07d1-4992-9ef3-53d5820ec600")
+		(property "Reference" "#PWR030"
+			(at 179.07 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 179.07 53.594 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 179.07 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 179.07 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16940865-65f4-4a75-8347-26e076852edd")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 196.85 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0dced0f-7f75-43a5-b052-dc496fee5bc7")
+		(property "Reference" "#PWR035"
+			(at 196.85 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 196.85 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 196.85 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f84823c-a3bd-473c-9172-4910876fcc49")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.97 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b95e9241-25f0-4c92-a343-f3e44ef29691")
+		(property "Reference" "#PWR020"
+			(at 140.97 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4abed4b4-fff1-4fb5-b249-b37499a426ef")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
 		(at 114.3 46.99 0)
 		(unit 1)
@@ -4292,6 +9373,609 @@
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
 					(reference "K4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 157.48 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bdc7b665-6d93-4bd0-9de3-c39abe5a31d6")
+		(property "Reference" "D11"
+			(at 154.94 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 155.702 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 157.48 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 157.48 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 157.48 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 157.48 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 156.972 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 157.226 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 157.48 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 156.972 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 157.48 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 157.226 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 157.48 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 157.48 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 157.48 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 157.48 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 157.48 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "09180eb8-d4eb-4c66-a8fe-d04b18595796")
+		)
+		(pin "3"
+			(uuid "ec6eff34-cb57-40a1-8a05-f77c4f2db6e4")
+		)
+		(pin "2"
+			(uuid "47b48414-ad09-4e25-85a1-7230c953bb74")
+		)
+		(pin "1"
+			(uuid "2a9e3c63-ee10-470c-9e3e-b9b38f8445f8")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.97 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0581a7a-d53e-4858-82bb-67dd76fff072")
+		(property "Reference" "#PWR018"
+			(at 140.97 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a25dfc0-8593-45d0-9dac-9f6608cc6d7b")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 113.03 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3d6b868-2f68-4a38-ae99-c5251002fe74")
+		(property "Reference" "#PWR012"
+			(at 113.03 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 113.03 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 113.03 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd8a2bfb-835e-4af8-90dd-3223612f1dea")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 85.09 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5255de7-5311-438f-87e4-6971545a08da")
+		(property "Reference" "#PWR08"
+			(at 85.09 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 85.09 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 85.09 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01a4dd14-779b-4f7d-a64b-0675eae65136")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 45.72 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7d981db-1d1c-450c-a99f-940ccfcfee3b")
+		(property "Reference" "D7"
+			(at 43.18 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 43.942 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 45.72 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 45.72 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 45.72 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 45.212 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 45.466 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 45.72 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 45.212 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 45.72 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 45.466 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 45.72 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 45.72 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 45.72 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 45.72 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 45.72 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "e75f76b0-8cbc-4fc1-8ffd-93df06f4d395")
+		)
+		(pin "3"
+			(uuid "d20b0c86-dea7-4b0e-93db-3612a4094cc7")
+		)
+		(pin "2"
+			(uuid "a2e68615-db1d-4a27-bfbc-9f10570d00e4")
+		)
+		(pin "1"
+			(uuid "87d46a1c-2ff6-488a-983c-4a2252bc7bc6")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -4459,6 +10143,680 @@
 		)
 	)
 	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 129.54 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc5d7d4c-bdfe-4222-8f4f-7108ff107127")
+		(property "Reference" "D10"
+			(at 127 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 127.762 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 129.54 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 129.54 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 129.54 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 129.032 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 129.286 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 129.54 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 129.032 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 129.54 135.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 129.286 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 129.54 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 129.54 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 129.54 135.382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 129.54 134.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 129.54 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "128eceba-834a-44d5-a58b-51e46d1b1d3f")
+		)
+		(pin "3"
+			(uuid "a1eca832-c1b8-4679-a9e2-a0c3550da201")
+		)
+		(pin "2"
+			(uuid "b969990c-72a4-4790-b893-0858e68cf251")
+		)
+		(pin "1"
+			(uuid "499bf26c-9767-4798-8f23-ad7397fa351c")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 168.91 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cf880161-5213-4ba3-9486-6477750123dd")
+		(property "Reference" "C11"
+			(at 166.624 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 171.958 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 168.91 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 168.91 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 168.91 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "edea64c5-5927-4c21-b559-ad3ec2b12691")
+		)
+		(pin "2"
+			(uuid "03bb0f3a-2f3e-4dfa-824f-3a082cf13f29")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 168.91 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5af32d8-2496-4bdb-a024-573287155184")
+		(property "Reference" "#PWR026"
+			(at 168.91 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 168.91 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f6fed7c-0332-4f23-9dba-d4e8cf0d9310")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 85.09 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "db1aebe7-2991-4786-87ff-5679074baf72")
+		(property "Reference" "C3"
+			(at 83.312 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 88.138 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 85.09 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3c7399e-c8fe-4e52-82f9-70ba0390d772")
+		)
+		(pin "2"
+			(uuid "56a4d91c-1c01-4728-8467-2b6ff0cf58bf")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WS2812B-4020:WS2812B-4020")
+		(at 73.66 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "db43c0ac-d9cf-4f88-859e-8233f0084228")
+		(property "Reference" "D2"
+			(at 71.12 93.726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B-4020"
+			(at 71.882 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+			(at 73.66 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Worldsemi"
+			(at 73.66 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "2.05 mm"
+			(at 73.66 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 73.152 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 73.406 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=eda"
+			(at 73.66 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 73.152 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "V1.2"
+			(at 73.66 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/WS2812B-4020/Worldsemi/view-part/?ref=snap"
+			(at 73.406 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "WS2812B-4020"
+			(at 73.66 106.934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            12mA RGB SMD,2x4mm Light Emitting Diodes\n                        \n"
+			(at 73.66 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Worldsemi"
+			(at 73.66 107.442 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 73.66 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "WS2812B-4020"
+			(at 73.66 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "039bb19a-2d04-48a7-a5ef-7c309d1e6333")
+		)
+		(pin "3"
+			(uuid "4d47e9bf-14f2-4bd8-96a1-7c338061bbda")
+		)
+		(pin "2"
+			(uuid "6fa4371a-28e8-4a67-b2b5-60337fe1695e")
+		)
+		(pin "1"
+			(uuid "182b78b3-c2e6-483d-9488-f8dc41f642ba")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 57.15 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de290c06-e18a-46d4-9190-fa7b0ec6b65f")
+		(property "Reference" "C2"
+			(at 55.372 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 60.198 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 57.15 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 57.15 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 57.15 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f25ecab5-54f0-4da1-8462-51c6ef0396f1")
+		)
+		(pin "2"
+			(uuid "f976d109-cc22-4cbf-a3b0-beb1ee0a274f")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 119.38 31.75 0)
 		(mirror y)
@@ -4468,7 +10826,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e6c5bf34-d134-4fe8-a16d-6285ef746b8e")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR016"
 			(at 119.38 38.1 0)
 			(effects
 				(font
@@ -4518,7 +10876,332 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "#PWR04")
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 168.91 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e6f208ab-0ba9-42f8-b0f4-9381a124096c")
+		(property "Reference" "#PWR025"
+			(at 168.91 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 168.91 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 168.91 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ec475ae-1073-407b-915f-08bba7afab92")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 85.09 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e873219a-c638-4656-ac51-a4edcda7e680")
+		(property "Reference" "#PWR09"
+			(at 85.09 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 85.09 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b901e877-12b1-45de-8c01-394b631d44b6")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 57.15 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ecb5b821-1c32-4a1e-a42b-c3486a815eb4")
+		(property "Reference" "#PWR02"
+			(at 57.15 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 57.15 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 57.15 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc414aa8-dcdf-4f6c-b9cd-a2930de8adfe")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 57.15 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ee1e11ac-399f-4428-ada4-f4a713b26a6c")
+		(property "Reference" "#PWR05"
+			(at 57.15 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 57.15 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 57.15 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff7a923c-ce71-4915-a58a-36f09376ab0c")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 140.97 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef325f04-67c4-45d8-908e-2d6dc72e53f3")
+		(property "Reference" "#PWR017"
+			(at 140.97 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 140.97 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 140.97 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75df62d4-db36-422f-b1d4-325d09deb1b5")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -4533,7 +11216,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eff4a4dd-cf5f-4aec-8cdd-6d2a1729da7a")
-		(property "Reference" "C1"
+		(property "Reference" "C5"
 			(at 110.998 26.67 90)
 			(effects
 				(font
@@ -4587,7 +11270,139 @@
 		(instances
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "C1")
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 198.12 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f1e878af-caaf-4c61-b404-9b6dfb3f8338")
+		(property "Reference" "#PWR031"
+			(at 198.12 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 198.12 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 198.12 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d94de67-a6b3-42ef-8131-a707f535434e")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 140.97 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f30229c6-d3ca-44c2-baed-51ffdedf0b2a")
+		(property "Reference" "C10"
+			(at 138.684 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 144.018 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 140.97 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 140.97 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86ffedec-8000-44bc-a71f-316fac27309a")
+		)
+		(pin "2"
+			(uuid "d704e390-2438-4785-8b48-dadea79fef30")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -4791,6 +11606,71 @@
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
 					(reference "K8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 196.85 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f93dc126-4847-4e28-8cda-c840ab663d74")
+		(property "Reference" "#PWR034"
+			(at 196.85 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 196.85 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 196.85 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "974868df-572e-4d15-a319-ca9e6fc71664")
+		)
+		(instances
+			(project "touch-pads"
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)

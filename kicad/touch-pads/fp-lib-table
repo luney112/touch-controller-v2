@@ -3,4 +3,5 @@
   (lib (name "CAP1188_1_CP_TR")(type "KiCad")(uri "${KIPRJMOD}/../lib/CAP1188_1_CP_TR/CAP1188_1_CP_TR.pretty")(options "")(descr ""))
   (lib (name "TouchKey")(type "KiCad")(uri "${KIPRJMOD}/../lib/TouchKey/TouchKey.pretty")(options "")(descr ""))
   (lib (name "Logo")(type "KiCad")(uri "${KIPRJMOD}/../lib/Logo/Logo.pretty")(options "")(descr ""))
+  (lib (name "WS2812B-4020")(type "KiCad")(uri "${KIPRJMOD}/../lib/WS2812B-4020/WS2812B-4020.pretty")(options "")(descr ""))
 )
