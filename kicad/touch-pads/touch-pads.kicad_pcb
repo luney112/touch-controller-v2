@@ -125,7 +125,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "39f5ac27-5cd9-46c5-ba76-a140ac78b638")
@@ -564,7 +564,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "621bcf86-d2c6-4645-abb7-412cd79a950c")
@@ -1003,7 +1003,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "c5bd4316-9484-4437-a75b-bb08a0565a8e")
@@ -1442,7 +1442,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "33aa0cb3-1bd5-4816-89d8-2211a784f1df")
@@ -1881,7 +1881,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "bf3b2920-fe36-47c6-9841-99b906043859")
@@ -2320,7 +2320,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "3f6ff2d1-0ed6-44b7-b4b5-848777d03ac2")
@@ -2995,7 +2995,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "6c66f171-56a8-4342-b3ca-a74cb9210e21")
@@ -3434,7 +3434,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "6dbcff23-af50-4d52-a60c-53712cc393d5")
@@ -3987,7 +3987,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "23ecd868-fea8-494e-b582-e329696cb328")
@@ -4544,7 +4544,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "3cb673bb-0577-446f-b516-35dc6d9fb4d7")
@@ -5219,7 +5219,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "928744ed-c124-4296-91b7-b6a778b8d0c4")
@@ -5772,7 +5772,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_WS2812B-4020"
+		(property "Value" "WS2812B-4020"
 			(at 7.92 3.185 0)
 			(layer "F.Fab")
 			(uuid "17b6829c-3deb-4ceb-a2fe-6e7d514bc8bd")
