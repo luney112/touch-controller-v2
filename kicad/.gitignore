@@ -4,9 +4,6 @@
 # bom
 bom/
 
-# gerber
-gerber/
-
 # Temporary files
 *.000
 *.bak
