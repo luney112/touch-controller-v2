@@ -132,7 +132,7 @@
 		(descr "ESP32-S3-WROOM-1 is a powerful, generic Wi-Fi + Bluetooth LE MCU modules that have Dual core CPU , a rich set of peripherals, provides acceleration for neural network computing and signal processing workloads. They are an ideal choice for a wide variety of application scenarios related to AI + Internet of Things (AIoT), such as wake word detection and speech commands recognition , face detection and recognition, smart home, smart appliance, smart control panel, smart speaker etc.")
 		(tags "esp32-s3")
 		(property "Reference" "U3"
-			(at 0 -17.05 180)
+			(at 11.4 -14.64 180)
 			(layer "F.SilkS")
 			(uuid "f6ad6cda-7687-4e21-b3f5-90867d38c0da")
 			(effects
@@ -904,7 +904,7 @@
 		(descr "module CMS SOT223 4 pins")
 		(tags "CMS SOT")
 		(property "Reference" "U5"
-			(at 5.45 1.5 180)
+			(at 5.45 2.75 180)
 			(layer "F.SilkS")
 			(uuid "cdc5afdb-fa46-4551-85ee-2480e3dd2163")
 			(effects
