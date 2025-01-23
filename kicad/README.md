@@ -12,6 +12,12 @@ There are two different PCB types: `mainboard` and `touch-pads`.
 - Has the touch pads and LEDs
 - 4 copies of the board is required
 
+### development
+
+- Use KiCad 8+
+- Install the [espressif libraries](https://github.com/espressif/kicad-libraries)
+- Install interactive html bom plugin
+
 ### manufacturing
 
 - The `gerber.zip` files that are committed should be enough for manufacturing
