@@ -4,8 +4,6 @@
 #include <CRC32.h>
 #include <FastLED.h>
 
-#define ENABLE_RGBW 1
-
 #define _HSV(h, s, v) (h * 255.0 / 360.0), (s * 255.0 / 100.0), (v * 255.0 / 100.0)
 
 const CRGB ColorUntouched = CHSV(_HSV(51, 100, 100));
@@ -19,11 +17,7 @@ constexpr uint8_t LedBrightness = 12;
 void LedController::init(SerialController *serial) {
   this->serial = serial;
 
-#ifdef ENABLE_RGBW
-  FastLED.addLeds<WS2812B, GPIO_LED_DATA, BRG>(leds, LED_COUNT).setRgbw(RgbwDefault());
-#else
-  FastLED.addLeds<WS2812B, GPIO_LED_DATA, GRB>(leds, LED_COUNT);
-#endif
+  FastLED.addLeds<SK6812, GPIO_LED_DATA, GRB>(leds, LED_COUNT);
 
   for (int i = 0; i < LED_COUNT; i++) {
     leds[i] = CRGB::Black;
