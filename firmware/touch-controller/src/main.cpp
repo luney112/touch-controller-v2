@@ -32,11 +32,15 @@ unsigned long startTime = 0;
 
 void setup() {
   delay(1000); // Needed for some reason to get complete serial output
+  Wire.begin();
 
   serial.init(&led); // Should be first
   led.init(&serial);
-  touch.init(&serial);
+  touch.begin(&serial);
+  air.begin(&serial);
+
   air.init();
+  touch.init();
 
   uint32_t clock = Wire.getClock();
   serial.writeDebugLogf("Wire clock speed is %d hz", clock);
@@ -45,7 +49,6 @@ void setup() {
   led.calibrate();
   delay(500);
   serial.writeDebugLog("Calibrating...")->processWrite();
-  air.calibrate();
   serial.writeDebugLog("Finished calibrating!")->processWrite();
   led.setAllUntouched();
 
@@ -63,7 +66,7 @@ void loop() {
   unsigned long dt = micros() - start;
   if (count >= LatencyMetricSampleCount * 8) {
     unsigned long us = sum / count;
-    serial.writeDebugLogf("Latency metric for processing serial write: %d us", us);
+    // serial.writeDebugLogf("Latency metric for processing serial write: %d us", us);
     sum = 0;
     count = 0;
   }

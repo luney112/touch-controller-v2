@@ -8,20 +8,25 @@ constexpr uint8_t Register_MultipleTouch = 0x2A;
 
 constexpr uint8_t Register_MainControl_InterruptBit = 0x01;
 
-boolean CAP1188::begin(uint8_t i2cAddr, TwoWire *theWire) {
+bool CAP1188::begin() {
+  // Cap1188 starts off disabled
+  if (this->resetPin > 0) {
+    pinMode(this->resetPin, OUTPUT);
+    disable();
+  }
+
+  return true;
+}
+
+bool CAP1188::init(uint8_t i2cAddr, TwoWire *theWire) {
+  // Reset the sensor
+  disable();
+  enable();
+
+  // Begin
   this->i2cDevice = new Adafruit_I2CDevice(i2cAddr, theWire);
   if (!this->i2cDevice->begin()) {
     return false;
-  }
-
-  if (this->resetPin != -1) {
-    pinMode(this->resetPin, OUTPUT);
-    digitalWrite(this->resetPin, LOW);
-    delay(100);
-    digitalWrite(this->resetPin, HIGH);
-    delay(100);
-    digitalWrite(this->resetPin, LOW);
-    delay(100);
   }
 
   // Main register (default is [00 0 0 000 0])
@@ -44,6 +49,22 @@ boolean CAP1188::begin(uint8_t i2cAddr, TwoWire *theWire) {
   writeRegister(Register_MultipleTouch, 0x0);
 
   return true;
+}
+
+void CAP1188::enable() {
+  if (this->resetPin > 0) {
+    digitalWrite(this->resetPin, LOW);
+    delay(50);
+  }
+}
+
+void CAP1188::disable() {
+  if (this->resetPin > 0) {
+    // The RESET pin is an active high reset that is driven from an external source.
+    // While it is asserted high, all the internal blocks will be held in reset including the communications protocol
+    digitalWrite(this->resetPin, HIGH);
+    delay(50);
+  }
 }
 
 uint8_t CAP1188::touched() {

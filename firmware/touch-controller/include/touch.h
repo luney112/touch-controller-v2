@@ -17,7 +17,8 @@ struct TouchData {
 
 class TouchController {
 public:
-  bool init(SerialController *serial);
+  bool begin(SerialController *serial);
+  bool init();
   void getTouchStatus(TouchData &data);
 
 private:

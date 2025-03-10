@@ -23,6 +23,7 @@ enum FramedPacketHeader {
 void SerialController::init(LedController *ledController) {
   Serial.begin(SerialBaudRate);
   writeDebugLog("-------------------------------------")->processWrite();
+  writeDebugLog("Initialized serial")->processWrite();
   this->ledController = ledController;
 }
 

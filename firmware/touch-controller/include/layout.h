@@ -21,6 +21,9 @@ enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
 #define CAP1188_ADDR_2 0x2B
 #define CAP1188_ADDR_3 0x2C
 
+#define TOF_ADDR_LEFT (0x2D << 1)
+#define TOF_ADDR_RIGHT (0x2E << 1)
+
 #define LED_OFFSET 0         // Offset from the first LED
 #define LED_SEGMENT_COUNT 47 // 16 keys (x2) and 15 dividers
 #define LED_COUNT (LED_OFFSET + LED_SEGMENT_COUNT)

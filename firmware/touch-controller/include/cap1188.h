@@ -1,3 +1,6 @@
+#ifndef CAP1188_H
+#define CAP1188_H
+
 #include "Arduino.h"
 #include <Adafruit_I2CDevice.h>
 
@@ -5,7 +8,10 @@ class CAP1188 {
 public:
   CAP1188(int8_t resetPin = -1) { this->resetPin = resetPin; }
 
-  boolean begin(uint8_t i2cAddr, TwoWire *theWire = &Wire);
+  bool begin();
+  bool init(uint8_t i2cAddr, TwoWire *theWire = &Wire);
+  void enable();
+  void disable();
   uint8_t touched();
 
 private:
@@ -15,3 +21,5 @@ private:
   Adafruit_I2CDevice *i2cDevice = NULL;
   int8_t resetPin;
 };
+
+#endif
