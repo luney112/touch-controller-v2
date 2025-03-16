@@ -7,7 +7,7 @@
 
 constexpr uint32_t WireClockSpeed = 400000;
 
-constexpr uint8_t CapAddressMap[4] = {CAP1188_ADDR_0, CAP1188_ADDR_1, CAP1188_ADDR_2, CAP1188_ADDR_3};
+constexpr uint8_t AddressMap[Cap1188Count] = {CAP1188_ADDR_0, CAP1188_ADDR_1, CAP1188_ADDR_2, CAP1188_ADDR_3};
 
 bool TouchController::begin(SerialController *serial) {
   this->serial = serial;
@@ -16,7 +16,7 @@ bool TouchController::begin(SerialController *serial) {
   Wire.setClock(WireClockSpeed);
 #endif
 
-  for (int i = 0; i < CAP1188_COUNT; i++) {
+  for (int i = 0; i < Cap1188Count; i++) {
     this->caps[i] = CAP1188(GPIO_TOUCH_RESET);
     this->caps[i].begin();
   }
@@ -25,8 +25,8 @@ bool TouchController::begin(SerialController *serial) {
 }
 
 bool TouchController::init() {
-  for (int i = 0; i < CAP1188_COUNT; i++) {
-    auto i2cAddress = CapAddressMap[i];
+  for (int i = 0; i < Cap1188Count; i++) {
+    auto i2cAddress = AddressMap[i];
     if (!this->caps[i].init(i2cAddress)) {
       serial->writeDebugLogf("[ERROR] Unable to initialize CAP1188 %#02X", i2cAddress)->processWrite();
       return false;
@@ -39,7 +39,7 @@ bool TouchController::init() {
 
 void TouchController::getTouchStatus(TouchData &data) {
   data.touched = 0;
-  for (int i = 0; i < CAP1188_COUNT; i++) {
+  for (int i = 0; i < Cap1188Count; i++) {
     data.touched |= this->caps[i].touched() << (i * 8);
   }
 }

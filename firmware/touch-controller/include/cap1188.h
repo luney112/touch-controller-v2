@@ -12,7 +12,7 @@ public:
   bool init(uint8_t i2cAddr, TwoWire *theWire = &Wire);
   void enable();
   void disable();
-  uint8_t touched();
+  uint8_t touched(); // Touch status is in LSB ordering (Key1=bit0, key2=bit1, ...)
 
 private:
   uint8_t readRegister(uint8_t reg);

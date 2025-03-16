@@ -1,7 +1,6 @@
 #ifndef AIR_H
 #define AIR_H
 
-#include "layout.h"
 #include <cstdint>
 #include <vl53l7cx_class.h>
 

@@ -195,7 +195,7 @@ void processSensorDataTest() {
 
   // Read and update slider
   touch.getTouchStatus(touchData);
-  uint16_t touched = touchData.touched;
+  uint32_t touched = touchData.touched;
   for (int i = 0; i < 32; i++) {
     if (touched & (1 << i)) {
       if (ledData[i] == 0) {

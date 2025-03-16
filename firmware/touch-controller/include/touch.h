@@ -1,12 +1,12 @@
 #ifndef TOUCH_H
 #define TOUCH_H
 
-#define CAP1188_COUNT 1
-
 #include "cap1188.h"
 #include <cstdint>
 
 class SerialController;
+
+constexpr uint8_t Cap1188Count = 4;
 
 struct TouchData {
   // Bitmap of touch sensor data
@@ -24,7 +24,7 @@ public:
 private:
   SerialController *serial;
 
-  CAP1188 caps[CAP1188_COUNT];
+  CAP1188 caps[Cap1188Count];
 };
 
 #endif
