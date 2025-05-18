@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "CAP1188_1_CP_TR")(type "KiCad")(uri "${KIPRJMOD}/../lib/CAP1188_1_CP_TR/CAP1188_1_CP_TR.kicad_sym")(options "")(descr ""))
   (lib (name "WS2812B-4020")(type "KiCad")(uri "${KIPRJMOD}/../lib/WS2812B-4020/WS2812B-4020.kicad_sym")(options "")(descr ""))
+  (lib (name "VL53L5CX_Breakout")(type "KiCad")(uri "${KIPRJMOD}/../lib/VL53L5CX_Breakout/VL53L5CX_Breakout.kicad_sym")(options "")(descr ""))
 )

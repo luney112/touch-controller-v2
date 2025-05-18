@@ -4,4 +4,5 @@
   (lib (name "TouchKey")(type "KiCad")(uri "${KIPRJMOD}/../lib/TouchKey/TouchKey.pretty")(options "")(descr ""))
   (lib (name "Logo")(type "KiCad")(uri "${KIPRJMOD}/../lib/Logo/Logo.pretty")(options "")(descr ""))
   (lib (name "WS2812B-4020")(type "KiCad")(uri "${KIPRJMOD}/../lib/WS2812B-4020/WS2812B-4020.pretty")(options "")(descr ""))
+  (lib (name "VL53L5CX_Breakout")(type "KiCad")(uri "${KIPRJMOD}/../lib/VL53L5CX_Breakout/VL53L5CX_Breakout.pretty")(options "")(descr ""))
 )
