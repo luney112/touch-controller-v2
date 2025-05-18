@@ -1,7 +1,7 @@
 (footprint "VL53L5CX_Breakout_Aliexpress"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -0.5 0)
@@ -20,19 +20,6 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "f3a62edb-c6a4-4850-8b14-3ae9f3e45ae2")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "196a8230-022b-4e1e-a8da-f5d939973ada")
 		(effects
 			(font
 				(size 1 1)
@@ -74,7 +61,7 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "3ca896a3-0cbb-49ed-9721-cfcc16f4812c")
 	)
@@ -85,7 +72,7 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "d4b26188-084b-4736-9860-f83429368fba")
 	)
@@ -96,7 +83,7 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "4af46bbb-8304-45f5-9f89-ec07218d0f09")
 	)
@@ -220,4 +207,5 @@
 			"f86b5d3c-3a2e-4b61-a3ea-e2e5180fb0b9"
 		)
 	)
+	(embedded_fonts no)
 )

@@ -1,7 +1,7 @@
 (footprint "TouchKey_Standard"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 6.5 0)
@@ -20,19 +20,6 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "d3c5f24a-b0b7-4f4b-962c-9039392e392d")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "0124942b-34db-47e3-9f11-c75b21f3f00b")
 		(effects
 			(font
 				(size 1 1)
@@ -74,7 +61,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "Dwgs.User")
 		(uuid "9b643f19-f40e-41a5-a495-4f520f5b5c06")
 	)
@@ -85,7 +72,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "8420f461-8b78-4a19-a1b1-a9fe9e9029ce")
 	)
@@ -108,4 +95,5 @@
 		(roundrect_rratio 0.01923076923)
 		(uuid "8b54c8dd-5615-4a75-8317-8b21ab9a00bc")
 	)
+	(embedded_fonts no)
 )

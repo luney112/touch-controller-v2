@@ -1,7 +1,7 @@
-(footprint "WS2812B-4020"
-	(version 20240108)
+(footprint "LED_WS2812B-4020"
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0.935 -1.935 0)
@@ -15,24 +15,12 @@
 		)
 	)
 	(property "Value" "LED_WS2812B-4020"
-		(at 7.92 3.185 0)
+		(at 0 3.5 0)
 		(layer "F.Fab")
 		(uuid "b83bb5eb-f689-41b3-a278-80aa2c6a33be")
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "eeb99873-db57-48e7-ba37-2ef47e1ee84d")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -119,7 +107,7 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "5188b827-e176-4112-b9ca-c1559fb09ec4")
 	)
@@ -210,38 +198,39 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "2ff866c4-05e4-4170-a532-80e83734cc25")
 	)
 	(pad "1" smd rect
 		(at 1.275 0.85)
 		(size 0.42 1.3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "32c6d5e4-4df7-4146-8760-4bff5087b0bd")
 	)
 	(pad "2" smd rect
 		(at 0.425 0.85)
 		(size 0.42 1.3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "b694cda8-65e6-4d6e-9574-9ce7eed44ddb")
 	)
 	(pad "3" smd rect
 		(at -0.425 0.85)
 		(size 0.42 1.3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "3a332782-5414-4fd4-9878-47c01166e5f0")
 	)
 	(pad "4" smd rect
 		(at -1.275 0.85)
 		(size 0.42 1.3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "0640ad1f-331f-44d0-8c7e-e421e79c3ef5")
 	)
+	(embedded_fonts no)
 	(model "${KIPRJMOD}/../lib/WS2812B-4020/WS2812B-4020.step"
 		(offset
 			(xyz 0 -1 1)

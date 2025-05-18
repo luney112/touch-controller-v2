@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "208e6366-7d11-4576-9309-e3e3af46f0ad")
 	(paper "A4")
 	(lib_symbols
@@ -28,7 +28,7 @@
 					)
 				)
 			)
-			(property "Footprint" "QFN24_4X4MC_MCH"
+			(property "Footprint" "CAP1188_1_CP_TR:QFN24_4X4MC_MCH"
 				(at 0 4.064 0)
 				(effects
 					(font
@@ -57,14 +57,6 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "ki_keywords" "CAP1188-1-CP-TR"
 				(at 0 0 0)
 				(effects
@@ -86,18 +78,6 @@
 			(symbol "CAP1188-1-CP-TR_0_1"
 				(polyline
 					(pts
-						(xy 7.62 -35.56) (xy 54.61 -35.56)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 7.62 5.08) (xy 7.62 -35.56)
 					)
 					(stroke
@@ -110,7 +90,7 @@
 				)
 				(polyline
 					(pts
-						(xy 54.61 -35.56) (xy 54.61 5.08)
+						(xy 7.62 -35.56) (xy 54.61 -35.56)
 					)
 					(stroke
 						(width 0.127)
@@ -123,6 +103,18 @@
 				(polyline
 					(pts
 						(xy 54.61 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 54.61 -35.56) (xy 54.61 5.08)
 					)
 					(stroke
 						(width 0.127)
@@ -150,186 +142,6 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -22.86 0)
-					(length 7.62)
-					(name "LED6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -25.4 0)
-					(length 7.62)
-					(name "LED7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -27.94 0)
-					(length 7.62)
-					(name "LED8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 62.23 -2.54 180)
-					(length 7.62)
-					(name "*ALERT/*BC_IRQ"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 62.23 -27.94 180)
-					(length 7.62)
-					(name "ADDR_COMM"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -22.86 180)
-					(length 7.62)
-					(name "CS8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -20.32 180)
-					(length 7.62)
-					(name "CS7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -17.78 180)
-					(length 7.62)
-					(name "CS6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -15.24 180)
-					(length 7.62)
-					(name "CS5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -12.7 180)
-					(length 7.62)
-					(name "CS4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at 0 -2.54 0)
 					(length 7.62)
@@ -341,114 +153,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -10.16 180)
-					(length 7.62)
-					(name "CS3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -7.62 180)
-					(length 7.62)
-					(name "CS2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 62.23 -5.08 180)
-					(length 7.62)
-					(name "CS1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 62.23 0 180)
-					(length 7.62)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 62.23 -25.4 180)
-					(length 7.62)
-					(name "RESET"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 62.23 -30.48 180)
-					(length 7.62)
-					(name "EPAD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -582,11 +286,302 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 0 -22.86 0)
+					(length 7.62)
+					(name "LED6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -25.4 0)
+					(length 7.62)
+					(name "LED7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -27.94 0)
+					(length 7.62)
+					(name "LED8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 62.23 0 180)
+					(length 7.62)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 62.23 -2.54 180)
+					(length 7.62)
+					(name "*ALERT/*BC_IRQ"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -5.08 180)
+					(length 7.62)
+					(name "CS1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -7.62 180)
+					(length 7.62)
+					(name "CS2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -10.16 180)
+					(length 7.62)
+					(name "CS3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -12.7 180)
+					(length 7.62)
+					(name "CS4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -15.24 180)
+					(length 7.62)
+					(name "CS5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -17.78 180)
+					(length 7.62)
+					(name "CS6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -20.32 180)
+					(length 7.62)
+					(name "CS7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 62.23 -22.86 180)
+					(length 7.62)
+					(name "CS8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 62.23 -25.4 180)
+					(length 7.62)
+					(name "RESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 62.23 -27.94 180)
+					(length 7.62)
+					(name "ADDR_COMM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 62.23 -30.48 180)
+					(length 7.62)
+					(name "EPAD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:Conn_01x03_Socket"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -660,21 +655,9 @@
 				)
 			)
 			(symbol "Conn_01x03_Socket_1_1"
-				(arc
-					(start 0 -2.032)
-					(mid -0.5058 -2.54)
-					(end 0 -3.048)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
-						(xy -1.27 -2.54) (xy -0.508 -2.54)
+						(xy -1.27 2.54) (xy -0.508 2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -698,7 +681,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 2.54) (xy -0.508 2.54)
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -709,21 +692,33 @@
 					)
 				)
 				(arc
-					(start 0 0.508)
-					(mid -0.5058 0)
-					(end 0 -0.508)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 3.048)
+					(start 0 2.032)
 					(mid -0.5058 2.54)
-					(end 0 2.032)
+					(end 0 3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -787,10 +782,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:Conn_01x06_Socket"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -864,81 +862,9 @@
 				)
 			)
 			(symbol "Conn_01x06_Socket_1_1"
-				(arc
-					(start 0 -7.112)
-					(mid -0.5058 -7.62)
-					(end 0 -8.128)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -4.572)
-					(mid -0.5058 -5.08)
-					(end 0 -5.588)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -2.032)
-					(mid -0.5058 -2.54)
-					(end 0 -3.048)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
-						(xy -1.27 -7.62) (xy -0.508 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy -0.508 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy -0.508 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -0.508 0)
+						(xy -1.27 5.08) (xy -0.508 5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -962,7 +888,43 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 5.08) (xy -0.508 5.08)
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -0.508 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -7.62) (xy -0.508 -7.62)
 					)
 					(stroke
 						(width 0.1524)
@@ -973,33 +935,69 @@
 					)
 				)
 				(arc
-					(start 0 0.508)
-					(mid -0.5058 0)
-					(end 0 -0.508)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 3.048)
-					(mid -0.5058 2.54)
-					(end 0 2.032)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 5.588)
+					(start 0 4.572)
 					(mid -0.5058 5.08)
-					(end 0 4.572)
+					(end 0 5.588)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 2.032)
+					(mid -0.5058 2.54)
+					(end 0 3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -5.588)
+					(mid -0.5058 -5.08)
+					(end 0 -4.572)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -8.128)
+					(mid -0.5058 -7.62)
+					(end 0 -7.112)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -1117,10 +1115,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector_Generic:Conn_01x01"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1187,17 +1188,6 @@
 			)
 			(symbol "Conn_01x01_1_1"
 				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
 					(start -1.27 1.27)
 					(end 1.27 -1.27)
 					(stroke
@@ -1206,6 +1196,17 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(pin passive line
@@ -1227,11 +1228,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1301,10 +1307,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -1313,10 +1319,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -1362,9 +1368,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -1483,12 +1492,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim yes)
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(property "Reference" "JP"
@@ -1553,30 +1567,6 @@
 				)
 			)
 			(symbol "SolderJumper_2_Open_0_1"
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -0.254 1.016) (xy -0.254 -1.016)
@@ -1589,6 +1579,54 @@
 						(type none)
 					)
 				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
 						(xy 0.254 1.016) (xy 0.254 -1.016)
@@ -1599,30 +1637,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 			)
@@ -1664,12 +1678,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
 				(offset 1.016)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
@@ -1746,8 +1761,9 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
-		(symbol "VL53L5CX_Breakout:VL53L5CX_Breakout.pretty"
+		(symbol "VL53L5CX_Breakout:VL53L5CX_Breakout"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1794,7 +1810,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "VL53L5CX_Breakout.pretty_0_1"
+			(symbol "VL53L5CX_Breakout_0_1"
 				(rectangle
 					(start -7.62 3.81)
 					(end 2.54 -11.43)
@@ -1807,7 +1823,7 @@
 					)
 				)
 			)
-			(symbol "VL53L5CX_Breakout.pretty_1_1"
+			(symbol "VL53L5CX_Breakout_1_1"
 				(pin power_in line
 					(at 5.08 2.54 180)
 					(length 2.54)
@@ -1917,6 +1933,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "WS2812B-4020:WS2812B-4020"
 			(pin_names
@@ -2188,12 +2205,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2265,7 +2287,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2277,7 +2299,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2308,12 +2330,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2385,7 +2412,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2397,7 +2424,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2428,12 +2455,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2524,12 +2556,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:PWR_FLAG"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2620,7 +2657,174 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 129.54 15.24)
+		(end 237.49 81.28)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 029cc69c-17ea-428f-8868-adf66d6f79a3)
+	)
+	(rectangle
+		(start 15.24 15.24)
+		(end 127 81.28)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 09df779d-c137-43c4-ab6b-b3c0b2f425b8)
+	)
+	(rectangle
+		(start 238.76 83.82)
+		(end 267.97 102.87)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 14399331-ffef-41b2-ae32-a9b2b4529fa7)
+	)
+	(rectangle
+		(start 240.03 15.24)
+		(end 281.94 81.28)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2bf246e7-0e3a-45c8-9aa3-5557cafd4646)
+	)
+	(rectangle
+		(start 15.24 83.82)
+		(end 236.22 146.05)
+		(stroke
+			(width 0.2032)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 3c9cf9ba-b9de-4fd8-a407-bbf80d19c9b2)
+	)
+	(text "ToF Breakout"
+		(exclude_from_sim no)
+		(at 251.46 18.796 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "2af505c4-e04f-4ad2-863e-9e6872225341")
+	)
+	(text "I2C address: 0x2B (100k)"
+		(exclude_from_sim no)
+		(at 56.134 51.562 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 251 41 255 1)
+			)
+			(justify left)
+		)
+		(uuid "8692ba79-eb4b-4d16-b92f-b16752af9900")
+	)
+	(text "I2C address: 0x29 (150k)"
+		(exclude_from_sim no)
+		(at 56.134 46.482 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 251 41 255 1)
+			)
+			(justify left)
+		)
+		(uuid "93866acc-b8fd-4a70-bcb6-bd2097f895b1")
+	)
+	(text "LEDs"
+		(exclude_from_sim no)
+		(at 20.828 87.884 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "b3131338-00c0-42aa-97bc-e19ef4d4db04")
+	)
+	(text "Mounting holes"
+		(exclude_from_sim no)
+		(at 251.714 86.868 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "c4014f86-2211-42b8-aa37-db687790bf49")
+	)
+	(text "Touch Sensor"
+		(exclude_from_sim no)
+		(at 27.94 19.304 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "d62dfab3-a323-4146-a89d-51cc7f88487a")
+	)
+	(text "Connectors"
+		(exclude_from_sim no)
+		(at 140.97 19.05 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "dbf9256e-2f44-4c54-ac5b-bdfee02878c0")
+	)
+	(text "I2C address: 0x2C (82k)"
+		(exclude_from_sim no)
+		(at 56.134 53.848 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 251 41 255 1)
+			)
+			(justify left)
+		)
+		(uuid "dc34cd3e-cd4e-46ad-ae2e-6dbf09b6b6d4")
+	)
+	(text "I2C address: 0x2A (120k)"
+		(exclude_from_sim no)
+		(at 56.134 49.022 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(color 251 41 255 1)
+			)
+			(justify left)
+		)
+		(uuid "f3b76614-a18f-4c76-93e1-cb7d202483cd")
 	)
 	(junction
 		(at 140.97 104.14)
@@ -4664,172 +4868,6 @@
 		)
 		(uuid "ffed535f-bba0-48d8-a787-29c91ea0d8aa")
 	)
-	(rectangle
-		(start 129.54 15.24)
-		(end 237.49 81.28)
-		(stroke
-			(width 0.2032)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 029cc69c-17ea-428f-8868-adf66d6f79a3)
-	)
-	(rectangle
-		(start 15.24 15.24)
-		(end 127 81.28)
-		(stroke
-			(width 0.2032)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 09df779d-c137-43c4-ab6b-b3c0b2f425b8)
-	)
-	(rectangle
-		(start 238.76 83.82)
-		(end 267.97 102.87)
-		(stroke
-			(width 0.2032)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 14399331-ffef-41b2-ae32-a9b2b4529fa7)
-	)
-	(rectangle
-		(start 240.03 15.24)
-		(end 281.94 81.28)
-		(stroke
-			(width 0.2032)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 2bf246e7-0e3a-45c8-9aa3-5557cafd4646)
-	)
-	(rectangle
-		(start 15.24 83.82)
-		(end 236.22 146.05)
-		(stroke
-			(width 0.2032)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 3c9cf9ba-b9de-4fd8-a407-bbf80d19c9b2)
-	)
-	(text "ToF Breakout"
-		(exclude_from_sim no)
-		(at 251.46 18.796 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "2af505c4-e04f-4ad2-863e-9e6872225341")
-	)
-	(text "I2C address: 0x2B (100k)"
-		(exclude_from_sim no)
-		(at 56.134 51.562 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 251 41 255 1)
-			)
-			(justify left)
-		)
-		(uuid "8692ba79-eb4b-4d16-b92f-b16752af9900")
-	)
-	(text "I2C address: 0x29 (150k)"
-		(exclude_from_sim no)
-		(at 56.134 46.482 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 251 41 255 1)
-			)
-			(justify left)
-		)
-		(uuid "93866acc-b8fd-4a70-bcb6-bd2097f895b1")
-	)
-	(text "LEDs"
-		(exclude_from_sim no)
-		(at 20.828 87.884 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "b3131338-00c0-42aa-97bc-e19ef4d4db04")
-	)
-	(text "Mounting holes"
-		(exclude_from_sim no)
-		(at 251.714 86.868 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "c4014f86-2211-42b8-aa37-db687790bf49")
-	)
-	(text "Touch Sensor"
-		(exclude_from_sim no)
-		(at 27.94 19.304 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "d62dfab3-a323-4146-a89d-51cc7f88487a")
-	)
-	(text "Connectors"
-		(exclude_from_sim no)
-		(at 140.97 19.05 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "dbf9256e-2f44-4c54-ac5b-bdfee02878c0")
-	)
-	(text "I2C address: 0x2C (82k)"
-		(exclude_from_sim no)
-		(at 56.134 53.848 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 251 41 255 1)
-			)
-			(justify left)
-		)
-		(uuid "dc34cd3e-cd4e-46ad-ae2e-6dbf09b6b6d4")
-	)
-	(text "I2C address: 0x2A (120k)"
-		(exclude_from_sim no)
-		(at 56.134 49.022 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 251 41 255 1)
-			)
-			(justify left)
-		)
-		(uuid "f3b76614-a18f-4c76-93e1-cb7d202483cd")
-	)
 	(global_label "TOUCH_RESET"
 		(shape input)
 		(at 100.33 59.69 0)
@@ -5692,7 +5730,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 185.42 106.68 0)
 			(effects
 				(font
@@ -5875,7 +5913,7 @@
 		(lib_id "Jumper:SolderJumper_2_Open")
 		(at 265.43 60.96 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -6403,7 +6441,7 @@
 		(lib_id "Jumper:SolderJumper_2_Open")
 		(at 265.43 55.88 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -7310,7 +7348,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 45.72 106.68 0)
 			(effects
 				(font
@@ -7514,7 +7552,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 185.42 134.62 0)
 			(effects
 				(font
@@ -7697,7 +7735,7 @@
 		(lib_id "Mechanical:MountingHole")
 		(at 246.38 92.71 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -7782,7 +7820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 73.66 134.62 0)
 			(effects
 				(font
@@ -8032,7 +8070,7 @@
 		(lib_id "Jumper:SolderJumper_2_Open")
 		(at 265.43 63.5 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -8295,7 +8333,7 @@
 		(lib_id "Mechanical:MountingHole")
 		(at 246.38 97.79 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -8649,7 +8687,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 129.54 106.68 0)
 			(effects
 				(font
@@ -9031,6 +9069,145 @@
 		)
 	)
 	(symbol
+		(lib_id "CAP1188_1_CP_TR:CAP1188-1-CP-TR")
+		(at 38.1 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76a0cb36-33e9-4ac5-8f60-7a8895f53696")
+		(property "Reference" "U1"
+			(at 69.215 24.13 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "CAP1188-1-CP-TR"
+			(at 69.215 26.67 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAP1188_1_CP_TR:QFN24_4X4MC_MCH"
+			(at 38.1 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "CAP1188-1-CP-TR"
+			(at 38.354 27.432 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "21f4a114-3c6c-4de8-b7ce-f092a0a21411")
+		)
+		(pin "7"
+			(uuid "e6618645-4bcf-4026-a09a-989a7ee7dc73")
+		)
+		(pin "11"
+			(uuid "d1b1f1ce-66e1-4951-bcaf-f6484916ec7b")
+		)
+		(pin "2"
+			(uuid "6216bba9-128c-4c38-acee-2f752a68b0e9")
+		)
+		(pin "5"
+			(uuid "fbcea868-8880-4cc1-b0d7-6c63a14b3d55")
+		)
+		(pin "1"
+			(uuid "db8a1378-69ba-4fe5-b331-efbabb54decc")
+		)
+		(pin "4"
+			(uuid "29879dac-c5fd-4d4c-bbc5-eb585f678368")
+		)
+		(pin "6"
+			(uuid "1e4b04ef-8a5c-4443-b24d-163db50b0a6f")
+		)
+		(pin "8"
+			(uuid "0208dcf3-2b76-49f8-8dbe-55456efa07b1")
+		)
+		(pin "9"
+			(uuid "e48dde2b-b760-42ea-9017-67361df5f977")
+		)
+		(pin "10"
+			(uuid "450fa85f-9dbd-475c-82ec-ff786718bd27")
+		)
+		(pin "13"
+			(uuid "59fa804e-f71d-4f27-b66d-b0d7b54c3ea2")
+		)
+		(pin "16"
+			(uuid "965ef352-6669-40ec-abe0-81c0585ee67b")
+		)
+		(pin "14"
+			(uuid "0aec84cd-251c-482e-ab67-c16b15ac8adb")
+		)
+		(pin "20"
+			(uuid "49ce5f9b-fe91-4128-854e-ca57d69c8313")
+		)
+		(pin "24"
+			(uuid "04ae0ea4-a9a3-47ef-9d1e-896cda949339")
+		)
+		(pin "22"
+			(uuid "fe3abefe-0ce2-45b4-b348-8b57989d65d8")
+		)
+		(pin "18"
+			(uuid "4cdc6ab3-438d-4382-aa8a-689dd662bb2e")
+		)
+		(pin "15"
+			(uuid "f43c4b3d-6a79-4023-bf65-9db73228b4ba")
+		)
+		(pin "23"
+			(uuid "0ba87fc3-24e0-40a7-88de-6875c4eef9f3")
+		)
+		(pin "17"
+			(uuid "ae10cf97-293e-42ad-a9e4-b97d0bb90803")
+		)
+		(pin "25"
+			(uuid "b053b7bb-4208-4414-ba76-6af48d6cfc81")
+		)
+		(pin "12"
+			(uuid "0ccc8139-1548-4e48-bcd2-4a2c9d60d639")
+		)
+		(pin "21"
+			(uuid "18ec7a98-e7b6-4d71-ab41-c75f5c7d4db0")
+		)
+		(pin "19"
+			(uuid "b7b55f91-81f8-46d9-95ce-45c700d8b9f5")
+		)
+		(instances
+			(project ""
+				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "WS2812B-4020:WS2812B-4020")
 		(at 157.48 102.87 0)
 		(unit 1)
@@ -9055,7 +9232,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 157.48 106.68 0)
 			(effects
 				(font
@@ -9592,7 +9769,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 101.6 134.62 0)
 			(effects
 				(font
@@ -9865,7 +10042,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 101.6 106.68 0)
 			(effects
 				(font
@@ -10175,7 +10352,7 @@
 		)
 	)
 	(symbol
-		(lib_id "VL53L5CX_Breakout:VL53L5CX_Breakout.pretty")
+		(lib_id "VL53L5CX_Breakout:VL53L5CX_Breakout")
 		(at 255.27 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10202,7 +10379,7 @@
 			)
 		)
 		(property "Footprint" "VL53L5CX_Breakout:VL53L5CX_Breakout_Aliexpress"
-			(at 255.27 36.83 0)
+			(at 256.032 32.004 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10526,145 +10703,6 @@
 			(project "touch-pads"
 				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "CAP1188_1_CP_TR:CAP1188-1-CP-TR")
-		(at 38.1 34.29 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aee1b81b-2c27-4955-aed8-f7dc11e33401")
-		(property "Reference" "U1"
-			(at 69.215 24.13 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "CAP1188-1-CP-TR"
-			(at 69.215 26.67 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "CAP1188_1_CP_TR:QFN24_4X4MC_MCH"
-			(at 38.1 30.226 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "CAP1188-1-CP-TR"
-			(at 38.354 27.432 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "88e5f2b5-2525-4936-9180-242b4f5ef61f")
-		)
-		(pin "14"
-			(uuid "a3798e92-1866-4d9c-9365-5c38cefe8aea")
-		)
-		(pin "20"
-			(uuid "95ca7afe-f58a-4803-a806-2c3e4be88712")
-		)
-		(pin "8"
-			(uuid "eeb8e326-b54a-413d-8303-78c07003b7c6")
-		)
-		(pin "23"
-			(uuid "e6c05956-a305-4daa-8dd5-4b120cdf6421")
-		)
-		(pin "22"
-			(uuid "b4d7d1cb-de43-4c5a-8037-a750321e403c")
-		)
-		(pin "11"
-			(uuid "73c4d582-bce0-44f1-8f0d-67d043ae17f1")
-		)
-		(pin "6"
-			(uuid "3d64004b-1790-4339-b6e8-a0ddfcb3ec58")
-		)
-		(pin "24"
-			(uuid "0d6e655c-29d1-4e01-8b51-0ea44239a4a5")
-		)
-		(pin "7"
-			(uuid "7621aef6-ef54-40a5-83e8-15cb2d5c7a80")
-		)
-		(pin "16"
-			(uuid "d55cc5ef-ce09-4985-92e5-a1fbe5449601")
-		)
-		(pin "25"
-			(uuid "20aff255-6c5e-42b2-9e69-e1e23e067689")
-		)
-		(pin "2"
-			(uuid "a38e20ad-f80a-43c7-b289-ff3b859bbbf2")
-		)
-		(pin "10"
-			(uuid "babd2fc2-553d-410a-a9b4-e5311c525b0b")
-		)
-		(pin "17"
-			(uuid "39a3c358-f4a7-4714-a1d1-64898c85b17c")
-		)
-		(pin "4"
-			(uuid "4464ff71-46e5-483c-9db6-ab4be865fca6")
-		)
-		(pin "5"
-			(uuid "fbbc0c80-d567-42fc-afca-ba9d664d71f0")
-		)
-		(pin "15"
-			(uuid "3b11e96b-dc66-498c-82d6-843b67bb0d55")
-		)
-		(pin "9"
-			(uuid "3d0f1aa4-f1f3-413c-bdc8-6e06f6642b5b")
-		)
-		(pin "21"
-			(uuid "30723c4a-3867-467c-ae40-168306a14d1d")
-		)
-		(pin "18"
-			(uuid "3116fea6-0ca2-4846-a874-6e7ac2a7bdb7")
-		)
-		(pin "1"
-			(uuid "48c0910d-92aa-4677-b7c1-559a663a08c0")
-		)
-		(pin "12"
-			(uuid "055b6c0c-5279-4b92-be25-dc79a14d58d9")
-		)
-		(pin "13"
-			(uuid "ff4942c3-73dd-456a-b94f-dc7543e3fe97")
-		)
-		(pin "19"
-			(uuid "b8d02031-0a13-4b5a-98b7-7e1824c7e66c")
-		)
-		(instances
-			(project ""
-				(path "/208e6366-7d11-4576-9309-e3e3af46f0ad"
-					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -11039,7 +11077,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 157.48 134.62 0)
 			(effects
 				(font
@@ -11438,7 +11476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 45.72 134.62 0)
 			(effects
 				(font
@@ -11803,7 +11841,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 129.54 134.62 0)
 			(effects
 				(font
@@ -12053,7 +12091,7 @@
 		(lib_id "Jumper:SolderJumper_2_Open")
 		(at 265.43 58.42 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -12274,7 +12312,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WS2812B-4020:WS2812B-4020"
+		(property "Footprint" "WS2812B-4020:LED_WS2812B-4020"
 			(at 73.66 106.68 0)
 			(effects
 				(font
@@ -13452,4 +13490,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

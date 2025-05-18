@@ -1,8 +1,8 @@
 (kicad_symbol_lib
-	(version 20231120)
+	(version 20241209)
 	(generator "kicad_symbol_editor")
-	(generator_version "8.0")
-	(symbol "VL53L5CX_Breakout.pretty"
+	(generator_version "9.0")
+	(symbol "VL53L5CX_Breakout"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -49,7 +49,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "VL53L5CX_Breakout.pretty_0_1"
+		(symbol "VL53L5CX_Breakout_0_1"
 			(rectangle
 				(start -7.62 3.81)
 				(end 2.54 -11.43)
@@ -62,7 +62,7 @@
 				)
 			)
 		)
-		(symbol "VL53L5CX_Breakout.pretty_1_1"
+		(symbol "VL53L5CX_Breakout_1_1"
 			(pin power_in line
 				(at 5.08 2.54 180)
 				(length 2.54)
@@ -172,5 +172,6 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
 )
