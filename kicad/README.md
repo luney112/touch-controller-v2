@@ -14,7 +14,7 @@ There are two different PCB types: `mainboard` and `touch-pads`.
 
 ### development
 
-- Use KiCad 8+
+- Use KiCad 9+
 - Install the [espressif libraries](https://github.com/espressif/kicad-libraries)
 - Install interactive html bom plugin
 

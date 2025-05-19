@@ -763,7 +763,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "254d1a09-39f9-47a7-adf8-16f44303b7ab")
 		)
 		(pad "41" smd rect
 			(at -2.9 0.86)
@@ -772,7 +772,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "3c63830f-c8df-4cb3-9826-539c7568a665")
 		)
 		(pad "41" smd rect
 			(at -2.9 0.86)
@@ -781,7 +781,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "ae4592b1-55c0-400d-b0d5-d1752352dc40")
 		)
 		(pad "41" smd rect
 			(at -1.5 -1.94)
@@ -790,7 +790,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "678efcb0-0fe4-4167-bee8-019684e95ce2")
 		)
 		(pad "41" smd rect
 			(at -1.5 -1.94)
@@ -799,7 +799,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "714e17c2-4880-403a-aee1-0bbd0c4c8b40")
 		)
 		(pad "41" smd rect
 			(at -1.5 -0.54)
@@ -808,7 +808,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "625f489c-9a4f-43bf-b887-3c7496cf526b")
 		)
 		(pad "41" smd rect
 			(at -1.5 0.86)
@@ -817,7 +817,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "caea143f-5b84-4c24-9da1-66b9870fcfd5")
 		)
 		(pad "41" smd rect
 			(at -0.1 -1.94)
@@ -826,7 +826,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "03e34352-b9ab-42f9-b463-354feaeb5eaa")
 		)
 		(pad "41" smd rect
 			(at -0.1 -0.54)
@@ -835,7 +835,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "33cb4374-696a-43c4-9045-c7d9ad972d06")
 		)
 		(pad "41" smd rect
 			(at -0.1 0.86)
@@ -844,7 +844,7 @@
 			(net 1 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "45c17de9-6a2f-472f-ac9a-cb499dcc79f8")
+			(uuid "2e0382f9-36a3-49cb-998b-a79cc2d8cefd")
 		)
 		(zone
 			(net 0)
@@ -1133,7 +1133,7 @@
 			(net 3 "+3.3V")
 			(pinfunction "VO")
 			(pintype "power_out")
-			(uuid "b2c5cb98-fd57-4b24-bf6f-da9358439547")
+			(uuid "0969a905-2f09-48a4-9cf1-633cb07357e5")
 		)
 		(pad "3" smd roundrect
 			(at -3.15 2.3 270)
@@ -3873,7 +3873,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "8f465bf1-c006-433f-bf32-02511e696e41")
+			(uuid "63ec5246-add0-4900-a53f-d6186a6f4b86")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -3.105 180)
@@ -3885,7 +3885,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "8f465bf1-c006-433f-bf32-02511e696e41")
+			(uuid "50e51522-f164-41a3-9936-e21cd9fc28bc")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 1.075 180)
@@ -3897,7 +3897,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "8f465bf1-c006-433f-bf32-02511e696e41")
+			(uuid "999eb38d-5b36-4220-bd8f-06747217661e")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
@@ -4616,7 +4616,7 @@
 			(size 1 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(uuid "0e191292-3772-46dd-acf4-617f9385a247")
+			(uuid "9ad314aa-0bc4-4749-8f20-ddd3680f9b6c")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_GH_SM06B-GHS-TB_1x06-1MP_P1.25mm_Horizontal.step"
@@ -4933,7 +4933,7 @@
 			(size 1 2.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(uuid "2854a9a7-6bb7-4eda-99a8-02c2eb472f2a")
+			(uuid "3f116f03-7a5a-40cb-9821-dcfa8a69a116")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_GH_SM06B-GHS-TB_1x06-1MP_P1.25mm_Horizontal.step"
@@ -6889,7 +6889,7 @@
 			(size 1.5 3.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.166667)
-			(uuid "f5b2cd58-f0ec-4a33-bdfe-68814afb8b7a")
+			(uuid "4a4422ff-fd7f-4f96-b8cf-81d76321aea3")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal.step"
