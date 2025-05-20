@@ -24,7 +24,10 @@ public:
 private:
   SerialController *serial;
 
-  CAP1188 caps[Cap1188Count];
+  void enableTouchSensors();
+  void disableTouchSensors();
+
+  CAP1188 sensors[Cap1188Count];
 };
 
 #endif

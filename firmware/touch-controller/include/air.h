@@ -1,29 +1,27 @@
 #ifndef AIR_H
 #define AIR_H
 
+#include <SparkFun_VL53L5CX_Library.h>
 #include <cstdint>
-#include <vl53l7cx_class.h>
 
 class SerialController;
 
-struct AirSensorData {};
+constexpr uint8_t TofCount = 4;
 
 class AirController {
 public:
   bool begin(SerialController *serial);
   bool init();
+  void loop();
   uint8_t getBlockedSensors(); // LSB ordering, low=bit0, 6 bits only
 
 private:
-  void initSingleSensor(VL53L7CX *sensor, uint8_t addr);
-  void assertOk(uint8_t status, const char *name);
-
   static void interruptFn() { interruptCount += 1; }
 
   SerialController *serial;
 
-  VL53L7CX *sensorLeft;
-  VL53L7CX *sensorRight;
+  SparkFun_VL53L5CX sensors[TofCount];
+  VL53L5CX_ResultsData measurementData[TofCount];
 
   static volatile int interruptCount;
 };

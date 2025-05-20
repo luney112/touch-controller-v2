@@ -8,6 +8,7 @@
 
 #define TEST_MODE
 #define REPORT_LATENCY_METRICS
+// #define SET_QUICK_WIRE_CLOCK_SPEED
 
 void processSensorData();
 void processAirSensorData();
@@ -19,13 +20,14 @@ constexpr int SliderTouchedPressureValue = 128;
 
 constexpr int LatencyMetricSampleCount = 1000;
 
+constexpr uint32_t WireClockSpeed = 400000;
+
 LedController led;
 TouchController touch;
 AirController air;
 SerialController serial;
 
 TouchData touchData;
-AirSensorData airSensorData;
 int ledData[LED_SEGMENT_COUNT] = {0};
 
 unsigned long startTime = 0;
@@ -33,6 +35,9 @@ unsigned long startTime = 0;
 void setup() {
   delay(1000); // Needed for some reason to get complete serial output
   Wire.begin();
+#ifdef SET_QUICK_WIRE_CLOCK_SPEED
+  Wire.setClock(WireClockSpeed);
+#endif
 
   serial.init(&led); // Should be first
   led.init(&serial);
@@ -59,6 +64,7 @@ void loop() {
 #ifdef REPORT_LATENCY_METRICS
   unsigned long start = micros();
 #endif
+  air.loop();
   serial.processWrite();
 #ifdef REPORT_LATENCY_METRICS
   static unsigned long sum = 0;
@@ -192,6 +198,7 @@ void processSensorDataTest() {
   // Read and update air sensor
   uint8_t blocked = air.getBlockedSensors();
   led.setBeamBroken(blocked > 0);
+  serial.writeDebugLogf("Air sensor is %d", blocked);
 
   // Read and update slider
   touch.getTouchStatus(touchData);

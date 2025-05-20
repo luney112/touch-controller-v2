@@ -1,88 +1,141 @@
 /**
  * Some good reference material:
- *  https://www.st.com/resource/en/user_manual/um3038-a-guide-to-using-the-vl53l7cx-timeofflight-multizone-ranging-sensor-with-90-fov-stmicroelectronics.pdf
- *  https://www.st.com/resource/en/datasheet/vl53l7cx.pdf
+ *  https://www.st.com/resource/en/datasheet/vl53l5cx.pdf
+ *  https://www.pololu.com/file/0J1885/um2884-a-guide-to-using-the-vl53l5cx-multizone-timeofflight-ranging-sensor-with-wide-field-of-view-ultra-lite-driver-uld-stmicroelectronics.pdf
  *  https://community.st.com/t5/imaging-sensors/vl53l8cx-example-quot-platform-h-quot-ram-reduction/td-p/714296
+ *  https://github.com/sparkfun/SparkFun_VL53L5CX_Arduino_Library/tree/main/examples
  */
 #include "air.h"
 #include "layout.h"
 #include "serial.h"
 #include <Arduino.h>
-#include <vl53l7cx_class.h>
+#include <SparkFun_VL53L5CX_Library.h>
 
-constexpr uint8_t SpadIndexCount = 4;
-constexpr uint8_t SpadIndexes[SpadIndexCount] = {9, 10, 5, 6};
+constexpr uint8_t AddressMap[TofCount] = {TOF_ADDR_0, TOF_ADDR_1, TOF_ADDR_2, TOF_ADDR_3};
+constexpr uint8_t LpnMap[TofCount] = {GPIO_TOF_LPN0, GPIO_TOF_LPN1, GPIO_TOF_LPN2, GPIO_TOF_LPN3};
+
+constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_8X8;
+constexpr uint8_t RangingFrequency = 15; // 60hz for 4x4, 15hz for 8x8
+
+constexpr uint16_t BandCount = 6;
+constexpr uint16_t SingleBandSizeMm = 23;
+constexpr uint16_t LowBarMm = 10.0 * 10;
+constexpr uint16_t HighBarMm = LowBarMm + BandCount * SingleBandSizeMm;
 
 volatile int AirController::interruptCount;
 
 bool AirController::begin(SerialController *serial) {
   this->serial = serial;
 
-  // sensorLeft = new VL53L7CX(&Wire, GPIO_TOF_LPN0, GPIO_TOF_RESET);
-  sensorRight = new VL53L7CX(&Wire, GPIO_TOF_LPN1, GPIO_TOF_RESET);
+  memset(measurementData, 0, sizeof(measurementData));
 
-  // sensorLeft->begin();
-  sensorRight->begin();
+  // Disable all ToF sensors
+  for (int i = 0; i < TofCount; i++) {
+    pinMode(LpnMap[i], OUTPUT);
+    digitalWrite(LpnMap[i], LOW);
+  }
+  delay(50);
+
   return true;
 }
 
 bool AirController::init() {
-  sensorRight->vl53l7cx_on();
-  sensorRight->vl53l7cx_i2c_reset();
-  sensorRight->vl53l7cx_set_i2c_address(TOF_ADDR_RIGHT);
+  // Re-write i2c addresses
+  // 1. Disable i2c for all sensors
+  // 2. For every sensor:
+  //      a) Enable i2c and initialize
+  //      b) Write new address
+  //      c) Disable i2c
+  // 3. Re-enable i2c for all sensors
 
-  // Set interrupt pin
+  // 1. Disable all ToF sensors
+  for (int i = 0; i < TofCount; i++) {
+    digitalWrite(LpnMap[i], LOW);
+  }
+  delay(50);
+
+  // 2. Change addresses one-by-one
+  for (int i = 0; i < TofCount; i++) {
+    auto address = AddressMap[i];
+    digitalWrite(LpnMap[i], HIGH);
+    delay(50);
+    // Call begin() using the default address
+    // All other i2c devices that could interfere should be disabled
+    if (!sensors[i].begin()) {
+      serial->writeDebugLogf("[ERROR] Unable to initialize ToF %#02X", AddressMap[i])->processWrite();
+      return false;
+    }
+    sensors[i].setAddress(address);
+    digitalWrite(LpnMap[i], LOW);
+    delay(50);
+  }
+
+  // 3. Re-enable all pins
+  for (int i = 0; i < TofCount; i++) {
+    digitalWrite(LpnMap[i], HIGH);
+  }
+  delay(50);
+
+  // Setup interupt
   pinMode(GPIO_TOF_INT, INPUT_PULLUP);
   attachInterrupt(GPIO_TOF_INT, interruptFn, FALLING);
 
-  // initSingleSensor(sensorLeft, TOF_ADDR_LEFT);
-  initSingleSensor(sensorRight, TOF_ADDR_RIGHT);
+  // TODO: Look at code examples for setting up sensors
+  for (int i = 0; i < TofCount; i++) {
+    sensors[i].setResolution(Resolution);
+    sensors[i].setRangingFrequency(RangingFrequency);
+    sensors[i].setRangingMode(SF_VL53L5CX_RANGING_MODE::CONTINUOUS);
+    // sensors[i].setSharpenerPercent(40);
+    sensors[i].startRanging();
+  }
 
-  serial->writeDebugLog("Initialized ToF")->processWrite();
+  serial->writeDebugLog("Initialized ToFs")->processWrite();
   return true;
 }
 
-void AirController::initSingleSensor(VL53L7CX *sensor, uint8_t addr) {
-  assertOk(sensor->init_sensor(addr), "init_sensor");
-  assertOk(sensor->vl53l7cx_set_ranging_frequency_hz(60), "vl53l7cx_set_ranging_frequency_hz");
-  assertOk(sensor->vl53l7cx_set_ranging_mode(VL53L7CX_RANGING_MODE_CONTINUOUS), "vl53l7cx_set_ranging_mode");
-  // assertOk(sensor->vl53l7cx_set_sharpener_percent(40), "vl53l7cx_set_sharpener_percent");
-  assertOk(sensor->vl53l7cx_start_ranging(), "vl53l7cx_start_ranging");
-}
+void AirController::loop() {
+  if (interruptCount == 0) {
+    return;
+  }
+  interruptCount = 0;
 
-void AirController::assertOk(uint8_t status, const char *name) {
-  if (status != VL53L7CX_STATUS_OK) {
-    serial->writeDebugLogf("%s failed: %d", name, status)->processWrite();
+  for (int i = 0; i < TofCount; i++) {
+    if (!sensors[i].getRangingData(&measurementData[i])) {
+      serial->writeDebugLog("Could not get ranging data")->processWrite();
+      continue;
+    }
   }
 }
 
 uint8_t AirController::getBlockedSensors() {
-  VL53L7CX_ResultsData resultsData;
+  uint8_t val = 0;
 
-  // if (interruptCount > 0) {
-  //   interruptCount = 0;
-  //   assertOk(sensorRight->vl53l7cx_get_ranging_data(&resultsData), "vl53l7cx_get_ranging_data");
+  // For every sensor
+  for (int i = 0; i < TofCount; i++) {
+    auto data = &measurementData[i];
+    // For each zone/pixel of the sensor
+    for (int zid = 0; i < Resolution; i++) {
+      // We must have at least on thing detected
+      if (data->nb_target_detected[zid] == 0) {
+        continue;
+      }
+      // We consider 5,6,9 as valid
+      auto status = data->target_status[zid];
+      if (status == 5 || status == 6 || status == 9) {
+        auto mm = data->distance_mm[zid];
+        if (mm < LowBarMm || mm > HighBarMm) {
+          continue;
+        }
+        uint16_t normalized = mm - LowBarMm;
+        uint16_t pos = (normalized / SingleBandSizeMm) + 1;
+        if (pos <= 0 || pos > BandCount) {
+          serial->writeDebugLogf("Detected invalid ToF band state: %dmm -> pos=%d", mm, pos);
+          continue;
+        }
+        val |= ((1 << pos) - 1);
+      }
+    }
+  }
 
-  //   int32_t sum = 0;
-  //   int32_t cnt = 0;
-  //   for (int i = 0; i < SpadIndexCount; i++) {
-  //     uint8_t idx = SpadIndexes[i];
-  //     uint8_t status = resultsData.target_status[idx];
-  //     uint8_t detected = resultsData.nb_target_detected[idx];
-  //     int16_t distance = resultsData.distance_mm[idx];
-  //     if (status == 5 && detected > 0) {
-  //       sum += distance;
-  //       cnt++;
-  //       if (distance <= 1000) {
-  //         serial->writeDebugLogf("target at %d cm", distance / 10);
-  //       }
-  //     }
-  //   }
-  //   // if (cnt > 0) {
-  //   //   double distance = static_cast<double>(sum) / cnt;
-  //   //   serial->writeDebugLogf("%fmm", distance);
-  //   // }
-  // }
-
-  return 0; // TODO: Implement
+  return val;
 }
