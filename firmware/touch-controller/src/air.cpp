@@ -22,6 +22,8 @@ constexpr uint16_t SingleBandSizeMm = 23;
 constexpr uint16_t LowBarMm = 10.0 * 10;
 constexpr uint16_t HighBarMm = LowBarMm + BandCount * SingleBandSizeMm;
 
+constexpr uint32_t MaxWireClockSpeed = 1000000;
+
 volatile int AirController::interruptCount;
 
 bool AirController::begin(SerialController *serial) {
@@ -40,6 +42,27 @@ bool AirController::begin(SerialController *serial) {
 }
 
 bool AirController::init() {
+  /*
+      At each power on reset, a staggering 86,000 bytes of firmware have to be sent to the sensor.
+      At 100kHz, this can take ~9.4s. By increasing the clock speed, we can cut this time down to ~1.4s.
+
+      Two parameters can be tweaked:
+
+        Clock speed: The VL53L5CX has a max bus speed of 1MHz.
+
+        Max transfer size: The majority of Arduino platforms default to 32 bytes. If you are using one
+        with a larger buffer (ESP32 is 128 bytes for example), this can help decrease transfer times a bit.
+
+      https://github.com/sparkfun/SparkFun_VL53L5CX_Arduino_Library/blob/main/examples/Example2_FastStartup/Example2_FastStartup.ino
+
+      ---
+
+      The issue is that CAP1188 has a max speed of 400kHz.
+      So only use 1MHz for firmware transfer, then reset it back to what it was before
+  */
+  const uint32_t currentWireClock = Wire.getClock();
+  Wire.setClock(MaxWireClockSpeed);
+
   // Re-write i2c addresses
   // 1. Disable i2c for all sensors
   // 2. For every sensor:
@@ -56,16 +79,24 @@ bool AirController::init() {
 
   // 2. Change addresses one-by-one
   for (int i = 0; i < TofCount; i++) {
-    auto address = AddressMap[i];
+    // Enable i2c
     digitalWrite(LpnMap[i], HIGH);
     delay(50);
+
+    // Increase default from 32 bytes to 128 - not supported on all platforms
+    sensors[i].setWireMaxPacketSize(128);
+
     // Call begin() using the default address
     // All other i2c devices that could interfere should be disabled
     if (!sensors[i].begin()) {
       serial->writeDebugLogf("[ERROR] Unable to initialize ToF %#02X", AddressMap[i])->processWrite();
       return false;
     }
-    sensors[i].setAddress(address);
+
+    // Set the new address
+    sensors[i].setAddress(AddressMap[i]);
+
+    // Disable i2c
     digitalWrite(LpnMap[i], LOW);
     delay(50);
   }
@@ -85,11 +116,16 @@ bool AirController::init() {
     sensors[i].setResolution(Resolution);
     sensors[i].setRangingFrequency(RangingFrequency);
     sensors[i].setRangingMode(SF_VL53L5CX_RANGING_MODE::CONTINUOUS);
+    sensors[i].setTargetOrder(SF_VL53L5CX_TARGET_ORDER::STRONGEST);
     // sensors[i].setSharpenerPercent(40);
     sensors[i].startRanging();
   }
 
   serial->writeDebugLog("Initialized ToFs")->processWrite();
+
+  // Before finishing, set the clock speed back
+  Wire.setClock(currentWireClock);
+
   return true;
 }
 
