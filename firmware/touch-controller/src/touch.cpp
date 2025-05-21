@@ -4,6 +4,8 @@
 
 constexpr uint8_t AddressMap[Cap1188Count] = {CAP1188_ADDR_0, CAP1188_ADDR_1, CAP1188_ADDR_2, CAP1188_ADDR_3};
 
+// This function puts the touch sensors in a disabled state
+// No communication or setup should be done with the sensors
 bool TouchController::begin(SerialController *serial) {
   this->serial = serial;
 
@@ -20,6 +22,7 @@ bool TouchController::begin(SerialController *serial) {
   return true;
 }
 
+// Setup and initialize the touch sensors
 bool TouchController::init() {
   disableTouchSensors();
   enableTouchSensors();

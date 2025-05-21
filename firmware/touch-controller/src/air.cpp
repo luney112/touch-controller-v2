@@ -26,6 +26,8 @@ constexpr uint32_t MaxWireClockSpeed = 1000000;
 
 volatile int AirController::interruptCount;
 
+// This function puts the ToF sensors in a disabled state
+// No communication or setup should be done with the sensors
 bool AirController::begin(SerialController *serial) {
   this->serial = serial;
 
@@ -41,6 +43,7 @@ bool AirController::begin(SerialController *serial) {
   return true;
 }
 
+// Setup and initialize the ToF sensors
 bool AirController::init() {
   /*
       At each power on reset, a staggering 86,000 bytes of firmware have to be sent to the sensor.
