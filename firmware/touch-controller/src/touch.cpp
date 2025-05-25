@@ -10,7 +10,10 @@ bool TouchController::begin(SerialController *serial) {
   this->serial = serial;
 
   for (int i = 0; i < Cap1188Count; i++) {
-    this->sensors[i].begin(AddressMap[i]);
+    if (!this->sensors[i].begin(AddressMap[i])) {
+      serial->writeDebugLogf("[ERROR] Unable to begin CAP1188 %#02X", AddressMap[i])->processWrite();
+      return false;
+    }
   }
 
   // Cap1188s start off disabled

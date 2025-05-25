@@ -8,7 +8,6 @@
 
 #define TEST_MODE
 #define REPORT_LATENCY_METRICS
-// #define SET_QUICK_WIRE_CLOCK_SPEED
 
 void processSensorData();
 void processAirSensorData();
@@ -21,6 +20,8 @@ constexpr int SliderTouchedPressureValue = 128;
 constexpr int LatencyMetricSampleCount = 1000;
 
 constexpr uint32_t WireClockSpeed = 400000;
+
+constexpr uint32_t debugStateSendIntervalMillis = 5000; // 5 seconds
 
 LedController led;
 TouchController touch;
@@ -35,9 +36,7 @@ unsigned long startTime = 0;
 void setup() {
   delay(1000); // Needed for some reason to get complete serial output
   Wire.begin();
-#ifdef SET_QUICK_WIRE_CLOCK_SPEED
   Wire.setClock(WireClockSpeed);
-#endif
 
   serial.init(&led); // Should be first
   led.init(&serial);
@@ -64,8 +63,18 @@ void loop() {
 #ifdef REPORT_LATENCY_METRICS
   unsigned long start = micros();
 #endif
+
+  static unsigned long lastDebugStateSendTime = 0;
+
+  // Send debug state periodically
+  if (millis() - lastDebugStateSendTime >= debugStateSendIntervalMillis) {
+    serial.writeDebugState();
+    lastDebugStateSendTime = millis();
+  }
+
   air.loop();
   serial.processWrite();
+
 #ifdef REPORT_LATENCY_METRICS
   static unsigned long sum = 0;
   static unsigned long count = 0;

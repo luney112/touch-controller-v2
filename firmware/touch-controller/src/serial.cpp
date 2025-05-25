@@ -13,18 +13,12 @@ constexpr uint8_t FrameEsc = 0x5C;
 constexpr uint8_t FrameStart = 0x24;
 constexpr uint8_t FrameEnd = 0x0A;
 
-enum FramedPacketHeader {
-  FramedPacketHeader_DebugLog = 0x20,
-  FramedPacketHeader_LedData = 0x30,
-  FramedPacketHeader_SliderData = 0x31,
-  FramedPacketHeader_AirSensorData = 0x32,
-};
-
 void SerialController::init(LedController *ledController) {
   Serial.begin(SerialBaudRate);
   writeDebugLog("-------------------------------------")->processWrite();
   writeDebugLog("Initialized serial")->processWrite();
   this->ledController = ledController;
+  this->debugState.writeBufferOverflowCount = 0; // Initialize debug state
 }
 
 // TODO: Add CRC
@@ -90,16 +84,16 @@ void SerialController::writeSliderData(uint8_t *buf, int sz) {
   this->writeFramed(FramedPacketHeader_SliderData, buf, sz);
 }
 
-void SerialController::writeFramed(uint8_t header, uint8_t *buf, int sz) {
-  writeByte(FrameStart);
-  writeByte(header);
-  for (int i = 0; i < sz; i++) {
-    if (buf[i] == FrameEsc || buf[i] == FrameStart || buf[i] == FrameEnd) {
-      writeByte(FrameEsc);
-    }
-    writeByte(buf[i]);
-  }
-  writeByte(FrameEnd);
+void SerialController::writeDebugState() {
+  uint8_t buffer[4];
+  uint8_t cnt = 0;
+
+  // Overflow count
+  uint32_t overflowCount = htonl(this->debugState.writeBufferOverflowCount);
+  memcpy(buffer + cnt, &overflowCount, sizeof(overflowCount));
+  cnt += sizeof(overflowCount);
+
+  writeFramed(FramedPacketHeader_DebugState, buffer, sizeof(buffer));
 }
 
 // Write one byte to the ring buffer
@@ -110,6 +104,36 @@ bool SerialController::writeByte(uint8_t b) {
   }
   this->writeBuffer[(this->writeStart + this->writeBufferLen) % SerialWriteBufferSize] = b;
   this->writeBufferLen += 1;
+  return true;
+}
+
+bool SerialController::writeFramed(uint8_t header, uint8_t *buf, int sz) {
+  // Calculate required size
+  int requiredSize = 2; // Start byte + Header byte
+  for (int i = 0; i < sz; i++) {
+    if (buf[i] == FrameEsc || buf[i] == FrameStart || buf[i] == FrameEnd) {
+      requiredSize += 2; // Byte + Escape byte
+    } else {
+      requiredSize += 1; // Just the byte
+    }
+  }
+  requiredSize += 1; // End byte
+
+  if (requiredSize > availableToWrite()) {
+    this->debugState.writeBufferOverflowCount++; // Increment overflow counter
+    return false;
+  }
+
+  // Write all bytes to the buffer
+  writeByte(FrameStart);
+  writeByte(header);
+  for (int i = 0; i < sz; i++) {
+    if (buf[i] == FrameEsc || buf[i] == FrameStart || buf[i] == FrameEnd) {
+      writeByte(FrameEsc);
+    }
+    writeByte(buf[i]);
+  }
+  writeByte(FrameEnd);
   return true;
 }
 

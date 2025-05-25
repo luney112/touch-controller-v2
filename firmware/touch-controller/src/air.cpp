@@ -19,7 +19,7 @@ constexpr uint8_t RangingFrequency = 15; // 60hz for 4x4, 15hz for 8x8
 
 constexpr uint16_t BandCount = 6;
 constexpr uint16_t SingleBandSizeMm = 23;
-constexpr uint16_t LowBarMm = 10.0 * 10;
+constexpr uint16_t LowBarMm = 10.0 * 10; // 10cm
 constexpr uint16_t HighBarMm = LowBarMm + BandCount * SingleBandSizeMm;
 
 constexpr uint32_t MaxWireClockSpeed = 1000000;
@@ -144,17 +144,16 @@ void AirController::loop() {
       continue;
     }
   }
-}
 
-uint8_t AirController::getBlockedSensors() {
   uint8_t val = 0;
 
+  // Now, calculate using the ranging data the blocked sensor value
   // For every sensor
   for (int i = 0; i < TofCount; i++) {
     auto data = &measurementData[i];
     // For each zone/pixel of the sensor
-    for (int zid = 0; i < Resolution; i++) {
-      // We must have at least on thing detected
+    for (int zid = 0; zid < Resolution; zid++) {
+      // We must have at least one thing detected
       if (data->nb_target_detected[zid] == 0) {
         continue;
       }
@@ -166,15 +165,19 @@ uint8_t AirController::getBlockedSensors() {
           continue;
         }
         uint16_t normalized = mm - LowBarMm;
-        uint16_t pos = (normalized / SingleBandSizeMm) + 1;
-        if (pos <= 0 || pos > BandCount) {
+        uint16_t pos = (normalized / SingleBandSizeMm); // pos will be 0-indexed (0 to BandCount - 1)
+        if (pos >= BandCount) {                         // pos should be less than BandCount
           serial->writeDebugLogf("Detected invalid ToF band state: %dmm -> pos=%d", mm, pos);
           continue;
         }
-        val |= ((1 << pos) - 1);
+        val |= (1 << pos); // Set only the bit corresponding to the detected band (0-indexed)
       }
     }
   }
 
-  return val;
+  lastCalculatedSensorValue = val;
+}
+
+uint8_t AirController::getBlockedSensors() {
+  return lastCalculatedSensorValue;
 }

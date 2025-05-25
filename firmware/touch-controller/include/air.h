@@ -22,6 +22,7 @@ private:
 
   SparkFun_VL53L5CX sensors[TofCount];
   VL53L5CX_ResultsData measurementData[TofCount];
+  uint8_t lastCalculatedSensorValue = 0;
 
   static volatile int interruptCount;
 };

@@ -1,13 +1,14 @@
 #ifndef LAYOUT_H
 #define LAYOUT_H
 
-// Direction is relative to the front/top of the board
-// Leftmost = Key0, Rightmost = Key15
-enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
-
-//        Touch sensor layout (view from the front/top)
 // ---------------------------------------------------------
-// |    0x2C     |    0x2B     |    0x2A     |    0x29     |
+//                  View from the front/top
+// ---------------------------------------------------------
+//                    Touch sensor layout
+// ---------------------------------------------------------
+// |      0      |      1      |      2      |      3      |
+// ---------------------------------------------------------
+// |    0x29     |    0x2A     |    0x2B     |    0x2C     |
 // ---------------------------------------------------------
 // | 01 03 05 07 | 01 03 05 07 | 01 03 05 07 | 01 03 05 07 |
 // | 02 04 06 08 | 02 04 06 08 | 02 04 06 08 | 02 04 06 08 |
@@ -15,12 +16,23 @@ enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
 // | 01 03 05 07 | 09 11 13 15 | 17 19 21 23 | 25 27 29 31 |
 // | 02 04 06 08 | 10 12 14 16 | 18 20 22 24 | 26 28 30 32 |
 // ---------------------------------------------------------
+//                        ToF sensors
+// ---------------------------------------------------------
+// |      0      |      1      |      2      |      3      |
+// ---------------------------------------------------------
+// |    0x2D     |    0x2E     |    0x2F     |    0x30     |
+// ---------------------------------------------------------
+
+// Direction is relative to the front/top of the board
+// Leftmost = Key0, Rightmost = Key15
+enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
+
 // 0x2C->82k | 0x2B->100k | 0x2A->120k | 0x29->150k
 // These are 7-bit addresses
-#define CAP1188_ADDR_0 0x2C
-#define CAP1188_ADDR_1 0x2B
-#define CAP1188_ADDR_2 0x2A
-#define CAP1188_ADDR_3 0x29
+#define CAP1188_ADDR_0 0x29
+#define CAP1188_ADDR_1 0x2A
+#define CAP1188_ADDR_2 0x2B
+#define CAP1188_ADDR_3 0x2C
 
 // These addresses are assigned dynamically at runtime
 // These are 7-bit addresses
