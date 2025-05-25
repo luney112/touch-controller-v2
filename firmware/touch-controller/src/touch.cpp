@@ -41,11 +41,12 @@ bool TouchController::init() {
   return true;
 }
 
-void TouchController::getTouchStatus(TouchData &data) {
-  data.touched = 0;
+TouchData TouchController::getTouchStatus() {
+  TouchData data = 0;
   for (int i = 0; i < Cap1188Count; i++) {
-    data.touched |= this->sensors[i].touched() << (i * 8);
+    data |= this->sensors[i].touched() << (i * 8);
   }
+  return data;
 }
 
 void TouchController::enableTouchSensors() {

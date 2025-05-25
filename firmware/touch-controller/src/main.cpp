@@ -149,24 +149,24 @@ void processAirSensorData() {
    There are a total of 32 regions on the touch slider. Each region can return
    an 8-bit pressure value. The operator menu allows the operator to adjust the
    pressure level at which a region is considered to be pressed; the factory
-   default value for this setting is 20. */
+   default value for this setting is 20.
 
-/* Callback function supplied to your IO DLL. This must be called with a
+   Callback function supplied to your IO DLL. This must be called with a
    pointer to a 32-byte array of pressure values, one byte per slider cell.
    See above for layout and pressure threshold information.
 
    The callback will copy the pressure state data out of your buffer before
    returning. The pointer will not be retained. */
 void processSliderData() {
-  touch.getTouchStatus(touchData);
-  uint8_t keyData[32];
-  bool invert = false;
-  uint32_t touched = touchData.touched;
-  // Our data is mirrored the other way, so reverse it
-  for (int i = 0; i < 32; i++) {
-    int k = touched & (1 << i) ? SliderTouchedPressureValue : 0;
-    keyData[32 - 1 - i] = k;
+  uint32_t touched = touch.getTouchStatus();
+  uint8_t keyData[32] = {0};
+
+  // Our data is slighty different from the expected format
+  for (int i = 0; i < 32; i += 2) {
+    keyData[31 - i] = touched & (1 << i) ? SliderTouchedPressureValue : 0;
+    keyData[32 - i] = touched & (1 << (i + 1)) ? SliderTouchedPressureValue : 0;
   }
+
   serial.writeSliderData(keyData, sizeof(keyData));
 }
 
@@ -177,8 +177,7 @@ void processSensorDataTest() {
   serial.writeDebugLogf("Air sensor is %d", blocked);
 
   // Read and update slider
-  touch.getTouchStatus(touchData);
-  uint32_t touched = touchData.touched;
+  uint32_t touched = touch.getTouchStatus();
   for (int i = 0; i < 32; i++) {
     if (touched & (1 << i)) {
       if (ledData[i] == 0) {
