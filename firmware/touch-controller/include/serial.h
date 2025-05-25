@@ -7,6 +7,9 @@ class LedController;
 
 struct DebugStatePayload {
   uint32_t writeBufferOverflowCount;
+  uint32_t serialReadLatencyUs;
+  uint32_t serialWriteLatencyUs;
+  uint32_t sensorProcessingLatencyUs;
 };
 
 constexpr int SerialReadBufferSize = 512;
@@ -31,6 +34,10 @@ public:
   void writeAirSensorData(uint8_t *buf, int sz);
   void writeSliderData(uint8_t *buf, int sz);
   void writeDebugState();
+
+  void updateSerialReadLatency(uint32_t latency);
+  void updateSerialWriteLatency(uint32_t latency);
+  void updateSensorProcessingLatency(uint32_t latency);
 
   int availableToWrite() { return SerialWriteBufferSize - writeBufferLen; }
 

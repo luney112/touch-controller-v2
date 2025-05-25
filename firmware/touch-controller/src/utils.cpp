@@ -1,6 +1,27 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+#include "utils.h"
+
+constexpr uint32_t LatencyAveragingIntervalMillis = 5000; // 5 seconds
+
+// Helper function to update latency metrics. Returns true if an averaging period has passed.
+uint32_t updateLatencyMetric(LatencyTracker &tracker, unsigned long dt) {
+  tracker.sum += dt;
+  tracker.count++;
+
+  unsigned long currentMillis = millis();
+  if (currentMillis - tracker.startTime >= LatencyAveragingIntervalMillis) {
+    uint32_t avg = tracker.sum / tracker.count;
+    tracker.sum = 0;
+    tracker.count = 0;
+    tracker.startTime = currentMillis;
+    return avg;
+  }
+
+  return 0;
+}
+
 void scan() {
   Serial.println("Scanning...");
 

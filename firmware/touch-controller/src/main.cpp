@@ -5,9 +5,9 @@
 #include "led.h"
 #include "serial.h"
 #include "touch.h"
+#include "utils.h"
 
 #define TEST_MODE
-#define REPORT_LATENCY_METRICS
 
 void processSensorData();
 void processAirSensorData();
@@ -17,21 +17,23 @@ void processSensorDataTest();
 constexpr int SensorReadFrequencyMicros = 1000;
 constexpr int SliderTouchedPressureValue = 128;
 
-constexpr int LatencyMetricSampleCount = 1000;
-
 constexpr uint32_t WireClockSpeed = 400000;
 
-constexpr uint32_t debugStateSendIntervalMillis = 5000; // 5 seconds
+constexpr uint32_t DebugStateSendIntervalMillis = 5000; // 5 seconds
 
 LedController led;
 TouchController touch;
 AirController air;
 SerialController serial;
 
+LatencyTracker serialWriteLatencyTracker;
+LatencyTracker serialReadLatencyTracker;
+LatencyTracker sensorProcessingLatencyTracker;
+
 TouchData touchData;
 int ledData[LED_SEGMENT_COUNT] = {0};
 
-unsigned long startTime = 0;
+unsigned long sensorReadFrequencyStartUs = 0;
 
 void setup() {
   delay(1000); // Needed for some reason to get complete serial output
@@ -55,19 +57,15 @@ void setup() {
   serial.writeDebugLog("Calibrating...")->processWrite();
   serial.writeDebugLog("Finished calibrating!")->processWrite();
   led.setAllUntouched();
-
-  startTime = micros();
 }
 
 void loop() {
-#ifdef REPORT_LATENCY_METRICS
-  unsigned long start = micros();
-#endif
+  unsigned long start = micros(); // For serial write latency
 
   static unsigned long lastDebugStateSendTime = 0;
 
   // Send debug state periodically
-  if (millis() - lastDebugStateSendTime >= debugStateSendIntervalMillis) {
+  if (millis() - lastDebugStateSendTime >= DebugStateSendIntervalMillis) {
     serial.writeDebugState();
     lastDebugStateSendTime = millis();
   }
@@ -75,71 +73,40 @@ void loop() {
   air.loop();
   serial.processWrite();
 
-#ifdef REPORT_LATENCY_METRICS
-  static unsigned long sum = 0;
-  static unsigned long count = 0;
-  unsigned long dt = micros() - start;
-  if (count >= LatencyMetricSampleCount * 8) {
-    unsigned long us = sum / count;
-    // serial.writeDebugLogf("Latency metric for processing serial write: %d us", us);
-    sum = 0;
-    count = 0;
+  uint32_t avg = updateLatencyMetric(serialWriteLatencyTracker, micros() - start);
+  if (avg > 0) {
+    serial.updateSerialWriteLatency(avg);
   }
-  sum += dt;
-  count++;
-#endif
 
-  if (micros() - startTime > SensorReadFrequencyMicros) {
+  if (micros() - sensorReadFrequencyStartUs > SensorReadFrequencyMicros) {
 #ifdef TEST_MODE
     processSensorDataTest();
 #else
     processSensorData();
 #endif
-    startTime = micros();
+    sensorReadFrequencyStartUs = micros();
   }
 
   delayMicroseconds(50);
 }
 
 void serialEvent() {
-#ifdef REPORT_LATENCY_METRICS
-  unsigned long start = micros();
-#endif
+  unsigned long start = micros(); // For serial read latency
   serial.read();
-#ifdef REPORT_LATENCY_METRICS
-  static unsigned long sum = 0;
-  static unsigned long count = 0;
-  unsigned long dt = micros() - start;
-  if (count >= LatencyMetricSampleCount / 4) {
-    unsigned long us = sum / count;
-    serial.writeDebugLogf("Latency metric for processing serial read: %d us", us);
-    sum = 0;
-    count = 0;
+  uint32_t avg = updateLatencyMetric(serialReadLatencyTracker, micros() - start);
+  if (avg > 0) {
+    serial.updateSerialReadLatency(avg);
   }
-  sum += dt;
-  count++;
-#endif
 }
 
 void processSensorData() {
-#ifdef REPORT_LATENCY_METRICS
-  unsigned long start = micros();
-#endif
+  unsigned long start = micros(); // For sensor processing latency
   processAirSensorData();
   processSliderData();
-#ifdef REPORT_LATENCY_METRICS
-  static unsigned long sum = 0;
-  static unsigned long count = 0;
-  unsigned long dt = micros() - start;
-  if (count >= LatencyMetricSampleCount) {
-    unsigned long us = sum / count;
-    serial.writeDebugLogf("Latency metric for processing sensor data: %d us", us);
-    sum = 0;
-    count = 0;
+  uint32_t avg = updateLatencyMetric(sensorProcessingLatencyTracker, micros() - start);
+  if (avg > 0) {
+    serial.updateSensorProcessingLatency(avg);
   }
-  sum += dt;
-  count++;
-#endif
 }
 
 /* Poll JVS input.

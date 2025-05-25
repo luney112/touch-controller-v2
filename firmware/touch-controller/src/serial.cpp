@@ -19,6 +19,9 @@ void SerialController::init(LedController *ledController) {
   writeDebugLog("Initialized serial")->processWrite();
   this->ledController = ledController;
   this->debugState.writeBufferOverflowCount = 0; // Initialize debug state
+  this->debugState.serialReadLatencyUs = 0;
+  this->debugState.serialWriteLatencyUs = 0;
+  this->debugState.sensorProcessingLatencyUs = 0;
 }
 
 // TODO: Add CRC
@@ -84,8 +87,20 @@ void SerialController::writeSliderData(uint8_t *buf, int sz) {
   this->writeFramed(FramedPacketHeader_SliderData, buf, sz);
 }
 
+void SerialController::updateSerialReadLatency(uint32_t latency) {
+  this->debugState.serialReadLatencyUs = latency;
+}
+
+void SerialController::updateSerialWriteLatency(uint32_t latency) {
+  this->debugState.serialWriteLatencyUs = latency;
+}
+
+void SerialController::updateSensorProcessingLatency(uint32_t latency) {
+  this->debugState.sensorProcessingLatencyUs = latency;
+}
+
 void SerialController::writeDebugState() {
-  uint8_t buffer[4];
+  uint8_t buffer[16];
   uint8_t cnt = 0;
 
   // Overflow count
@@ -93,7 +108,22 @@ void SerialController::writeDebugState() {
   memcpy(buffer + cnt, &overflowCount, sizeof(overflowCount));
   cnt += sizeof(overflowCount);
 
-  writeFramed(FramedPacketHeader_DebugState, buffer, sizeof(buffer));
+  // Serial Read Latency
+  uint32_t readLatency = htonl(this->debugState.serialReadLatencyUs);
+  memcpy(buffer + cnt, &readLatency, sizeof(readLatency));
+  cnt += sizeof(readLatency);
+
+  // Serial Write Latency
+  uint32_t writeLatency = htonl(this->debugState.serialWriteLatencyUs);
+  memcpy(buffer + cnt, &writeLatency, sizeof(writeLatency));
+  cnt += sizeof(writeLatency);
+
+  // Sensor Processing Latency
+  uint32_t sensorLatency = htonl(this->debugState.sensorProcessingLatencyUs);
+  memcpy(buffer + cnt, &sensorLatency, sizeof(sensorLatency));
+  cnt += sizeof(sensorLatency);
+
+  writeFramed(FramedPacketHeader_DebugState, buffer, cnt);
 }
 
 // Write one byte to the ring buffer
