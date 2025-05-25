@@ -104,7 +104,7 @@ bool AirController::init() {
     delay(50);
   }
 
-  // 3. Re-enable all pins
+  // 3. Re-enable all devices
   for (int i = 0; i < TofCount; i++) {
     digitalWrite(LpnMap[i], HIGH);
   }

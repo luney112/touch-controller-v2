@@ -3,23 +3,38 @@
 
 #include "utils.h"
 
-constexpr uint32_t LatencyAveragingIntervalMillis = 5000; // 5 seconds
+// Constructor
+LatencyTracker::LatencyTracker(uint32_t intervalMillis) : intervalMillis(intervalMillis) {
+  startTimeMillis = millis();
+  sum = 0;
+  count = 0;
+}
 
-// Helper function to update latency metrics. Returns true if an averaging period has passed.
-uint32_t updateLatencyMetric(LatencyTracker &tracker, unsigned long dt) {
-  tracker.sum += dt;
-  tracker.count++;
+void LatencyTracker::measureAndRecord(MeasureFunc_t measureFunc, ResultCallback_t resultCallback) {
+  if (measureFunc) {
+    unsigned long measureStartTimeUs = micros();
+    measureFunc(); // Execute the function to be measured
+    unsigned long dtUs = micros() - measureStartTimeUs;
 
-  unsigned long currentMillis = millis();
-  if (currentMillis - tracker.startTime >= LatencyAveragingIntervalMillis) {
-    uint32_t avg = tracker.sum / tracker.count;
-    tracker.sum = 0;
-    tracker.count = 0;
-    tracker.startTime = currentMillis;
-    return avg;
+    sum += dtUs;
+    count++;
   }
 
-  return 0;
+  unsigned long currentMillis = millis();
+  if (currentMillis - startTimeMillis >= intervalMillis) {
+    uint32_t avg = 0;
+    if (count > 0) {
+      avg = sum / count;
+    }
+
+    sum = 0;
+    count = 0;
+    startTimeMillis = currentMillis;
+
+    if (resultCallback) {
+      resultCallback(avg); // Call the result callback with the average
+    }
+  }
 }
 
 void scan() {

@@ -22,6 +22,7 @@ private:
 
   SparkFun_VL53L5CX sensors[TofCount];
   VL53L5CX_ResultsData measurementData[TofCount];
+  // Value is cached and updated in loop() when new data is available via interrupt
   uint8_t lastCalculatedSensorValue = 0;
 
   static volatile int interruptCount;

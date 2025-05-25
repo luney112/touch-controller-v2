@@ -18,10 +18,6 @@ void SerialController::init(LedController *ledController) {
   writeDebugLog("-------------------------------------")->processWrite();
   writeDebugLog("Initialized serial")->processWrite();
   this->ledController = ledController;
-  this->debugState.writeBufferOverflowCount = 0; // Initialize debug state
-  this->debugState.serialReadLatencyUs = 0;
-  this->debugState.serialWriteLatencyUs = 0;
-  this->debugState.sensorProcessingLatencyUs = 0;
 }
 
 // TODO: Add CRC
@@ -85,18 +81,6 @@ void SerialController::writeAirSensorData(uint8_t *buf, int sz) {
 
 void SerialController::writeSliderData(uint8_t *buf, int sz) {
   this->writeFramed(FramedPacketHeader_SliderData, buf, sz);
-}
-
-void SerialController::updateSerialReadLatency(uint32_t latency) {
-  this->debugState.serialReadLatencyUs = latency;
-}
-
-void SerialController::updateSerialWriteLatency(uint32_t latency) {
-  this->debugState.serialWriteLatencyUs = latency;
-}
-
-void SerialController::updateSensorProcessingLatency(uint32_t latency) {
-  this->debugState.sensorProcessingLatencyUs = latency;
 }
 
 void SerialController::writeDebugState() {

@@ -55,7 +55,7 @@ void LedController::set(int *vals, int sz) {
   FastLED.show();
 }
 
-/* Update the RGB lighting on the slider. A pointer to an array of 32 * 3 = 96
+/* Update the RGB lighting on the slider. A pointer to an array of 31 * 3 = 93
   bytes is supplied, organized in BRG format.
    The first set of bytes is the right-most slider key, and from there the bytes
    alternate between the dividers and the keys until the left-most key.

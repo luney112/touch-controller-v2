@@ -6,14 +6,12 @@
 class LedController;
 
 struct DebugStatePayload {
-  uint32_t writeBufferOverflowCount;
-  uint32_t serialReadLatencyUs;
-  uint32_t serialWriteLatencyUs;
-  uint32_t sensorProcessingLatencyUs;
+  uint32_t writeBufferOverflowCount = 0;
+  uint32_t serialReadLatencyUs = 0;
+  uint32_t serialWriteLatencyUs = 0;
+  uint32_t sensorProcessingLatencyUs = 0;
+  uint32_t airLoopLatencyUs = 0;
 };
-
-constexpr int SerialReadBufferSize = 512;
-constexpr int SerialWriteBufferSize = 512;
 
 enum FramedPacketHeader {
   FramedPacketHeader_DebugLog = 0x20,
@@ -22,6 +20,9 @@ enum FramedPacketHeader {
   FramedPacketHeader_AirSensorData = 0x32,
   FramedPacketHeader_DebugState = 0x40,
 };
+
+constexpr int SerialReadBufferSize = 512;
+constexpr int SerialWriteBufferSize = 512;
 
 class SerialController {
 public:
@@ -35,9 +36,7 @@ public:
   void writeSliderData(uint8_t *buf, int sz);
   void writeDebugState();
 
-  void updateSerialReadLatency(uint32_t latency);
-  void updateSerialWriteLatency(uint32_t latency);
-  void updateSensorProcessingLatency(uint32_t latency);
+  DebugStatePayload *getDebugState() { return &debugState; };
 
   int availableToWrite() { return SerialWriteBufferSize - writeBufferLen; }
 
