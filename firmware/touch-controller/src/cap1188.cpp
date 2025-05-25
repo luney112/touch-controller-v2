@@ -11,6 +11,7 @@ bool CAP1188::begin(uint8_t i2cAddr, TwoWire *theWire) {
   // IMPORTANT!!!
   // DO NOT call begin() on `i2cDevice` as it also calls Wire.begin() and may re-initialize i2c
   this->i2cDevice = new Adafruit_I2CDevice(i2cAddr, theWire);
+  return true;
 }
 
 bool CAP1188::init() {
