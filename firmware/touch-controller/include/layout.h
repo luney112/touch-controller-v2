@@ -61,6 +61,6 @@ enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
 #define GPIO_TOUCH_ALERT 17
 #define GPIO_TOUCH_RESET 18
 
-#define GPIO_LED_DATA 35
+#define GPIO_LED_DATA 11
 
 #endif
