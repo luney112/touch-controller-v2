@@ -6,7 +6,7 @@
 
 class SerialController;
 
-constexpr uint8_t Cap1188Count = 4;
+constexpr uint8_t Cap1188Count = 1;
 
 // Bitmap of touch sensor data
 // 4 sensors, 8 keys each, so 32 bits

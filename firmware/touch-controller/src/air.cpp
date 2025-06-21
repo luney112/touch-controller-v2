@@ -11,11 +11,15 @@
 #include <Arduino.h>
 #include <SparkFun_VL53L5CX_Library.h>
 
-constexpr uint8_t AddressMap[TofCount] = {TOF_ADDR_0, TOF_ADDR_1, TOF_ADDR_2, TOF_ADDR_3};
-constexpr uint8_t LpnMap[TofCount] = {GPIO_TOF_LPN0, GPIO_TOF_LPN1, GPIO_TOF_LPN2, GPIO_TOF_LPN3};
+constexpr uint8_t AddressMap[] = {TOF_ADDR_0, TOF_ADDR_1, TOF_ADDR_2, TOF_ADDR_3};
+constexpr uint8_t LpnMap[] = {GPIO_TOF_LPN0, GPIO_TOF_LPN1, GPIO_TOF_LPN2, GPIO_TOF_LPN3};
 
-constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_8X8;
-constexpr uint8_t RangingFrequency = 15; // 60hz for 4x4, 15hz for 8x8
+constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_4X4;
+constexpr uint8_t RangingFrequency = 60; // 60hz for 4x4, 15hz for 8x8
+
+// Zones we care about for distance measurement. Right now, just the middle-back ones
+constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+constexpr uint8_t SearchZonesCount = sizeof(SearchZones) / sizeof(SearchZones[0]);
 
 constexpr uint16_t BandCount = 6;
 constexpr uint16_t SingleBandSizeMm = 23;
@@ -86,18 +90,27 @@ bool AirController::init() {
     digitalWrite(LpnMap[i], HIGH);
     delay(50);
 
-    // Increase default from 32 bytes to 128 - not supported on all platforms
-    sensors[i].setWireMaxPacketSize(128);
-
     // Call begin() using the default address
     // All other i2c devices that could interfere should be disabled
     if (!sensors[i].begin()) {
-      serial->writeDebugLogf("[ERROR] Unable to initialize ToF %#02X", AddressMap[i])->processWrite();
-      return false;
+      // Try again, but use the desired address
+      // This can happen if power was not cut off to the sensor, but the processor was reset/rebooted
+      // e.g. during development. This should not happen normally.
+      // If we ever have a reset pin that works properly, we can use that to also fully reset the sensor
+      if (!sensors[i].begin(AddressMap[i])) {
+        serial
+            ->writeDebugLogf("[ERROR] Unable to initialize ToF %#02X: %d", AddressMap[i],
+                             sensors[i].lastError.lastErrorCode)
+            ->processWrite();
+        return false;
+      }
     }
 
     // Set the new address
     sensors[i].setAddress(AddressMap[i]);
+
+    // Increase default from 32 bytes to 128 - not supported on all platforms
+    sensors[i].setWireMaxPacketSize(128);
 
     // Disable i2c
     digitalWrite(LpnMap[i], LOW);
@@ -120,7 +133,7 @@ bool AirController::init() {
     sensors[i].setRangingFrequency(RangingFrequency);
     sensors[i].setRangingMode(SF_VL53L5CX_RANGING_MODE::CONTINUOUS);
     sensors[i].setTargetOrder(SF_VL53L5CX_TARGET_ORDER::STRONGEST);
-    // sensors[i].setSharpenerPercent(40);
+    sensors[i].setSharpenerPercent(40);
     sensors[i].startRanging();
   }
 
@@ -152,7 +165,8 @@ void AirController::loop() {
   for (int i = 0; i < TofCount; i++) {
     auto data = &measurementData[i];
     // For each zone/pixel of the sensor
-    for (int zid = 0; zid < Resolution; zid++) {
+    for (int j = 0; j < SearchZonesCount; j++) {
+      auto zid = SearchZones[j];
       // We must have at least one thing detected
       if (data->nb_target_detected[zid] == 0) {
         continue;
@@ -161,7 +175,8 @@ void AirController::loop() {
       auto status = data->target_status[zid];
       if (status == 5 || status == 6 || status == 9) {
         auto mm = data->distance_mm[zid];
-        if (mm < LowBarMm || mm > HighBarMm) {
+        // Ignore distances outside of range
+        if (mm < LowBarMm || mm >= HighBarMm) {
           continue;
         }
         uint16_t normalized = mm - LowBarMm;

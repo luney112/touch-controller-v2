@@ -164,7 +164,7 @@ void processSensorDataTest() {
   // Read and update air sensor
   uint8_t blocked = air.getBlockedSensors();
   led.setBeamBroken(blocked > 0);
-  serial.writeDebugLogf("Air sensor is %d", blocked);
+  // serial.writeDebugLogf("Air sensor is %d", blocked);
 
   // Read and update slider
   uint32_t touched = touch.getTouchStatus();

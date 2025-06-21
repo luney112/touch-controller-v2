@@ -6,7 +6,7 @@
 
 class SerialController;
 
-constexpr uint8_t TofCount = 4;
+constexpr uint8_t TofCount = 1;
 
 class AirController {
 public:
