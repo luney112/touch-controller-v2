@@ -14,12 +14,14 @@
 constexpr uint8_t AddressMap[] = {TOF_ADDR_0, TOF_ADDR_1, TOF_ADDR_2, TOF_ADDR_3};
 constexpr uint8_t LpnMap[] = {GPIO_TOF_LPN0, GPIO_TOF_LPN1, GPIO_TOF_LPN2, GPIO_TOF_LPN3};
 
-constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_4X4;
-constexpr uint8_t RangingFrequency = 60; // 60hz for 4x4, 15hz for 8x8
+constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_8X8;
+constexpr uint8_t RangingFrequency = 15; // 60hz for 4x4, 15hz for 8x8
 
 // Zones we care about for distance measurement. Right now, just the middle-back ones
-constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+// constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+constexpr uint8_t SearchZones[] = {25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38};
 constexpr uint8_t SearchZonesCount = sizeof(SearchZones) / sizeof(SearchZones[0]);
+constexpr uint8_t SearchZonesHitRequirement = 2;
 
 constexpr uint16_t BandCount = 6;
 constexpr uint16_t SingleBandSizeMm = 23;
@@ -163,6 +165,7 @@ void AirController::loop() {
   // Now, calculate using the ranging data the blocked sensor value
   // For every sensor
   for (int i = 0; i < TofCount; i++) {
+    uint8_t hitCountsPerBand[BandCount] = {0};
     auto data = &measurementData[i];
     // For each zone/pixel of the sensor
     for (int j = 0; j < SearchZonesCount; j++) {
@@ -185,7 +188,14 @@ void AirController::loop() {
           serial->writeDebugLogf("Detected invalid ToF band state: %dmm -> pos=%d", mm, pos);
           continue;
         }
-        val |= (1 << pos); // Set only the bit corresponding to the detected band (0-indexed)
+        hitCountsPerBand[pos]++;
+      }
+    }
+
+    for (int j = 0; j < BandCount; j++) {
+      // If we have enough hits in this band, set the corresponding bit
+      if (hitCountsPerBand[j] >= SearchZonesHitRequirement) {
+        val |= (1 << j); // Set the bit corresponding to the band (0-indexed)
       }
     }
   }
