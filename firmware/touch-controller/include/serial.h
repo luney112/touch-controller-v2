@@ -11,6 +11,8 @@ struct DebugStatePayload {
   uint32_t serialWriteLatencyUs = 0;
   uint32_t sensorProcessingLatencyUs = 0;
   uint32_t airLoopLatencyUs = 0;
+  uint32_t airLoopTimeTotalUs = 0;
+  uint32_t airLoopCount = 0;
 };
 
 enum FramedPacketHeader {

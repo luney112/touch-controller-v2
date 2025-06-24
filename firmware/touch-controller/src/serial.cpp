@@ -5,7 +5,7 @@
 
 // Calculated by:
 // LedData[32+2+1] + AirData[1+2+1] = 39bytes
-// 1khz send rate = 39000 bytes/s
+// 1khz send rate (ideal) = 39000 bytes/s
 // 460800 baud = 46080 bytes/s real
 constexpr unsigned long SerialBaudRate = 460800;
 
@@ -83,31 +83,33 @@ void SerialController::writeSliderData(uint8_t *buf, int sz) {
   this->writeFramed(FramedPacketHeader_SliderData, buf, sz);
 }
 
+uint8_t writeUint32ToBuffer(uint8_t *buffer, uint32_t value) {
+  uint32_t netValue = htonl(value);
+  memcpy(buffer, &netValue, sizeof(netValue));
+  return sizeof(netValue);
+}
+
 void SerialController::writeDebugState() {
-  uint8_t buffer[16];
+  uint8_t buffer[128];
   uint8_t cnt = 0;
 
-  // Overflow count
-  uint32_t overflowCount = htonl(this->debugState.writeBufferOverflowCount);
-  memcpy(buffer + cnt, &overflowCount, sizeof(overflowCount));
-  cnt += sizeof(overflowCount);
-
-  // Serial Read Latency
-  uint32_t readLatency = htonl(this->debugState.serialReadLatencyUs);
-  memcpy(buffer + cnt, &readLatency, sizeof(readLatency));
-  cnt += sizeof(readLatency);
-
-  // Serial Write Latency
-  uint32_t writeLatency = htonl(this->debugState.serialWriteLatencyUs);
-  memcpy(buffer + cnt, &writeLatency, sizeof(writeLatency));
-  cnt += sizeof(writeLatency);
-
-  // Sensor Processing Latency
-  uint32_t sensorLatency = htonl(this->debugState.sensorProcessingLatencyUs);
-  memcpy(buffer + cnt, &sensorLatency, sizeof(sensorLatency));
-  cnt += sizeof(sensorLatency);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.writeBufferOverflowCount);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialReadLatencyUs);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialWriteLatencyUs);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.sensorProcessingLatencyUs);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopLatencyUs);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopTimeTotalUs);
+  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopCount);
 
   writeFramed(FramedPacketHeader_DebugState, buffer, cnt);
+
+  writeDebugLogf("Debug state: "
+                 "OverflowCount=%d, ReadLatency=%dus, WriteLatency=%dus, SensorLatency=%dus, AirLoopLatency=%dms, "
+                 "AirLoopTotal=%dms, AirLoopCount=%d",
+                 this->debugState.writeBufferOverflowCount, this->debugState.serialReadLatencyUs,
+                 this->debugState.serialWriteLatencyUs, this->debugState.sensorProcessingLatencyUs,
+                 this->debugState.airLoopLatencyUs / 1000, this->debugState.airLoopTimeTotalUs / 1000,
+                 this->debugState.airLoopCount);
 }
 
 // Write one byte to the ring buffer

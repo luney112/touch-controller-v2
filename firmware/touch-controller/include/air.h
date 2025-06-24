@@ -6,7 +6,7 @@
 
 class SerialController;
 
-constexpr uint8_t TofCount = 1;
+constexpr uint8_t TofCount = 4;
 
 class AirController {
 public:
@@ -26,6 +26,8 @@ private:
   uint8_t lastCalculatedSensorValue = 0;
 
   static volatile int interruptCount;
+
+  unsigned long lastRangeTimeMillis = 0;
 };
 
 #endif

@@ -3,8 +3,11 @@
 
 #include "utils.h"
 
+constexpr unsigned long ZeroThresholdUs = 20;
+
 // Constructor
-LatencyTracker::LatencyTracker(uint32_t intervalMillis) : intervalMillis(intervalMillis) {
+LatencyTracker::LatencyTracker(uint32_t intervalMillis, bool includeZeroValues)
+    : intervalMillis(intervalMillis), includeZeroValues(includeZeroValues) {
   startTimeMillis = millis();
   sum = 0;
   count = 0;
@@ -16,8 +19,10 @@ void LatencyTracker::measureAndRecord(MeasureFunc_t measureFunc, ResultCallback_
     measureFunc(); // Execute the function to be measured
     unsigned long dtUs = micros() - measureStartTimeUs;
 
-    sum += dtUs;
-    count++;
+    if (includeZeroValues || dtUs > ZeroThresholdUs) {
+      sum += dtUs;
+      count++;
+    }
   }
 
   unsigned long currentMillis = millis();
@@ -27,13 +32,13 @@ void LatencyTracker::measureAndRecord(MeasureFunc_t measureFunc, ResultCallback_
       avg = sum / count;
     }
 
+    if (resultCallback) {
+      resultCallback(avg, sum, count); // Call the result callback with the average
+    }
+
     sum = 0;
     count = 0;
     startTimeMillis = currentMillis;
-
-    if (resultCallback) {
-      resultCallback(avg); // Call the result callback with the average
-    }
   }
 }
 

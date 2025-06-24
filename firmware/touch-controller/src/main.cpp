@@ -17,10 +17,14 @@ void processSensorDataTest();
 constexpr int SensorReadFrequencyMicros = 1000;
 constexpr int SliderTouchedPressureValue = 128;
 
+// Max speed of the i2c bus
+// 400kHz max speed for cap1188
+// 1Mhz max speed for VL53L5CX
+// Must use the lower of the two
 constexpr uint32_t WireClockSpeed = 400000;
 
-constexpr uint32_t DebugStateSendIntervalMillis = 5000;   // 5 seconds
-constexpr uint32_t LatencyAveragingIntervalMillis = 5000; // 5 seconds
+constexpr uint32_t DebugStateSendIntervalMillis = 1000;   // 1 second
+constexpr uint32_t LatencyAveragingIntervalMillis = 1000; // 1 second
 
 LedController led;
 TouchController touch;
@@ -29,7 +33,7 @@ SerialController serial;
 
 LatencyTracker serialWriteLatencyTracker(LatencyAveragingIntervalMillis);
 LatencyTracker serialReadLatencyTracker(LatencyAveragingIntervalMillis);
-LatencyTracker airLoopLatencyTracker(LatencyAveragingIntervalMillis);
+LatencyTracker airLoopLatencyTracker(LatencyAveragingIntervalMillis, false);
 LatencyTracker sensorProcessingLatencyTracker(LatencyAveragingIntervalMillis);
 
 int ledData[LED_SEGMENT_COUNT] = {0};
@@ -70,18 +74,26 @@ void loop() {
 
   // Air loop
   airLoopLatencyTracker.measureAndRecord([]() { air.loop(); },
-                                         [](uint32_t avg) { serial.getDebugState()->airLoopLatencyUs = avg; });
+                                         [](uint32_t avg, uint32_t sum, uint32_t count) {
+                                           serial.getDebugState()->airLoopLatencyUs = avg;
+                                           serial.getDebugState()->airLoopTimeTotalUs = sum;
+                                           serial.getDebugState()->airLoopCount = count;
+                                         });
 
   // Process serial write
-  serialWriteLatencyTracker.measureAndRecord([]() { serial.processWrite(); },
-                                             [](uint32_t avg) { serial.getDebugState()->serialWriteLatencyUs = avg; });
+  serialWriteLatencyTracker.measureAndRecord(
+      []() { serial.processWrite(); },
+      [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->serialWriteLatencyUs = avg; });
 
   if (micros() - sensorReadFrequencyStartUs > SensorReadFrequencyMicros) {
 #ifdef TEST_MODE
-    processSensorDataTest();
+    sensorProcessingLatencyTracker.measureAndRecord(
+        []() { processSensorDataTest(); },
+        [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->sensorProcessingLatencyUs = avg; });
 #else
     sensorProcessingLatencyTracker.measureAndRecord(
-        []() { processSensorData(); }, [](uint32_t avg) { serial.getDebugState()->sensorProcessingLatencyUs = avg; });
+        []() { processSensorData(); },
+        [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->sensorProcessingLatencyUs = avg; });
 #endif
     sensorReadFrequencyStartUs = micros();
   }
@@ -90,8 +102,9 @@ void loop() {
 }
 
 void serialEvent() {
-  serialReadLatencyTracker.measureAndRecord([]() { serial.read(); },
-                                            [](uint32_t avg) { serial.getDebugState()->serialReadLatencyUs = avg; });
+  serialReadLatencyTracker.measureAndRecord(
+      []() { serial.read(); },
+      [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->serialReadLatencyUs = avg; });
 }
 
 void processSensorData() {

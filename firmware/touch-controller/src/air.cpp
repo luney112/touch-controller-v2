@@ -4,6 +4,14 @@
  *  https://www.pololu.com/file/0J1885/um2884-a-guide-to-using-the-vl53l5cx-multizone-timeofflight-ranging-sensor-with-wide-field-of-view-ultra-lite-driver-uld-stmicroelectronics.pdf
  *  https://community.st.com/t5/imaging-sensors/vl53l8cx-example-quot-platform-h-quot-ram-reduction/td-p/714296
  *  https://github.com/sparkfun/SparkFun_VL53L5CX_Arduino_Library/tree/main/examples
+ *
+ * Things to tune:
+ *  - Resolution
+ *  - Ranging frequency
+ *  - Search zones
+ *  - Search zones hit requirement
+ *  - Sharpener
+ *  - Target status
  */
 #include "air.h"
 #include "layout.h"
@@ -11,16 +19,32 @@
 #include <Arduino.h>
 #include <SparkFun_VL53L5CX_Library.h>
 
+// 4x4 mode has a lower resolution, but can run at 60hz. It also has a lower average latency (5ms)
+// 8x8 mode has a higher resolution, but can only run at 15hz. It has a higher average latency (14ms)
+// For now, use 4x4 mode since we care most about responsiveness and accuracy (having a poll rate)
+#define USE_4X4
+
 constexpr uint8_t AddressMap[] = {TOF_ADDR_0, TOF_ADDR_1, TOF_ADDR_2, TOF_ADDR_3};
 constexpr uint8_t LpnMap[] = {GPIO_TOF_LPN0, GPIO_TOF_LPN1, GPIO_TOF_LPN2, GPIO_TOF_LPN3};
 
+#ifdef USE_4X4
+constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_4X4;
+constexpr uint8_t RangingFrequency = 60; // Max 60hz for 4x4, 15hz for 8x8
+#else
 constexpr uint8_t Resolution = VL53L5CX_RESOLUTION_8X8;
-constexpr uint8_t RangingFrequency = 15; // 60hz for 4x4, 15hz for 8x8
+constexpr uint8_t RangingFrequency = 15; // Max 60hz for 4x4, 15hz for 8x8
+#endif
+
+constexpr unsigned long RangingFrequencyIntervalMillis = 1000 / RangingFrequency;
 
 // Zones we care about for distance measurement. Right now, just the middle-back ones
-// constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+#ifdef USE_4X4
+constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+#else
 constexpr uint8_t SearchZones[] = {25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38};
+#endif
 constexpr uint8_t SearchZonesCount = sizeof(SearchZones) / sizeof(SearchZones[0]);
+// The number of zones that must be hit for a specific band to be considered hit
 constexpr uint8_t SearchZonesHitRequirement = 2;
 
 constexpr uint16_t BandCount = 6;
@@ -28,6 +52,7 @@ constexpr uint16_t SingleBandSizeMm = 23;
 constexpr uint16_t LowBarMm = 10.0 * 10; // 10cm
 constexpr uint16_t HighBarMm = LowBarMm + BandCount * SingleBandSizeMm;
 
+// Max speed is 1MHz
 constexpr uint32_t MaxWireClockSpeed = 1000000;
 
 volatile int AirController::interruptCount;
@@ -52,22 +77,22 @@ bool AirController::begin(SerialController *serial) {
 // Setup and initialize the ToF sensors
 bool AirController::init() {
   /*
-      At each power on reset, a staggering 86,000 bytes of firmware have to be sent to the sensor.
-      At 100kHz, this can take ~9.4s. By increasing the clock speed, we can cut this time down to ~1.4s.
+    At each power on reset, a staggering 86,000 bytes of firmware have to be sent to the sensor.
+    At 100kHz, this can take ~9.4s. By increasing the clock speed, we can cut this time down to ~1.4s.
 
-      Two parameters can be tweaked:
+    Two parameters can be tweaked:
 
-        Clock speed: The VL53L5CX has a max bus speed of 1MHz.
+      Clock speed: The VL53L5CX has a max bus speed of 1MHz.
 
-        Max transfer size: The majority of Arduino platforms default to 32 bytes. If you are using one
-        with a larger buffer (ESP32 is 128 bytes for example), this can help decrease transfer times a bit.
+      Max transfer size: The majority of Arduino platforms default to 32 bytes. If you are using one
+      with a larger buffer (ESP32 is 128 bytes for example), this can help decrease transfer times a bit.
 
-      https://github.com/sparkfun/SparkFun_VL53L5CX_Arduino_Library/blob/main/examples/Example2_FastStartup/Example2_FastStartup.ino
+    https://github.com/sparkfun/SparkFun_VL53L5CX_Arduino_Library/blob/main/examples/Example2_FastStartup/Example2_FastStartup.ino
 
-      ---
+    ---
 
-      The issue is that CAP1188 has a max speed of 400kHz.
-      So only use 1MHz for firmware transfer, then reset it back to what it was before
+    The issue is that CAP1188 has a max speed of 400kHz.
+    So only use 1MHz for firmware transfer, then reset it back to what it was before
   */
   const uint32_t currentWireClock = Wire.getClock();
   Wire.setClock(MaxWireClockSpeed);
@@ -112,6 +137,7 @@ bool AirController::init() {
     sensors[i].setAddress(AddressMap[i]);
 
     // Increase default from 32 bytes to 128 - not supported on all platforms
+    // Must be called after begin() to prevent a segfault
     sensors[i].setWireMaxPacketSize(128);
 
     // Disable i2c
@@ -129,7 +155,6 @@ bool AirController::init() {
   pinMode(GPIO_TOF_INT, INPUT_PULLUP);
   attachInterrupt(GPIO_TOF_INT, interruptFn, FALLING);
 
-  // TODO: Look at code examples for setting up sensors
   for (int i = 0; i < TofCount; i++) {
     sensors[i].setResolution(Resolution);
     sensors[i].setRangingFrequency(RangingFrequency);
@@ -148,10 +173,23 @@ bool AirController::init() {
 }
 
 void AirController::loop() {
+  // Not enough time has passed since the last range, skip
+  if (millis() - lastRangeTimeMillis < RangingFrequencyIntervalMillis) {
+    return;
+  }
+
   if (interruptCount == 0) {
     return;
   }
+
+  // Reset
   interruptCount = 0;
+  lastRangeTimeMillis = millis();
+  memset(measurementData, 0, sizeof(measurementData));
+
+  // Set faster clock speed for reading data
+  const uint32_t currentWireClock = Wire.getClock();
+  Wire.setClock(MaxWireClockSpeed);
 
   for (int i = 0; i < TofCount; i++) {
     if (!sensors[i].getRangingData(&measurementData[i])) {
@@ -159,6 +197,9 @@ void AirController::loop() {
       continue;
     }
   }
+
+  // After reading, set the clock speed back
+  Wire.setClock(currentWireClock);
 
   uint8_t val = 0;
 
@@ -175,6 +216,7 @@ void AirController::loop() {
         continue;
       }
       // We consider 5,6,9 as valid
+      // TODO: Limit to only 5?
       auto status = data->target_status[zid];
       if (status == 5 || status == 6 || status == 9) {
         auto mm = data->distance_mm[zid];

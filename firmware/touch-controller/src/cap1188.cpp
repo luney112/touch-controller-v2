@@ -3,6 +3,7 @@
 constexpr uint8_t Register_MainControl = 0x00;
 constexpr uint8_t Register_SensorInputStatus = 0x3;
 constexpr uint8_t Register_SensitivityControl = 0x1F;
+constexpr uint8_t Register_InterruptEnable = 0x27;
 constexpr uint8_t Register_RepeatRateEnable = 0x28;
 constexpr uint8_t Register_MultipleTouch = 0x2A;
 constexpr uint8_t Register_MainControl_InterruptBit = 0x01;
@@ -22,11 +23,12 @@ bool CAP1188::init() {
   // Sensitivity control (default is [0 010 1111])
   writeRegister(Register_SensitivityControl, 0b01001111);
 
-  // TODO: Enable interrupt
   // TODO: Disable auto-reconfigure?
-  // TODO: Disable repeat?
   // TODO: Disable auto-reconfig on long press?
   // TODO: Look at other settings to tweak
+
+  // Enable interrupts on all keys
+  writeRegister(Register_InterruptEnable, 0xFF);
 
   // Disable repeating presses (default is 0xFF)
   writeRegister(Register_RepeatRateEnable, 0x0);
