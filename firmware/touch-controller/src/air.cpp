@@ -40,12 +40,14 @@ constexpr unsigned long RangingFrequencyIntervalMillis = 1000 / RangingFrequency
 // Zones we care about for distance measurement. Right now, just the middle-back ones
 #ifdef USE_4X4
 constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+// The number of zones that must be hit for a specific band to be considered hit
+constexpr uint8_t SearchZonesHitRequirement = 1;
 #else
 constexpr uint8_t SearchZones[] = {25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38};
-#endif
-constexpr uint8_t SearchZonesCount = sizeof(SearchZones) / sizeof(SearchZones[0]);
 // The number of zones that must be hit for a specific band to be considered hit
 constexpr uint8_t SearchZonesHitRequirement = 2;
+#endif
+constexpr uint8_t SearchZonesCount = sizeof(SearchZones) / sizeof(SearchZones[0]);
 
 constexpr uint16_t BandCount = 6;
 constexpr uint16_t SingleBandSizeMm = 23;

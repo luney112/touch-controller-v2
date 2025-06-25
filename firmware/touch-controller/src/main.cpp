@@ -42,7 +42,9 @@ unsigned long sensorReadFrequencyStartUs = 0;
 unsigned long lastDebugStateSendMillis = 0;
 
 void setup() {
-  delay(1000); // Needed for some reason to get complete serial output
+  // Needed for some reason to get complete serial output
+  delay(1000);
+
   Wire.begin();
   Wire.setClock(WireClockSpeed);
 
@@ -51,18 +53,19 @@ void setup() {
   touch.begin(&serial);
   air.begin(&serial);
 
+  serial.writeDebugLog("Preparing for calibration...")->processWrite();
+  led.calibrate();
+  delay(100);
+  serial.writeDebugLog("Calibrating...")->processWrite();
+
   air.init();
   touch.init();
 
-  uint32_t clock = Wire.getClock();
-  serial.writeDebugLogf("Wire clock speed is %d hz", clock);
-
-  serial.writeDebugLog("Preparing for calibration...")->processWrite();
-  led.calibrate();
-  delay(500);
-  serial.writeDebugLog("Calibrating...")->processWrite();
   serial.writeDebugLog("Finished calibrating!")->processWrite();
   led.setAllUntouched();
+
+  serial.writeDebugLogf("Wire clock speed is %dhz", Wire.getClock())->processWrite();
+  serial.writeDebugLog("Setup complete!")->processWrite();
 }
 
 void loop() {
@@ -181,17 +184,19 @@ void processSensorDataTest() {
 
   // Read and update slider
   uint32_t touched = touch.getTouchStatus();
-  for (int i = 0; i < 32; i++) {
-    if (touched & (1 << i)) {
-      if (ledData[i] == 0) {
+  for (int i = 0, pos = 0; i < 32; i += 2, pos += 3) {
+    if (touched & (1 << i) || touched & (1 << (i + 1))) {
+      if (ledData[pos] == 0) {
         serial.writeDebugLogf("Key pressed %d", i);
       }
-      ledData[i] = 1;
+      ledData[pos] = 1;
+      ledData[pos + 1] = 1;
     } else {
-      if (ledData[i] == 1) {
+      if (ledData[pos] == 1) {
         serial.writeDebugLogf("Key released %d", i);
       }
-      ledData[i] = 0;
+      ledData[pos] = 0;
+      ledData[pos + 1] = 0;
     }
   }
   led.set(ledData, LED_SEGMENT_COUNT);

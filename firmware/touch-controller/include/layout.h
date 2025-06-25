@@ -8,7 +8,7 @@
 // ---------------------------------------------------------
 // |      0      |      1      |      2      |      3      |
 // ---------------------------------------------------------
-// |    0x29     |    0x2A     |    0x2B     |    0x2C     |
+// |    0x2C     |    0x2B     |    0x2A     |    0x29     |
 // ---------------------------------------------------------
 // | 01 03 05 07 | 01 03 05 07 | 01 03 05 07 | 01 03 05 07 |
 // | 02 04 06 08 | 02 04 06 08 | 02 04 06 08 | 02 04 06 08 |
@@ -29,10 +29,10 @@ enum LedDirection { LeftToRight = 0, RightToLeft = 1 };
 
 // 0x2C->82k | 0x2B->100k | 0x2A->120k | 0x29->150k
 // These are 7-bit addresses
-#define CAP1188_ADDR_0 0x29
-#define CAP1188_ADDR_1 0x2A
-#define CAP1188_ADDR_2 0x2B
-#define CAP1188_ADDR_3 0x2C
+#define CAP1188_ADDR_0 0x2C
+#define CAP1188_ADDR_1 0x2B
+#define CAP1188_ADDR_2 0x2A
+#define CAP1188_ADDR_3 0x29
 
 // These addresses are assigned dynamically at runtime
 // These are 7-bit addresses
