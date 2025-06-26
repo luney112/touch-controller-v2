@@ -22,10 +22,10 @@ enum {
 	CHUNI_IO_OPBTN_COIN = 0x04,
 };
 
-#define TEST_KEY 0x70
-#define SERVICE_KEY 0x71
-#define COIN_KEY 0x72
-#define RECONNECT_KEY 0x73
+#define TEST_KEY VK_F1
+#define SERVICE_KEY VK_F2
+#define COIN_KEY VK_F3
+#define RECONNECT_KEY VK_F4
 
 #define EXTERN_C extern "C"
 #define DLLEXPORT __declspec(dllexport)

@@ -16,11 +16,11 @@ struct DebugStatePayload {
 };
 
 enum FramedPacketHeader {
-  FramedPacketHeader_DebugLog = 0x20,
-  FramedPacketHeader_LedData = 0x30,
-  FramedPacketHeader_SliderData = 0x31,
-  FramedPacketHeader_AirSensorData = 0x32,
-  FramedPacketHeader_DebugState = 0x40,
+  FramedPacketHeader_DebugLog = 0x20,      // Space
+  FramedPacketHeader_LedData = 0x30,       // 0
+  FramedPacketHeader_SliderData = 0x31,    // 1
+  FramedPacketHeader_AirSensorData = 0x32, // 2
+  FramedPacketHeader_DebugState = 0x33,    // 3
 };
 
 constexpr int SerialReadBufferSize = 512;

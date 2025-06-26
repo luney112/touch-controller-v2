@@ -7,7 +7,7 @@
 #include "touch.h"
 #include "utils.h"
 
-#define TEST_MODE
+// #define TEST_MODE
 
 void processSensorData();
 void processAirSensorData();
@@ -15,7 +15,7 @@ void processSliderData();
 void processSensorDataTest();
 
 constexpr int SensorReadFrequencyMicros = 1000;
-constexpr int SliderTouchedPressureValue = 128;
+constexpr int SliderTouchedPressureValue = 126;
 
 // Max speed of the i2c bus
 // 400kHz max speed for cap1188
@@ -23,8 +23,8 @@ constexpr int SliderTouchedPressureValue = 128;
 // Must use the lower of the two
 constexpr uint32_t WireClockSpeed = 400000;
 
-constexpr uint32_t DebugStateSendIntervalMillis = 1000;   // 1 second
-constexpr uint32_t LatencyAveragingIntervalMillis = 1000; // 1 second
+constexpr uint32_t DebugStateSendIntervalMillis = 5000;   // 5 seconds
+constexpr uint32_t LatencyAveragingIntervalMillis = 5000; // 5 seconds
 
 LedController led;
 TouchController touch;
@@ -169,8 +169,8 @@ void processSliderData() {
 
   // Our data is slighty different from the expected format
   for (int i = 0; i < 32; i += 2) {
-    keyData[31 - i] = touched & (1 << i) ? SliderTouchedPressureValue : 0;
-    keyData[32 - i] = touched & (1 << (i + 1)) ? SliderTouchedPressureValue : 0;
+    keyData[30 - i] = touched & (1 << i) ? SliderTouchedPressureValue : 0;
+    keyData[31 - i] = touched & (1 << (i + 1)) ? SliderTouchedPressureValue : 0;
   }
 
   serial.writeSliderData(keyData, sizeof(keyData));

@@ -9,9 +9,9 @@
 // 460800 baud = 46080 bytes/s real
 constexpr unsigned long SerialBaudRate = 460800;
 
-constexpr uint8_t FrameEsc = 0x5C;
-constexpr uint8_t FrameStart = 0x24;
-constexpr uint8_t FrameEnd = 0x0A;
+constexpr uint8_t FrameEsc = 0x5C;   // Backslash
+constexpr uint8_t FrameStart = 0x24; // Dollar sign
+constexpr uint8_t FrameEnd = 0x0A;   // LineFeed
 
 void SerialController::init(LedController *ledController) {
   Serial.begin(SerialBaudRate);
@@ -90,18 +90,18 @@ uint8_t writeUint32ToBuffer(uint8_t *buffer, uint32_t value) {
 }
 
 void SerialController::writeDebugState() {
-  uint8_t buffer[128];
-  uint8_t cnt = 0;
+  // uint8_t buffer[128];
+  // uint8_t cnt = 0;
 
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.writeBufferOverflowCount);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialReadLatencyUs);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialWriteLatencyUs);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.sensorProcessingLatencyUs);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopLatencyUs);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopTimeTotalUs);
-  cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopCount);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.writeBufferOverflowCount);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialReadLatencyUs);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.serialWriteLatencyUs);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.sensorProcessingLatencyUs);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopLatencyUs);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopTimeTotalUs);
+  // cnt += writeUint32ToBuffer(buffer + cnt, this->debugState.airLoopCount);
 
-  writeFramed(FramedPacketHeader_DebugState, buffer, cnt);
+  // writeFramed(FramedPacketHeader_DebugState, buffer, cnt);
 
   writeDebugLogf("Debug state: "
                  "OverflowCount=%d, ReadLatency=%dus, WriteLatency=%dus, SensorLatency=%dus, AirLoopLatency=%dms, "

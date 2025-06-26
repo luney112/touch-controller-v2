@@ -16,13 +16,14 @@ constexpr int SerialReadBufferSize = 256;
 constexpr int SerialWriteMaxSize = 256;
 constexpr int SerialWriteBufferSize = SerialWriteMaxSize * 2 + 3;
 
-constexpr const char* SerialPortName = "\\\\.\\COM3";
+constexpr const char* SerialPortName = "\\\\.\\COM4";
 
 enum FramedPacketHeader {
 	FramedPacketHeader_DebugLog = 0x20,
 	FramedPacketHeader_LedData = 0x30,
 	FramedPacketHeader_SliderData = 0x31,
 	FramedPacketHeader_AirSensorData = 0x32,
+	FramedPacketHeader_DebugState = 0x33
 };
 
 HRESULT serial_init(const char led_com[12], DWORD baud);
