@@ -15,9 +15,12 @@ std::mutex slider_mux;
 
 HRESULT serial_init(const char led_com[12], DWORD baud)
 {
+	serial_mux.lock();
 	dlog("Initializing serial");
 
 	if (serial_port != INVALID_HANDLE_VALUE) {
+		dlog("Serial already initialized");
+		serial_mux.unlock();
 		return S_OK;
 	}
 
@@ -57,6 +60,7 @@ HRESULT serial_init(const char led_com[12], DWORD baud)
 
 	if (!status)
 	{
+		serial_mux.unlock();
 		return E_FAIL;
 	}
 
@@ -70,10 +74,12 @@ HRESULT serial_init(const char led_com[12], DWORD baud)
 		0,
 		NULL);
 
+	serial_mux.unlock();
 	return S_OK;
 }
 
 HRESULT serial_reconnect(const char led_com[12], DWORD baud) {
+	serial_mux.lock();
 	dlog("Reconnecting to serial");
 
 	BOOL status = true;
@@ -112,11 +118,13 @@ HRESULT serial_reconnect(const char led_com[12], DWORD baud) {
 
 	if (!status)
 	{
+		serial_mux.unlock();
 		return E_FAIL;
 	}
 
 	dlog("Initializing serial: Success");
 
+	serial_mux.unlock();
 	return S_OK;
 }
 

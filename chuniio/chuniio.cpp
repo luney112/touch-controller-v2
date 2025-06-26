@@ -91,7 +91,7 @@ void chuni_io_jvs_read_coin_counter(uint16_t* total) {
 		return;
 	}
 
-	if (GetAsyncKeyState(TEST_KEY) & 0x8000) {
+	if (GetAsyncKeyState(COIN_KEY) & 0x8000) {
 		if (!chuni_io_coin) {
 			chuni_io_coin = true;
 			chuni_io_coins++;
