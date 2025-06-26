@@ -98,6 +98,7 @@ bool AirController::init() {
   */
   const uint32_t currentWireClock = Wire.getClock();
   Wire.setClock(MaxWireClockSpeed);
+  delay(50);
 
   // Re-write i2c addresses
   // 1. Disable i2c for all sensors
@@ -134,6 +135,7 @@ bool AirController::init() {
         return false;
       }
     }
+    delay(50);
 
     // Set the new address
     sensors[i].setAddress(AddressMap[i]);
@@ -164,12 +166,14 @@ bool AirController::init() {
     sensors[i].setTargetOrder(SF_VL53L5CX_TARGET_ORDER::STRONGEST);
     sensors[i].setSharpenerPercent(40);
     sensors[i].startRanging();
+    delay(50);
   }
 
   serial->writeDebugLog("Initialized ToFs")->processWrite();
 
   // Before finishing, set the clock speed back
   Wire.setClock(currentWireClock);
+  delay(50);
 
   return true;
 }
