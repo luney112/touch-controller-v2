@@ -39,7 +39,7 @@ constexpr unsigned long RangingFrequencyIntervalMillis = 1000 / RangingFrequency
 
 // Zones we care about for distance measurement. Right now, just the middle-back ones
 #ifdef USE_4X4
-constexpr uint8_t SearchZones[] = {8, 9, 10, 11};
+constexpr uint8_t SearchZones[] = {9, 10, 13, 14};
 // The number of zones that must be hit for a specific band to be considered hit
 constexpr uint8_t SearchZonesHitRequirement = 1;
 #else
@@ -164,7 +164,7 @@ bool AirController::init() {
     sensors[i].setRangingFrequency(RangingFrequency);
     sensors[i].setRangingMode(SF_VL53L5CX_RANGING_MODE::CONTINUOUS);
     sensors[i].setTargetOrder(SF_VL53L5CX_TARGET_ORDER::STRONGEST);
-    sensors[i].setSharpenerPercent(40);
+    // sensors[i].setSharpenerPercent(40);
     sensors[i].startRanging();
     delay(50);
   }
@@ -224,7 +224,7 @@ void AirController::loop() {
       // We consider 5,6,9 as valid
       // TODO: Limit to only 5?
       auto status = data->target_status[zid];
-      if (status == 5 || status == 6 || status == 9) {
+      if (status == 5) {
         auto mm = data->distance_mm[zid];
         // Ignore distances outside of range
         if (mm < LowBarMm || mm >= HighBarMm) {

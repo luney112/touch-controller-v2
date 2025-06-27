@@ -21,7 +21,7 @@ bool CAP1188::init() {
   writeRegister(Register_MainControl, 0b00000000);
 
   // Sensitivity control (default is [0 010 1111])
-  writeRegister(Register_SensitivityControl, 0b01001111);
+  writeRegister(Register_SensitivityControl, 0b00101111);
 
   // TODO: Disable auto-reconfigure?
   // TODO: Disable auto-reconfig on long press?

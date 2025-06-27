@@ -44,6 +44,15 @@ void LedController::setAllOff() {
 
 // TODO: Use bitmap
 void LedController::set(int *vals, int sz) {
+  // FastLED.show() can be slow, so only call it when the crc of the light pattern changes
+  CRC32 crc;
+  crc.update(vals, sz);
+  crc.update(this->isBeamBroken);
+  uint32_t currentCrc = crc.finalize();
+  if (currentCrc == this->ledCrc) {
+    return;
+  }
+
   for (int i = 0; i < sz; i++) {
     int idx = LED_DIRECTION == LeftToRight ? (LED_OFFSET + i) : (LED_COUNT - 1 - i);
     if (vals[i] == 0) {
@@ -52,7 +61,9 @@ void LedController::set(int *vals, int sz) {
       leds[idx] = this->isBeamBroken ? ColorTouchedBeamBroken : ColorTouched;
     }
   }
+
   FastLED.show();
+  this->ledCrc = currentCrc;
 }
 
 /* Update the RGB lighting on the slider. A pointer to an array of 31 * 3 = 93
