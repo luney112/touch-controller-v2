@@ -88,6 +88,11 @@ void loop() {
       []() { serial.processWrite(); },
       [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->serialWriteLatencyUs = avg; });
 
+  // Process serial read
+  serialReadLatencyTracker.measureAndRecord(
+      []() { serial.read(); },
+      [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->serialReadLatencyUs = avg; });
+
   if (micros() - sensorReadFrequencyStartUs > SensorReadFrequencyMicros) {
 #ifdef TEST_MODE
     sensorProcessingLatencyTracker.measureAndRecord(
@@ -102,12 +107,6 @@ void loop() {
   }
 
   delayMicroseconds(50);
-}
-
-void serialEvent() {
-  serialReadLatencyTracker.measureAndRecord(
-      []() { serial.read(); },
-      [](uint32_t avg, uint32_t sum, uint32_t count) { serial.getDebugState()->serialReadLatencyUs = avg; });
 }
 
 void processSensorData() {
