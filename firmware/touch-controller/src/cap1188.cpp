@@ -3,6 +3,7 @@
 constexpr uint8_t Register_MainControl = 0x00;
 constexpr uint8_t Register_SensorInputStatus = 0x3;
 constexpr uint8_t Register_SensitivityControl = 0x1F;
+constexpr uint8_t Register_Sampling = 0x24;
 constexpr uint8_t Register_InterruptEnable = 0x27;
 constexpr uint8_t Register_RepeatRateEnable = 0x28;
 constexpr uint8_t Register_MultipleTouch = 0x2A;
@@ -18,22 +19,22 @@ bool CAP1188::begin(uint8_t i2cAddr, TwoWire *theWire) {
 bool CAP1188::init() {
   // Main register (default is [00 0 0 000 0])
   // Can tweak Gain for sensitiviy
-  writeRegister(Register_MainControl, 0b00000000);
+  writeRegister(Register_MainControl, 0b10000000);
 
   // Sensitivity control (default is [0 010 1111])
   writeRegister(Register_SensitivityControl, 0b00101111);
 
-  // TODO: Disable auto-reconfigure?
-  // TODO: Disable auto-reconfig on long press?
-  // TODO: Look at other settings to tweak
+  // Default is 0x39 [0 011 10 01]
+  // count=4, time=640us, decode_time=35ms
+  writeRegister(Register_Sampling, 0b00100100);
 
-  // Enable interrupts on all keys
+  // Enable interrupts on all keys (default is 0xFF)
   writeRegister(Register_InterruptEnable, 0xFF);
 
   // Disable repeating presses (default is 0xFF)
   writeRegister(Register_RepeatRateEnable, 0x0);
 
-  // Allow multiple touches
+  // Allow multiple touches (default is 0x80)
   writeRegister(Register_MultipleTouch, 0x0);
 
   return true;
