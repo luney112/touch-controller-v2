@@ -12,7 +12,7 @@ const CRGB ColorCalibrate = CHSV(_HSV(0, 100, 100));
 const CRGB ColorUntouchedBeamBroken = CHSV(_HSV(3, 100, 71));
 const CRGB ColorTouchedBeamBroken = CHSV(_HSV(120, 78, 72));
 
-constexpr uint8_t LedBrightness = 100;
+constexpr uint8_t LedBrightness = 255;
 
 void LedController::init(SerialController *serial) {
   this->serial = serial;
