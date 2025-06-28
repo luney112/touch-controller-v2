@@ -1,3 +1,9 @@
+/***
+ * Some good reference material:
+ *  https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/00001620C.pdf
+ *  https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ApplicationNotes/ApplicationNotes/00002034B.pdf
+ *  https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/LegacyCollaterals/00001334B.pdf
+ */
 #include "cap1188.h"
 
 constexpr uint8_t Register_MainControl = 0x00;
